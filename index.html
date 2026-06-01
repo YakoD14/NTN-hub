@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTN & Direct-to-Cell Intelligence Hub</title>
+    <!-- Tailwind CSS para el diseño responsivo y sofisticado -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d',
+                        },
+                        slate: {
+                            950: '#090d16'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons para una iconografía técnica y premium -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .code-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        /* Personalización de scrollbar para un look más refinado */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e4e4e7;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-200">
+
+    <script>
+        // Esta sección actúa como la base de datos local y editable de la aplicación.
+        const NTN_DATA = {
+            providers: [
+                {
+                    id: "skylo",
+                    name: "Skylo Technologies",
+                    category: "SNO / NTN Service Enabler",
+                    d2cModel: "NB-IoT NTN (Rel-17) / Managed Service",
+                    spectrum: "L-band / S-band (MSS partners like Viasat, Ligado, Terrestar)",
+                    deviceAssumptions: "Standard 3GPP Rel-17 NB-NTN compatible modems & chipsets without hardware modifications.",
+                    mnoRelevance: "Critical. Acts as an overlay roaming partner using standard MNO core integration. No satellite ownership, purely service management.",
+                    officialWebsite: "https://www.skylo.tech/",
+                    pressPage: "https://www.skylo.tech/about-us",
+                    notes: "Focuses on IoT and wearables first, expanding to standard Android smartphones via modern chipsets (Qualcomm, MediaTek, Samsung LSI). Highly relevant for MNO roaming agreements.",
+                    badge: "NB-IoT NTN",
+                    logoText: "SK"
+                },
+                {
+                    id: "ast",
+                    name: "AST SpaceMobile",
+                    category: "Satellite Network Operator (SNO)",
+                    d2cModel: "Direct-to-Cell (4G LTE / 5G NR)",
+                    spectrum: "Utilizes terrestrial MNO spectrum (e.g., Band 5, 8, 20, 28) on a lease basis.",
+                    deviceAssumptions: "Unmodified standard LTE/5G smartphones. No special hardware required. High antenna gain from massive space arrays (BlueWalker/BlueBird).",
+                    mnoRelevance: "High (Strategic partner for major MNOs like AT&T, Verizon, Vodafone, Rakuten). Direct-to-Cell cellular broadband capabilities.",
+                    officialWebsite: "https://www.ast-science.com/",
+                    pressPage: "https://investors.ast-science.com/press-releases",
+                    notes: "Deploying high-power phased array satellites to act as 'cell towers in space'. Requires complex spectrum orchestration and terrestrial gateway deployment with partners.",
+                    badge: "Direct-to-Cell (LTE)",
+                    logoText: "AST"
+                },
+                {
+                    id: "starlink",
+                    name: "Starlink Direct to Cell",
+                    category: "Satellite Network Operator (SNO)",
+                    d2cModel: "Direct-to-Cell (4G LTE)",
+                    spectrum: "PCS G-Block (T-Mobile US Band 25) & equivalents in partner MNO territories.",
+                    deviceAssumptions: "Unmodified LTE smartphones. Acts as a base station (eNodeB) in space.",
+                    mnoRelevance: "Disruptive. Partnering directly with T-Mobile, Rogers, Optus, Salt, KDDI, One NZ. Direct text messaging followed by voice/data.",
+                    officialWebsite: "https://starlink.com/business/direct-to-cell",
+                    pressPage: "https://starlink.com/business/direct-to-cell",
+                    notes: "Leverages SpaceX rapid launch capability. Satellites carry an advanced eNodeB payload. MNOs provide spectrum and route SMS/IP traffic to standard network cores.",
+                    badge: "D2C (LTE)",
+                    logoText: "SL"
+                },
+                {
+                    id: "lynk",
+                    name: "Lynk Global",
+                    category: "Satellite Network Operator (SNO)",
+                    d2cModel: "Direct-to-Cell (4G LTE / GSM)",
+                    spectrum: "Terrestrial UHF/VHF bands, lease model with local MNOs.",
+                    deviceAssumptions: "Standard, unmodified legacy and modern mobile devices.",
+                    mnoRelevance: "Active commercial trials in remote areas (e.g., Palau, Solomon Islands). Excellent starting point for island nations and remote MNO coverage extensions.",
+                    officialWebsite: "https://lynk.world/how-we-do-it/",
+                    pressPage: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
+                    notes: "Secured first FCC commercial license for satellite-to-phone service. Works as an 'SMS/voice coverage extender' in areas with absolute zero terrestrial signal.",
+                    badge: "D2C (LTE/GSM)",
+                    logoText: "LG"
+                },
+                {
+                    id: "globalstar",
+                    name: "Globalstar",
+                    category: "Satellite Network Operator (SNO)",
+                    d2cModel: "Proprietary MSS / S-Band (Rel-17 upgrade path)",
+                    spectrum: "Band 53 (2.4 GHz MSS). Proprietary bands with global ITU allocation.",
+                    deviceAssumptions: "Requires customized device antennas and specialized RF front-end support (e.g., Apple iPhone Emergency SOS via satellite).",
+                    mnoRelevance: "High priority due to Apple's dominant backing. Crucial to analyze how Apple integrates this flow independently of standard MNO configurations.",
+                    officialWebsite: "https://www.globalstar.com/",
+                    pressPage: "https://www.globalstar.com/",
+                    notes: "Funded heavily by Apple. Moving towards standardized 3GPP NTN features over time while sustaining proprietary legacy services.",
+                    badge: "MSS / Custom",
+                    logoText: "GS"
+                },
+                {
+                    id: "gsma",
+                    name: "GSMA Foundry NTN Hub",
+                    category: "Ecosystem & Industry Reference",
+                    d2cModel: "Global Standard Alignment / Best Practices",
+                    spectrum: "N/A (Industry advisory group)",
+                    deviceAssumptions: "Focus on standardized eSIM, standard PLMN IDs, and unified roaming architectures.",
+                    mnoRelevance: "Industry reference for MNOs to collaborate on commercial NTN business cases, regulatory guidelines, and RF safety.",
+                    officialWebsite: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    pressPage: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    notes: "Essential for tracking industry consensus on roaming models, Billing (TAP/RAP), and billing over satellite.",
+                    badge: "Standardization",
+                    logoText: "GM"
+                }
+            ],
+            news: [
+                {
+                    id: 1,
+                    title: "Skylo partners with leading MNOs to enable seamless NB-NTN roaming on standard SIMs",
+                    category: "official",
+                    source: "Skylo Press Office",
+                    url: "https://www.skylo.tech/",
+                    date: "May 2026",
+                    excerpt: "Skylo announces successful integration testing with Tier-1 European MNOs, proving that standard IMS/SMS roaming can be routed through proprietary NTN gateways over standard LTE-M/NB-IoT modems.",
+                    badge: "Official Announcement"
+                },
+                {
+                    id: 2,
+                    title: "AST SpaceMobile confirms deployment timeline for initial BlueBird Block 2 satellites",
+                    category: "official",
+                    source: "AST Investors Relations",
+                    url: "https://investors.ast-science.com/press-releases",
+                    date: "April 2026",
+                    excerpt: "The commercial-grade space arrays will offer full MIMO capabilities designed to deliver high-speed 5G directly to standard, unmodified mobile devices in target carrier regions.",
+                    badge: "Investor News"
+                },
+                {
+                    id: 3,
+                    title: "FCC grants Lynk Global modification to operate commercial D2C services in target US markets",
+                    category: "official",
+                    source: "Lynk Global Press",
+                    url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
+                    date: "March 2026",
+                    excerpt: "The FCC approval represents a critical regulatory milestone, allowing Lynk to offer instant satellite connectivity utilizing terrestrial cellular frequencies inside terrestrial coverage gaps.",
+                    badge: "Regulatory"
+                },
+                {
+                    id: 4,
+                    title: "T-Mobile and Starlink Direct-to-Cell dynamic spectrum lease trials expand globally",
+                    category: "rollout",
+                    source: "Fierce Network",
+                    url: "https://starlink.com/business/direct-to-cell",
+                    date: "May 2026",
+                    excerpt: "Regulators around the globe are reviewing the dynamic spectrum allocation scheme which lets Starlink use PCS G-block bands inside designated exclusion zones to prevent terrestrial interference.",
+                    badge: "Commercial Rollout"
+                },
+                {
+                    id: 5,
+                    title: "GSMA NTN Foundry publishes new Whitepaper on Unified PLMN Strategy for Satellite Roaming",
+                    category: "standards",
+                    source: "GSMA Foundry",
+                    url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    date: "February 2026",
+                    excerpt: "Addressing the key debate in device strategy: Should NTN use a dedicated MCC-MNC (like 901-XX) or behave as an extension of the home MNO's PLMN ID inside specific tracking areas?",
+                    badge: "Standards & Policy"
+                },
+                {
+                    id: 6,
+                    title: "Android 15 & 16 Satellite API Integration: How Carrier Config controls NTN exposure to standard messaging apps",
+                    category: "techmedia",
+                    source: "The Verge / Tech Media",
+                    url: "https://www.theverge.com/",
+                    date: "May 2026",
+                    excerpt: "A deep dive into how Google exposes satellite UI only when Android detects entry conditions from specific PLMNs, configured securely via the MNO's Carrier Config XML.",
+                    badge: "OS & UI Integration"
+                },
+                {
+                    id: 7,
+                    title: "Direct-to-Device vs NB-NTN: The Battle of Power Amplifiers and Antenna Gain on Modern Chipsets",
+                    category: "techmedia",
+                    source: "TechCrunch",
+                    url: "https://techcrunch.com/",
+                    date: "April 2026",
+                    excerpt: "Hardware-constrained standard smartphones face physics-based limits. Innovation teams discuss if high-power chips are necessary, or if satellite array gains will solve the path loss autonomously.",
+                    badge: "Hardware & RF"
+                }
+            ],
+            standards: [
+                {
+                    id: "ts_123122",
+                    specNumber: "3GPP TS 23.122",
+                    title: "Non-access-stratum (NAS) functions related to Mobile Station (MS) in idle mode",
+                    release: "Release 17 / 18",
+                    topic: "PLMN Selection, manual network selection overrides, and satellite-specific exclusion zones.",
+                    link: "https://www.etsi.org/deliver/etsi_ts/123100_123199/123122/16.07.00_60/ts_123122v160700p.pdf",
+                    status: "Core Reference",
+                    notes: "Crucial for device strategy teams. Outlines how the OS handles PLMN scans when a satellite signal is detected, avoiding constant battery-draining hunting."
+                },
+                {
+                    id: "ts_138300",
+                    specNumber: "3GPP TS 38.300",
+                    title: "NR; Overall description; Stage-2 (NTN Architecture Aspects)",
+                    release: "Release 17",
+                    topic: "Radio Access Network, timing advance, frequency compensation, feeder link handovers.",
+                    link: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    status: "Core Reference",
+                    notes: "Provides baseline for NR-NTN (5G New Radio in non-terrestrial networks). Defines the roles of SAN (Satellite Access Node) and GW (Gateway)."
+                },
+                {
+                    id: "ts_124008",
+                    specNumber: "3GPP TS 24.008",
+                    title: "Mobile radio interface Layer 3 specification; Core network protocols",
+                    release: "Release 17",
+                    topic: "Timer adjustments (T3245, T3212) to accommodate propagation delay in satellite orbits.",
+                    link: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    status: "Under Review",
+                    notes: "Ensures the device does not trigger radio link failures or network attach timeouts due to the massive 600km - 36,000km distances."
+                }
+            ],
+            ecosystemMapping: [
+                { provider: "Starlink D2C", enabler: "SpaceX Payload", mnoPartners: "T-Mobile US, Salt, Rogers, Optus, KDDI, One NZ", devices: "Standard LTE Smartphones", chipsets: "Standard cellular modems (Qualcomm, MediaTek, Apple)", standards: "Proprietary LTE interface on standard 3GPP spectrum" },
+                { provider: "Skylo", enabler: "Skylo Core Network Gateway", mnoPartners: "Deutsche Telekom, Telefonica, SoftBank, KDDI", devices: "Google Pixel 9 series, Cat phones, Bullitt Key, Wearables", chipsets: "Qualcomm Snapdragon X75, MediaTek MT6825, Samsung Exynos 5300", standards: "3GPP Rel-17 NB-IoT NTN" },
+                { provider: "AST SpaceMobile", enabler: "AST Gateway & Phased Array", mnoPartners: "AT&T, Verizon, Vodafone, Rakuten, Orange", devices: "Unmodified 4G/5G Smartphones", chipsets: "Standard modern cellular modems", standards: "3GPP Rel-17/18 LTE & 5G NR" },
+                { provider: "Globalstar", enabler: "Globalstar Ground Station Engine", mnoPartners: "T-Mobile (spectrum partner), Apple (direct partnership)", devices: "Apple iPhone 14 / 15 / 16 series", chipsets: "Custom RF Front End + customized Qualcomm Basebands", standards: "Proprietary MSS with 3GPP Rel-17 roadmap" }
+            ]
+        };
+    </script>
+
+    <!-- CABECERA PRINCIPAL (STICKY) -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo & Identidad de Equipo -->
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-brand-500 text-white rounded-lg flex items-center justify-center">
+                        <i data-lucide="satellite" class="w-6 h-6 animate-pulse"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-zinc-900 to-zinc-700 dark:from-white dark:to-zinc-300 bg-clip-text text-transparent">NTN INTEL HUB</span>
+                            <span class="px-2 py-0.5 text-[10px] uppercase tracking-wider font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 rounded-md border border-zinc-200 dark:border-zinc-700">MNO Device Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navegación de Secciones -->
+                <nav class="hidden md:flex space-x-1 text-sm font-medium">
+                    <button onclick="scrollToSection('dashboard')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">Dashboard</button>
+                    <button onclick="scrollToSection('news')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">News Hub</button>
+                    <button onclick="scrollToSection('providers')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">SNOs & Providers</button>
+                    <button onclick="scrollToSection('devices')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">Device Ecosystem</button>
+                    <button onclick="scrollToSection('satmode')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">Satmode & OS</button>
+                    <button onclick="scrollToSection('standards')" class="px-3 py-2 text-zinc-600 dark:text-zinc-300 hover:text-brand-500 dark:hover:text-brand-500 transition-colors">3GPP Standards</button>
+                </nav>
+
+                <!-- Utilidades (Buscador, Dark Mode, Evaluador) -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="scrollToSection('evaluator')" class="hidden sm:flex items-center space-x-1 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg shadow-sm transition-colors">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                        <span>Device Evaluator</span>
+                    </button>
+
+                    <!-- Toggle Modo Oscuro -->
+                    <button onclick="toggleDarkMode()" class="p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" title="Toggle theme">
+                        <i data-lucide="sun" id="theme-icon-light" class="w-5 h-5 hidden"></i>
+                        <i data-lucide="moon" id="theme-icon-dark" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <!-- HERO INTRODUCTORIO -->
+        <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 dark:from-zinc-950 dark:via-black dark:to-zinc-950 text-white rounded-3xl border border-zinc-800 p-8 md:p-12 shadow-2xl">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative z-10 max-w-3xl space-y-4">
+                <span class="inline-flex items-center px-2.5 py-1 text-xs font-semibold bg-brand-500/10 text-brand-500 rounded-full border border-brand-500/20">
+                    <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+                    Internal Strategy Intel Hub
+                </span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">
+                    NTN & Direct-to-Cell <span class="bg-gradient-to-r from-brand-500 to-emerald-400 bg-clip-text text-transparent">Intelligence Portal</span>
+                </h1>
+                <p class="text-zinc-400 text-lg">
+                    Real-time technical tracking of Non-Terrestrial Networks, D2C ecosystem, carrier configurations, satellite mode OS layers, SNO mapping, and 3GPP standardization for device management teams.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-3">
+                    <div class="flex items-center space-x-2 text-xs bg-zinc-800/80 text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                        <span>IMS & SMS Gateways</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs bg-zinc-800/80 text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700">
+                        <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                        <span>Carrier Config XML</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs bg-zinc-800/80 text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700">
+                        <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                        <span>D2C Unmodified Devices</span>
+                    </div>
+                    <div class="flex items-center space-x-2 text-xs bg-zinc-800/80 text-zinc-300 px-3 py-1.5 rounded-lg border border-zinc-700">
+                        <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                        <span>3GPP Rel-17/18/19</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: DASHBOARD PRINCIPAL & KPI CARDS -->
+        <section id="dashboard" class="scroll-mt-20 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight">Active Intelligence Overview</h2>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">Core parameters monitored globally by the Innovation & Device Strategy team.</p>
+                </div>
+                <!-- Buscador Integrado -->
+                <div class="relative w-full md:w-96">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-zinc-400">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                    </span>
+                    <input type="text" id="global-search" oninput="runGlobalSearch()" placeholder="Search providers, news, devices, config specs..." 
+                        class="w-full pl-10 pr-4 py-2 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm outline-none transition-all">
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- KPI 1 -->
+                <div class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex flex-col justify-between shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Satellite Providers</span>
+                        <span class="p-1.5 bg-blue-500/10 text-blue-500 rounded-lg"><i data-lucide="satellite" class="w-4 h-4"></i></span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-3xl font-extrabold" id="kpi-providers-count">6</span>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">Active Monitoring</p>
+                    </div>
+                </div>
+                <!-- KPI 2 -->
+                <div class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex flex-col justify-between shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Official News Feeds</span>
+                        <span class="p-1.5 bg-brand-500/10 text-brand-500 rounded-lg"><i data-lucide="rss" class="w-4 h-4"></i></span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-3xl font-extrabold" id="kpi-news-count">7</span>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">Indexed sources</p>
+                    </div>
+                </div>
+                <!-- KPI 3 -->
+                <div class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex flex-col justify-between shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Standard Specs</span>
+                        <span class="p-1.5 bg-amber-500/10 text-amber-500 rounded-lg"><i data-lucide="file-text" class="w-4 h-4"></i></span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-3xl font-extrabold" id="kpi-standards-count">3</span>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">3GPP Release Tracks</p>
+                    </div>
+                </div>
+                <!-- KPI 4 -->
+                <div class="bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex flex-col justify-between shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Ecosystem Partners</span>
+                        <span class="p-1.5 bg-purple-500/10 text-purple-500 rounded-lg"><i data-lucide="users" class="w-4 h-4"></i></span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-3xl font-extrabold">20+</span>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">MNOs & SNOs mapped</p>
+                    </div>
+                </div>
+                <!-- KPI 5 -->
+                <div class="col-span-2 lg:col-span-1 bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 p-5 rounded-2xl flex flex-col justify-between shadow-sm">
+                    <div class="flex justify-between items-start">
+                        <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">OS Satmode Status</span>
+                        <span class="p-1.5 bg-rose-500/10 text-rose-500 rounded-lg"><i data-lucide="cpu" class="w-4 h-4"></i></span>
+                    </div>
+                    <div class="mt-4">
+                        <span class="text-lg font-bold text-rose-500 dark:text-rose-400">Active</span>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1 uppercase tracking-wider">Android 15+ compatible</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtro de Categoría Rápido -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-zinc-200 dark:border-zinc-800">
+                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mr-2">Filter View:</span>
+                <button onclick="setFilter('all')" id="btn-filter-all" class="filter-btn px-3 py-1 text-xs font-medium bg-brand-500 text-white rounded-full transition-all">All intelligence</button>
+                <button onclick="setFilter('news')" id="btn-filter-news" class="filter-btn px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all">News Only</button>
+                <button onclick="setFilter('providers')" id="btn-filter-providers" class="filter-btn px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all">Providers & SNOs</button>
+                <button onclick="setFilter('devices')" id="btn-filter-devices" class="filter-btn px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all">Device & Chipsets</button>
+                <button onclick="setFilter('satmode')" id="btn-filter-satmode" class="filter-btn px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all">Satmode OS Layer</button>
+                <button onclick="setFilter('3gpp')" id="btn-filter-3gpp" class="filter-btn px-3 py-1 text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all">3GPP Tracking</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: NEWS HUB -->
+        <section id="news" class="scroll-mt-20 space-y-6 content-section">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="rss" class="w-5 h-5 text-brand-500"></i>
+                        <h2 class="text-2xl font-bold tracking-tight">Ecosystem News & Feeds</h2>
+                    </div>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Aggregated and categorized tracking feeds for strategic planning.</p>
+                </div>
+
+                <!-- Botones de Acción de Tiempo Real -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="openLast7DaysDigest()" class="flex items-center space-x-1.5 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white text-xs font-bold rounded-xl shadow-md transition-all">
+                        <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                        <span>📅 Last 7 Days Digest</span>
+                    </button>
+                    <button onclick="fetchRealTimeNews()" class="flex items-center space-x-1.5 px-4 py-2 bg-gradient-to-r from-brand-600 to-emerald-600 hover:from-brand-700 hover:to-emerald-700 text-white text-xs font-bold rounded-xl shadow-md transition-all">
+                        <i data-lucide="refresh-cw" class="w-3.5 h-3.5" id="news-refresh-icon"></i>
+                        <span id="news-refresh-text">✨ Fetch Real-Time News</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Estatus de Conexión de Feed -->
+            <div class="flex items-center space-x-2 text-xs">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-zinc-500 dark:text-zinc-400">Live API Status:</span>
+                <span class="font-bold text-emerald-500" id="live-feed-status">Ready for Real-Time Querying</span>
+            </div>
+
+            <!-- Navegación por pestañas de noticias -->
+            <div class="flex space-x-2 border-b border-zinc-200 dark:border-zinc-800 overflow-x-auto pb-px">
+                <button onclick="setActiveNewsTab('all-news')" id="tab-news-all-news" class="news-tab-btn border-b-2 border-brand-500 px-4 py-2 text-sm font-semibold text-brand-600 dark:text-brand-400">All Sources</button>
+                <button onclick="setActiveNewsTab('top-official')" id="tab-news-top-official" class="news-tab-btn border-b-2 border-transparent px-4 py-2 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-white">Top Official News</button>
+                <button onclick="setActiveNewsTab('tech-media')" id="tab-news-tech-media" class="news-tab-btn border-b-2 border-transparent px-4 py-2 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-white">Tech Media / Industry</button>
+                <button onclick="setActiveNewsTab('ntn-sources')" id="tab-news-ntn-sources" class="news-tab-btn border-b-2 border-transparent px-4 py-2 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-white">NTN-Specific Sources</button>
+            </div>
+
+            <!-- Feed Container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid-container">
+                <!-- Se poblará dinámicamente con JavaScript -->
+            </div>
+
+            <!-- Configuración / Capa de integración RSS (Nota Técnica para el MNO Team) -->
+            <div class="bg-zinc-100 dark:bg-zinc-900/40 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 space-y-3">
+                <div class="flex items-center space-x-2 text-sm font-semibold">
+                    <i data-lucide="code" class="w-4 h-4 text-brand-500"></i>
+                    <span>Engineering Note: Real-Time Bypassed CORS Flow</span>
+                </div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                    Rather than dealing with strict CORS restrictions on direct RSS calls, clicking "Fetch Real-Time News" utilizes <strong>Google Search Grounding via Gemini 3 Flash</strong>. This crawls the actual live web (current context: May 2026) to pull real-time, validated articles, automatically structuring them into our MNO format.
+                </p>
+                <div class="flex space-x-4 pt-1">
+                    <a href="https://techcrunch.com/" target="_blank" class="text-xs text-brand-500 hover:underline flex items-center"><i data-lucide="external-link" class="w-3 h-3 mr-1"></i> TechCrunch RSS</a>
+                    <a href="https://www.theverge.com/" target="_blank" class="text-xs text-brand-500 hover:underline flex items-center"><i data-lucide="external-link" class="w-3 h-3 mr-1"></i> The Verge RSS</a>
+                    <a href="https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/" target="_blank" class="text-xs text-brand-500 hover:underline flex items-center"><i data-lucide="external-link" class="w-3 h-3 mr-1"></i> GSMA NTN Hub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: SNOs & PROVIDERS -->
+        <section id="providers" class="scroll-mt-20 space-y-8 content-section">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
+                <div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="globe" class="w-5 h-5 text-brand-500"></i>
+                        <h2 class="text-2xl font-bold tracking-tight">SNOs, NTN Providers & Hubs</h2>
+                    </div>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Deep analysis of commercial and trial solutions for Direct-to-Cell and standardized MSS overlays.</p>
+                </div>
+            </div>
+
+            <!-- Provider Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="providers-grid-container">
+                <!-- Se poblará dinámicamente -->
+            </div>
+
+            <!-- SUB-SECCIÓN: ECOSYSTEM MAPPING MATRIX -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="git-branch" class="w-4 h-4 text-emerald-500"></i>
+                    <h3 class="text-lg font-bold">SNO & Satellite Ecosystem Mapping Matrix</h3>
+                </div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">Tracing how high-level providers cascade down to enablers, target MNO frequencies, hardware requirements, and specific standard baselines.</p>
+
+                <!-- Tabla de Mapeo del Ecosistema -->
+                <div class="overflow-x-auto border border-zinc-200 dark:border-zinc-800 rounded-2xl bg-white dark:bg-zinc-900/40">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 font-semibold">
+                                <th class="p-4">Satellite Provider / SNO</th>
+                                <th class="p-4">Service Enabler Payload</th>
+                                <th class="p-4">Confirmed MNO Partners</th>
+                                <th class="p-4">Device Dependencies</th>
+                                <th class="p-4">Chipset / Modem Level</th>
+                                <th class="p-4">Standards / Alignment</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800" id="mapping-table-body">
+                            <!-- Se poblará dinámicamente con javascript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: DEVICE ECOSYSTEM & AI VALDIATOR -->
+        <section id="devices" class="scroll-mt-20 space-y-6 content-section">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="smartphone" class="w-5 h-5 text-brand-500"></i>
+                    <h2 class="text-2xl font-bold tracking-tight">Device & Chipset Ecosystem</h2>
+                </div>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Understanding hardware-level requirements, chipset readiness, and engineering limitations.</p>
+            </div>
+
+            <!-- Cuadrícula de consideraciones de hardware -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tarjeta 1: Chipsets & Modems -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-3">
+                    <div class="flex items-center space-x-2 text-brand-500 font-semibold text-sm">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                        <span>Chipset & Modem Readiness</span>
+                    </div>
+                    <h3 class="font-bold text-base">Modem Integration</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Qualcomm (Snapdragon X75 onwards), MediaTek (MT6825), and Samsung LSI (Exynos 5300) have deployed physical silicon supporting Rel-17 NB-NTN. For LTE-based Direct-to-Cell (Starlink/AST), any standard LTE baseband can connect, as the satellite emulates a standard terrestrial eNodeB.
+                    </p>
+                    <div class="text-[10px] bg-zinc-100 dark:bg-zinc-800 p-2 rounded text-zinc-500 dark:text-zinc-400 code-font">
+                        Key chips: MediaTek MT6825, Snapdragon X75/X80
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Antenna & RF Constraints -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-3">
+                    <div class="flex items-center space-x-2 text-indigo-500 font-semibold text-sm">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
+                        <span>RF & Antenna Constraints</span>
+                    </div>
+                    <h3 class="font-bold text-base">Power & Antenna Limits</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Handheld devices are restricted by a maximum transmit power of +23 dBm. Overcoming a 600km path loss requires highly sensitive satellite arrays or high-gain antennas on standard phones, often causing battery drain and heating during active transmission.
+                    </p>
+                    <div class="text-[10px] bg-zinc-100 dark:bg-zinc-800 p-2 rounded text-zinc-500 dark:text-zinc-400 code-font">
+                        Max TX Power: +23dBm | Link Budget Margin: Critical
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: OEM Implementation models -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-3">
+                    <div class="flex items-center space-x-2 text-purple-500 font-semibold text-sm">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                        <span>Standard vs Proprietary OS Flows</span>
+                    </div>
+                    <h3 class="font-bold text-base">Emergency vs Commercial</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Apple's implementation on Globalstar is entirely proprietary, bypassing standard carrier core infrastructure. Google Pixel 9 utilizes Skylo's standard Rel-17 NB-NTN gateways but integrates unique Android system UIs to guide user orientation during transmission.
+                    </p>
+                    <div class="text-[10px] bg-zinc-100 dark:bg-zinc-800 p-2 rounded text-zinc-500 dark:text-zinc-400 code-font">
+                        Proprietary Apple vs Standardized Android Satellite API
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN INTERACTIVA: CRITICAL DECISIONS CHECKLIST & AI REPORT GENERATOR -->
+            <div id="evaluator" class="bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 md:p-8 space-y-6 scroll-mt-20">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between flex-wrap gap-4">
+                        <div class="flex items-center space-x-2 text-brand-500">
+                            <i data-lucide="check-square" class="w-5 h-5"></i>
+                            <h3 class="text-lg font-bold">MNO Device Validation & ✨ AI Audit</h3>
+                        </div>
+                        <span class="px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-500 rounded-md border border-emerald-500/20">Powered by Gemini 3 Flash</span>
+                    </div>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                        Does your incoming smartphone properly support satellite networks without disrupting standard operations? Fill out this rapid check to evaluate compatibility score and let our Gemini AI compile a comprehensive validation report.
+                    </p>
+                </div>
+
+                <!-- Formulario de Evaluación Interactiva -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
+                    <div class="space-y-4">
+                        <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Device Parameters Under Test</h4>
+                        
+                        <!-- Pregunta 1 -->
+                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                            <input type="checkbox" id="q-spectrum" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
+                            <label for="q-spectrum" class="text-xs leading-normal cursor-pointer select-none">
+                                <span class="font-bold block text-sm">Spectrum & Bands Compat</span>
+                                Does the device support MSS bands (e.g. Band n256, n255) or lease bands used by the target SNO?
+                            </label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                            <input type="checkbox" id="q-carrier-config" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
+                            <label for="q-carrier-config" class="text-xs leading-normal cursor-pointer select-none">
+                                <span class="font-bold block text-sm">Carrier Config XML Support</span>
+                                Is there explicit support inside the OEM's software for carrier-provided satellite configurations and fallback behaviors?
+                            </label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                            <input type="checkbox" id="q-entitlements" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
+                            <label for="q-entitlements" class="text-xs leading-normal cursor-pointer select-none">
+                                <span class="font-bold block text-sm">Entitlement Integration</span>
+                                Can the OS securely query the standard MNO entitlement server to check if the user's plan is licensed to attach to NTN?
+                            </label>
+                        </div>
+
+                        <!-- Pregunta 4 -->
+                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
+                            <input type="checkbox" id="q-plmn" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
+                            <label for="q-plmn" class="text-xs leading-normal cursor-pointer select-none">
+                                <span class="font-bold block text-sm">PLMN ID Scan Optimization</span>
+                                Does the device's NAS protocol layer avoid high-power consumption scans during deep network searches?
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Cuadro de Resultados Interactivos -->
+                    <div class="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-zinc-400">Evaluation Result</span>
+                            <div class="flex items-baseline space-x-2 mt-2">
+                                <span class="text-5xl font-black" id="score-val">0%</span>
+                                <span class="text-sm font-semibold text-zinc-500 dark:text-zinc-400">Ready</span>
+                            </div>
+                            <div class="w-full bg-zinc-200 dark:bg-zinc-800 h-2.5 rounded-full mt-3 overflow-hidden">
+                                <div class="bg-brand-500 h-full transition-all duration-300" id="score-bar" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="text-xs space-y-3 text-zinc-500 dark:text-zinc-400">
+                            <p id="evaluation-verdict" class="italic font-medium text-amber-500">No parameters checked. Start checking the parameters above to run real-time evaluation.</p>
+                            
+                            <!-- Botón de Generación de Reporte por IA -->
+                            <button onclick="generateAIDeviceReport()" class="w-full flex items-center justify-center space-x-2 px-4 py-2.5 bg-gradient-to-r from-brand-600 to-emerald-600 hover:from-brand-700 hover:to-emerald-700 text-white text-xs font-bold rounded-xl shadow-md transition-all">
+                                <span>✨ Generate AI Compliance Audit</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: SATMODE & OS LAYER -->
+        <section id="satmode" class="scroll-mt-20 space-y-6 content-section">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="layers" class="w-5 h-5 text-brand-500"></i>
+                    <h2 class="text-2xl font-bold tracking-tight">Satmode & OS Layer Architecture</h2>
+                </div>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Exploring software behavior, entry conditions into satellite mode, and MNO policy hooks.</p>
+            </div>
+
+            <!-- Accordion / Grid de Temas Técnicos de OS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Tema 1: Android OS Integration -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-500">Entry Condition & APIs</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-brand-500/10 text-brand-500 rounded font-bold">Android 15 / 16</span>
+                    </div>
+                    <h3 class="font-bold text-lg">Android Satmode APIs</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Google integrated native satellite support directly within Android's telephony stack. The system triggers satellite mode only when:
+                    </p>
+                    <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-2 list-disc pl-5">
+                        <li>The terrestrial signal is completely lost for a predefined duration (e.g., 5-10 minutes).</li>
+                        <li>The device detects a valid satellite PLMN ID inside standard radio scanning.</li>
+                        <li>No emergency terrestrial roaming partner is available.</li>
+                    </ul>
+                </div>
+
+                <!-- Tema 2: Carrier Configuration Dependency -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-rose-500">MNO Controls</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-rose-500/10 text-rose-500 rounded font-bold">Carrier Config</span>
+                    </div>
+                    <h3 class="font-bold text-lg">Carrier Configuration Hooks</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        A major fear for MNO strategy teams is unauthorized devices or plans causing immense satellite roaming charges. Standardizing XML controls helps prevent this:
+                    </p>
+                    <div class="bg-zinc-50 dark:bg-zinc-950 p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 text-[11px] code-font text-zinc-400 dark:text-zinc-400 space-y-1">
+                        <div>&lt;boolean name="key_satellite_supported_bool" value="true" /&gt;</div>
+                        <div>&lt;int-array name="satellite_plmn_carrier_list"&gt;</div>
+                        <div class="pl-4">&lt;item value="901-11" /&gt; &lt;!-- Standard Skylo / SNO --&gt;</div>
+                        <div>&lt;/int-array&gt;</div>
+                    </div>
+                </div>
+
+                <!-- Tema 3: Entitlement & Subscription logic -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-500">Subscription Validation</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-500 rounded font-bold">IMS Entitlements</span>
+                    </div>
+                    <h3 class="font-bold text-lg">Entitlement & Billing Routing</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Before a device allows the user to open the Satellite UI, it queries the MNO Entitlement Server over HTTPS (using GSMA TS.43 standard). The response controls activation status. This prevents users without premium subscriptions from utilizing expensive satellite bandwidth.
+                    </p>
+                </div>
+
+                <!-- Tema 4: User Experience & Orientation UI -->
+                <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-500">User Interface</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-blue-500/10 text-blue-500 rounded font-bold">UX Core</span>
+                    </div>
+                    <h3 class="font-bold text-lg">UI Discoverability & Compass Flow</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Because satellite orbits are precise, the OS must guide the user dynamically. Standard Android uses internal magnetometer APIs to show an overlay compass indicating where the satellite is located, urging the user to stay clear of trees or walls for optimal link performance.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: 3GPP & STANDARDS TRACKING & AI EXPERT -->
+        <section id="standards" class="scroll-mt-20 space-y-6 content-section">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="file-text" class="w-5 h-5 text-brand-500"></i>
+                    <h2 class="text-2xl font-bold tracking-tight">3GPP NTN Standards Tracking</h2>
+                </div>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Core specifications from Release 17 to Release 19 watchlist.</p>
+            </div>
+
+            <!-- Resumen de las Releases de 3GPP -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Rel-17 -->
+                <div class="border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 bg-white dark:bg-zinc-900/40 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="px-2.5 py-1 text-xs font-bold bg-brand-500/10 text-brand-500 rounded-full border border-brand-500/20">Release 17 (Frozen)</span>
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500"></i>
+                    </div>
+                    <h3 class="font-bold text-base">IoT & NR Foundations</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Defined the absolute baseline for NTN. Introduced NB-IoT NTN for narrow band communications, and 5G NR-NTN for broadband, focusing on GEO and LEO satellite architectures, ephemeris data propagation, and timing advance compensations.
+                    </p>
+                </div>
+
+                <!-- Rel-18 -->
+                <div class="border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 bg-white dark:bg-zinc-900/40 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="px-2.5 py-1 text-xs font-bold bg-indigo-500/10 text-indigo-500 rounded-full border border-indigo-500/20">Release 18 (Active)</span>
+                        <i data-lucide="activity" class="w-5 h-5 text-indigo-500 animate-pulse"></i>
+                    </div>
+                    <h3 class="font-bold text-base">Ecosystem Optimization</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Improves coverage, mobility and handovers between terrestrial networks and NTN cells. Includes enhancements for VSAT terminals, emergency call handling over NTN, and spectrum optimization techniques.
+                    </p>
+                </div>
+
+                <!-- Rel-19 -->
+                <div class="border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 bg-white dark:bg-zinc-900/40 space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="px-2.5 py-1 text-xs font-bold bg-purple-500/10 text-purple-500 rounded-full border border-purple-500/20">Release 19 (Watchlist)</span>
+                        <i data-lucide="eye" class="w-5 h-5 text-purple-500"></i>
+                    </div>
+                    <h3 class="font-bold text-base">Future D2C Standards</h3>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        Aims to standardize pure D2C cellular architectures, optimizing direct handset connection mechanisms, lower frequency support, and coordinating dual-active SIM handling when using terrestrial + satellite networks simultaneously.
+                    </p>
+                </div>
+            </div>
+
+            <!-- MÓDULO INTERACTIVO DE CONSULTORÍA 3GPP POR GEMINI AI -->
+            <div class="bg-slate-900 text-white rounded-3xl border border-zinc-800 p-6 space-y-4 shadow-xl">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <div class="flex items-center space-x-2">
+                        <span class="p-2 bg-brand-500/20 text-brand-400 rounded-lg"><i data-lucide="sparkles" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="text-lg font-bold">✨ Live 3GPP Technical Consultant</h3>
+                            <p class="text-xs text-zinc-400">Ask Gemini for detailed protocol solutions, XML code generation, or standard specification analysis.</p>
+                        </div>
+                    </div>
+                    <span class="px-2 py-1 text-[9px] font-bold tracking-wider bg-zinc-800 text-zinc-300 rounded border border-zinc-700">GEMINI AI INTEGRATED</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <!-- Atajos de consulta -->
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Quick Inquiries</span>
+                        <button onclick="setQueryAndRun('Explain how NAS timers T3245 and T3212 prevent battery drain when searching satellite PLMNs.')" class="text-left px-3 py-2 bg-zinc-800/60 hover:bg-zinc-800 text-xs rounded-xl border border-zinc-700/50 transition-all">
+                            ⏱️ NAS Timers & Scan
+                        </button>
+                        <button onclick="setQueryAndRun('Draft an Android Carrier Config XML snippet defining satellite-supported settings and exclusion PLMN codes.')" class="text-left px-3 py-2 bg-zinc-800/60 hover:bg-zinc-800 text-xs rounded-xl border border-zinc-700/50 transition-all">
+                            ⚙️ XML Carrier Config
+                        </button>
+                        <button onclick="setQueryAndRun('Analyze the difference between standard-based Rel-17 NB-NTN and proprietary Apple Globalstar MSS implementation.')" class="text-left px-3 py-2 bg-zinc-800/60 hover:bg-zinc-800 text-xs rounded-xl border border-zinc-700/50 transition-all">
+                            🛰️ Rel-17 vs Apple Flow
+                        </button>
+                    </div>
+
+                    <!-- Input y Visualizador de Resultados -->
+                    <div class="md:col-span-3 flex flex-col space-y-3">
+                        <div class="flex space-x-2">
+                            <input type="text" id="ai-consultant-query" placeholder="Type a custom technical 3GPP / spectrum question..." class="flex-grow px-4 py-2 bg-zinc-950/80 border border-zinc-700 rounded-xl text-xs text-zinc-100 placeholder-zinc-500 outline-none focus:ring-2 focus:ring-brand-500">
+                            <button onclick="runAIConsultant()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl flex items-center space-x-1 transition-all">
+                                <span>✨ Ask AI</span>
+                            </button>
+                        </div>
+
+                        <!-- Panel de visualización de respuesta -->
+                        <div class="bg-zinc-950/80 rounded-xl p-4 border border-zinc-800 min-h-[140px] max-h-[300px] overflow-y-auto text-xs text-zinc-300 leading-relaxed" id="ai-consultant-response">
+                            <div class="h-full flex items-center justify-center text-zinc-500 italic">
+                                Ready to assist. Select a quick inquiry or type custom query above.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Referencias de Estándares Interactiva -->
+            <div class="space-y-4 pt-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div>
+                        <h3 class="text-lg font-bold">Monitored Specifications (Editable)</h3>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400">Click to add any new 3GPP document to the active working registry.</p>
+                    </div>
+                    <button onclick="openAddSpecModal()" class="flex items-center space-x-1.5 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg shadow-sm transition-colors">
+                        <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                        <span>Add Specification</span>
+                    </button>
+                </div>
+
+                <!-- Tabla de Especificaciones -->
+                <div class="overflow-x-auto border border-zinc-200 dark:border-zinc-800 rounded-2xl bg-white dark:bg-zinc-900/40">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead>
+                            <tr class="bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 font-semibold">
+                                <th class="p-4">Spec ID</th>
+                                <th class="p-4">Title</th>
+                                <th class="p-4">Release</th>
+                                <th class="p-4">Target Topic</th>
+                                <th class="p-4">MNO Status</th>
+                                <th class="p-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800" id="specs-table-body">
+                            <!-- Se poblará con javascript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex space-x-4 text-xs text-zinc-500 dark:text-zinc-400 pt-1">
+                    <span><strong>External Reference:</strong></span>
+                    <a href="https://www.etsi.org/deliver/etsi_ts/123100_123199/123122/16.07.00_60/ts_123122v160700p.pdf" target="_blank" class="text-brand-500 hover:underline flex items-center"><i data-lucide="file-text" class="w-3 h-3 mr-1"></i> ETSI TS 23.122 PDF</a>
+                    <a href="https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/" target="_blank" class="text-brand-500 hover:underline flex items-center"><i data-lucide="file-text" class="w-3 h-3 mr-1"></i> GSMA NTN Content Hub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7: CONFIG CONSOLE (EXPORT/IMPORT JSON) -->
+        <section id="config" class="scroll-mt-20 space-y-6">
+            <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="terminal" class="w-5 h-5 text-brand-500"></i>
+                    <h2 class="text-2xl font-bold tracking-tight">Active Configuration Registry</h2>
+                </div>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Copy and paste this raw configuration schema into your MNO development environment.</p>
+            </div>
+
+            <div class="bg-zinc-950 rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl">
+                <!-- Barra de control del editor -->
+                <div class="bg-zinc-900 border-b border-zinc-800 px-4 py-3 flex justify-between items-center">
+                    <div class="flex items-center space-x-2 text-zinc-400 text-xs">
+                        <span class="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/40"></span>
+                        <span class="ml-2 font-mono">active_ntn_profile_schema.json</span>
+                    </div>
+                    <button onclick="copyConfigCode()" class="flex items-center space-x-1 px-3 py-1 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-xs font-semibold rounded-lg transition-colors">
+                        <i data-lucide="copy" class="w-3 h-3"></i>
+                        <span id="copy-text">Copy JSON</span>
+                    </button>
+                </div>
+                <!-- Editor / Visualizador -->
+                <div class="p-6">
+                    <pre class="code-font text-xs text-zinc-300 overflow-x-auto max-h-96" id="raw-json-viewer"></pre>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 text-zinc-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="p-1.5 bg-brand-500 text-white rounded">
+                        <i data-lucide="satellite" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-extrabold text-sm tracking-widest text-white uppercase">NTN Intelligence Hub</span>
+                </div>
+                <p class="text-xs">
+                    Designed strictly for internal MNO Device Strategy & Chipset Validation teams.
+                </p>
+            </div>
+            <div class="border-t border-zinc-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div class="flex space-x-4">
+                    <a href="https://www.skylo.tech/" target="_blank" class="hover:text-white transition-colors">Skylo</a>
+                    <a href="https://starlink.com/business/direct-to-cell" target="_blank" class="hover:text-white transition-colors">Starlink</a>
+                    <a href="https://www.ast-science.com/" target="_blank" class="hover:text-white transition-colors">AST SpaceMobile</a>
+                    <a href="https://lynk.world" target="_blank" class="hover:text-white transition-colors">Lynk</a>
+                    <a href="https://www.globalstar.com/" target="_blank" class="hover:text-white transition-colors">Globalstar</a>
+                </div>
+                <p>&copy; 2026 MNO Strategy Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA MOSTRAR LOS REPORTES E INFORMES GENERADOS POR IA -->
+    <div id="ai-report-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden backdrop-blur-md">
+        <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 w-full max-w-3xl mx-4 space-y-4 shadow-2xl flex flex-col max-h-[85vh]">
+            <div class="flex justify-between items-center border-b border-zinc-100 dark:border-zinc-800 pb-3">
+                <div class="flex items-center space-x-2 text-brand-600 dark:text-brand-400">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                    <h3 class="text-lg font-bold">✨ AI Compliance validation report</h3>
+                </div>
+                <button onclick="closeAIReportModal()" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <!-- Cuerpo del informe con Scroll -->
+            <div class="flex-grow overflow-y-auto text-xs text-zinc-700 dark:text-zinc-300 space-y-4 pr-2 leading-relaxed" id="ai-report-content">
+                <!-- Se poblará dinámicamente -->
+            </div>
+
+            <!-- Botones de acción del reporte -->
+            <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end space-x-2">
+                <button onclick="copyAIReportText()" class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl text-xs font-semibold flex items-center space-x-1.5 hover:bg-zinc-200 dark:hover:bg-zinc-700">
+                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                    <span id="copy-report-btn-text">Copy Report</span>
+                </button>
+                <button onclick="closeAIReportModal()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-semibold">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE DIGEST EXCLUSIVO ULTIMOS 7 DIAS (REAL-TIME Y ANALÍTICO) -->
+    <div id="last-7-days-modal" class="fixed inset-0 z-50 flex items-center justify-end bg-black/60 hidden backdrop-blur-md">
+        <div class="bg-white dark:bg-zinc-900 border-l border-zinc-200 dark:border-zinc-800 w-full max-w-2xl h-full flex flex-col shadow-2xl animate-slide-in">
+            <!-- Header -->
+            <div class="p-6 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center bg-zinc-50 dark:bg-zinc-950/40">
+                <div class="flex items-center space-x-3">
+                    <span class="p-2 bg-amber-500/10 text-amber-500 rounded-lg"><i data-lucide="calendar" class="w-5 h-5"></i></span>
+                    <div>
+                        <h3 class="text-base font-extrabold tracking-tight">Last 7 Days Digest</h3>
+                        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 uppercase tracking-wider font-semibold">MNO Executive Satellite Watchlist</p>
+                    </div>
+                </div>
+                <button onclick="closeLast7DaysDigest()" class="p-2 text-zinc-400 hover:text-zinc-600 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Botones de Acción de Digest -->
+            <div class="p-4 bg-zinc-100 dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 flex justify-between items-center text-xs gap-2">
+                <span class="text-zinc-400 font-medium">May 24, 2026 - May 31, 2026</span>
+                <div class="flex space-x-2">
+                    <button onclick="copy7DaysText()" class="px-3 py-1.5 bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold rounded-lg hover:bg-zinc-300 flex items-center space-x-1">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+                        <span id="copy-7days-btn-text">Copy Digest</span>
+                    </button>
+                    <button onclick="fetch7DaysLiveAI()" class="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg flex items-center space-x-1">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5" id="ai-digest-icon"></i>
+                        <span>✨ Live Fetch</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cuerpo del Digest -->
+            <div class="flex-grow p-6 overflow-y-auto space-y-6" id="last-7-days-content">
+                <div class="flex flex-col items-center justify-center py-20 text-center space-y-4">
+                    <div class="p-3 bg-brand-500/10 text-brand-500 rounded-full animate-bounce">
+                        <i data-lucide="satellite" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">Retrieve Recent Satellite Strategy Movements</h4>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 max-w-sm mt-1">Click the ✨ Live Fetch button above to scour the web via Gemini 3 Flash Search Grounding for the most critical D2C/NTN events of the past week.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="p-4 bg-zinc-50 dark:bg-zinc-950/40 border-t border-zinc-200 dark:border-zinc-800 flex justify-between items-center text-[10px] text-zinc-400">
+                <span>Direct Search Grounding Enabled</span>
+                <button onclick="print7DaysDigest()" class="text-brand-500 hover:underline flex items-center"><i data-lucide="printer" class="w-3.5 h-3.5 mr-1"></i> Print Digest Page</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PARA AÑADIR ESPECIFICACIONES (3GPP) -->
+    <div id="add-spec-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden backdrop-blur-sm">
+        <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 w-full max-w-md mx-4 space-y-4 shadow-2xl">
+            <div class="flex justify-between items-center">
+                <h3 class="text-lg font-bold">Add 3GPP Specification</h3>
+                <button onclick="closeAddSpecModal()" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <form onsubmit="handleNewSpec(event)" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-semibold mb-1">Spec ID (e.g. 3GPP TS 38.213)</label>
+                    <input type="text" id="modal-spec-number" required class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs" placeholder="3GPP TS ...">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1">Title</label>
+                    <input type="text" id="modal-spec-title" required class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs" placeholder="e.g. Physical layer procedures for control">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1">Release Level</label>
+                    <input type="text" id="modal-spec-release" required class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs" placeholder="e.g. Release 18">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1">Target Topic / Scope</label>
+                    <input type="text" id="modal-spec-topic" required class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs" placeholder="e.g. Demodulation, link recovery...">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold mb-1">MNO Status</label>
+                    <select id="modal-spec-status" class="w-full px-3 py-2 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-lg text-xs">
+                        <option value="Core Reference">Core Reference</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Draft Target">Draft Target</option>
+                    </select>
+                </div>
+                <div class="pt-2 flex justify-end space-x-2">
+                    <button type="button" onclick="closeAddSpecModal()" class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300 rounded-lg text-xs font-semibold">Cancel</button>
+                    <button type="submit" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-xs font-semibold">Save Specification</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE INTERACCIÓN PRINCIPAL -->
+    <script>
+        let currentFilter = 'all';
+        let currentNewsTab = 'all-news';
+
+        // Inicialización de la Interfaz al Cargar la Página
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderProviders();
+            renderEcosystemMapping();
+            renderNews();
+            renderStandards();
+            updateJSONConsole();
+        });
+
+        // Desplazamiento suave entre secciones de la SPA
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ==========================================
+        //  INTEGRACIÓN DE GEMINI API & BACKOFF EXPO
+        // ==========================================
+        
+        // Función principal para la invocación asíncrona de Gemini
+        async function callGemini(prompt, systemInstruction = "", options = {}) {
+            const apiKey = ""; // La API key vacía para ser proveída por el entorno
+            // For general generation, we use gemini-3-flash-preview as per prompt rules
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }]
+            };
+            
+            if (systemInstruction) {
+                payload.systemInstruction = { parts: [{ text: systemInstruction }] };
+            }
+
+            // Integrar Google Search Grounding si se solicita
+            if (options.useSearch) {
+                payload.tools = [{ "google_search": {} }];
+            }
+
+            // Integrar respuesta estructurada si se solicita
+            if (options.useJsonSchema && options.responseSchema) {
+                payload.generationConfig = {
+                    responseMimeType: "application/json",
+                    responseSchema: options.responseSchema
+                };
+            }
+
+            const maxRetries = 5;
+            let delay = 1000;
+
+            // Bucle de reintentos con retroceso exponencial
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (response.ok) {
+                        const result = await response.json();
+                        return result.candidates?.[0]?.content?.parts?.[0]?.text || "No response text found.";
+                    }
+                } catch (error) {
+                    // Control de error silencioso durante reintentos
+                }
+                
+                // Espera exponencial (1s, 2s, 4s, 8s, 16s)
+                await new Promise(resolve => setTimeout(resolve, delay));
+                delay *= 2;
+            }
+            throw new Error("Unable to contact Gemini AI Services. Check your connection or try again later.");
+        }
+
+        // Conversor básico y limpio de Markdown a HTML para mostrar resultados estilizados
+        function formatMarkdownToHTML(text) {
+            return text
+                .replace(/### (.*)/g, '<h4 class="text-xs font-bold text-emerald-500 mt-4 mb-1 uppercase tracking-wider">$1</h4>')
+                .replace(/## (.*)/g, '<h3 class="text-sm font-extrabold text-zinc-900 dark:text-zinc-100 mt-5 mb-2 border-b border-zinc-100 dark:border-zinc-800 pb-1">$1</h3>')
+                .replace(/# (.*)/g, '<h2 class="text-base font-black text-zinc-900 dark:text-zinc-50 mt-6 mb-3">$1</h2>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-zinc-950 dark:text-white">$1</strong>')
+                .replace(/\* (.*)/g, '<li class="ml-4 list-disc text-xs my-1 text-zinc-600 dark:text-zinc-300">$1</li>')
+                .replace(/\n/g, '<br>');
+        }
+
+        // ==========================================
+        //  SISTEMA REAL-TIME: FETCH LIVE NEWS VIA GEMINI
+        // ==========================================
+        async function fetchRealTimeNews() {
+            const refreshIcon = document.getElementById('news-refresh-icon');
+            const refreshText = document.getElementById('news-refresh-text');
+            const statusIndicator = document.getElementById('live-feed-status');
+
+            refreshIcon.classList.add('animate-spin');
+            refreshText.innerText = 'Connecting Google Search & Gemini...';
+            statusIndicator.innerText = 'Querying live satellite databases & feeds (May 2026)...';
+            statusIndicator.className = 'font-bold text-amber-500 animate-pulse';
+
+            const queryPrompt = `
+                Perform a live google search for the most recent news on Non-Terrestrial Networks (NTN), satellite Direct-to-Cell (D2C), and mobile operators (MNO) partnerships from this current month (May 2026).
+                Collect up to 6 highly relevant, real articles from sources like GSMA Foundry, TechCrunch, Fierce Network, SpaceNews, Light Reading, or major satellite provider press releases.
+                
+                Format the response STRICTLY as a JSON array matching the specified schema.
+            `;
+
+            const responseSchema = {
+                type: "ARRAY",
+                items: {
+                    type: "OBJECT",
+                    properties: {
+                        title: { type: "STRING" },
+                        source: { type: "STRING" },
+                        url: { type: "STRING" },
+                        date: { type: "STRING" },
+                        excerpt: { type: "STRING" },
+                        category: { type: "STRING", description: "Must be one of: official, techmedia, standards, rollout" }
+                    },
+                    required: ["title", "source", "url", "date", "excerpt", "category"]
+                }
+            };
+
+            try {
+                const responseJsonText = await callGemini(queryPrompt, "You are a specialized telecom crawler that outputs exact structured JSON only.", {
+                    useSearch: true,
+                    useJsonSchema: true,
+                    responseSchema: responseSchema
+                });
+
+                const parsedNews = JSON.parse(responseJsonText);
+                if (Array.isArray(parsedNews) && parsedNews.length > 0) {
+                    // Mapear los elementos y agregar un ID único
+                    const formattedNews = parsedNews.map((item, index) => ({
+                        id: 100 + index,
+                        title: item.title,
+                        category: item.category || "techmedia",
+                        source: item.source || "Live Web Crawl",
+                        url: item.url || "#",
+                        date: item.date || "Just now",
+                        excerpt: item.excerpt,
+                        badge: item.category === 'official' ? 'Official Announcement' : (item.category === 'standards' ? 'Standards & Policy' : 'Live Tech Feed')
+                    }));
+
+                    NTN_DATA.news = formattedNews;
+                    renderNews();
+                    updateJSONConsole();
+
+                    statusIndicator.innerText = 'Live Feed Synced Successfully';
+                    statusIndicator.className = 'font-bold text-brand-500';
+                }
+            } catch (error) {
+                console.error("AI Live Feed Error:", error);
+                statusIndicator.innerText = 'Error syncing real-time feed (falling back to static cache)';
+                statusIndicator.className = 'font-bold text-rose-500';
+            } finally {
+                refreshIcon.classList.remove('animate-spin');
+                refreshText.innerText = '✨ Fetch Real-Time News';
+            }
+        }
+
+        // ==========================================
+        //  SISTEMA REAL-TIME: ULTIMOS 7 DIAS DIGEST
+        // ==========================================
+        function openLast7DaysDigest() {
+            document.getElementById('last-7-days-modal').classList.remove('hidden');
+        }
+
+        function closeLast7DaysDigest() {
+            document.getElementById('last-7-days-modal').classList.add('hidden');
+        }
+
+        async function fetch7DaysLiveAI() {
+            const container = document.getElementById('last-7-days-content');
+            const icon = document.getElementById('ai-digest-icon');
+            
+            icon.classList.add('animate-spin');
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-20 space-y-4">
+                    <span class="animate-spin text-brand-500"><i data-lucide="loader-2" class="w-8 h-8"></i></span>
+                    <p class="text-xs font-semibold animate-pulse text-zinc-500 dark:text-zinc-400">Scouring satellite developments from the last 7 days (May 24, 2026 - May 31, 2026)...</p>
+                    <p class="text-[9px] text-zinc-400 text-center max-w-xs">Using Google Search Grounding to compile high-fidelity strategic operator news.</p>
+                </div>
+            `;
+            lucide.createIcons();
+
+            const queryPrompt = `
+                Conduct a targeted search on Google for Non-Terrestrial Network (NTN) and Direct-to-Cell satellite cellular news over the last 7 days (specifically between May 24, 2026 and May 31, 2026).
+                Focus on:
+                1. Spectrum approvals or licenses (FCC/ITU).
+                2. SNO partnership rollouts (AST SpaceMobile, SpaceX/T-Mobile, Skylo, Lynk).
+                3. Device OEM or baseband silicon updates.
+
+                Generate a professional executive brief outlining the 4 most critical events, their impact on our MNO strategy, and direct web links to the news coverage.
+            `;
+
+            const systemPrompt = "You are a senior Director of Carrier Alliances and Device Strategy. You compile highly informative, technically accurate digests without fluff.";
+
+            try {
+                const digestText = await callGemini(queryPrompt, systemPrompt, { useSearch: true });
+                container.innerHTML = `
+                    <div class="space-y-4 prose prose-sm dark:prose-invert max-w-none">
+                        <div class="p-3.5 bg-brand-500/10 text-brand-400 rounded-xl border border-brand-500/20 text-xs flex justify-between items-center">
+                            <span>✨ AI Compiled & Verified Live Strategy Brief</span>
+                            <span class="font-bold text-[10px] bg-brand-500 text-white px-1.5 py-0.5 rounded">WEEKLY TARGET</span>
+                        </div>
+                        <div class="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                            ${formatMarkdownToHTML(digestText)}
+                        </div>
+                    </div>
+                `;
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="flex flex-col items-center justify-center py-12 space-y-3 text-rose-500 text-center">
+                        <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+                        <p class="text-xs font-semibold">${error.message}</p>
+                        <button onclick="fetch7DaysLiveAI()" class="px-4 py-2 bg-brand-600 text-white rounded-lg text-xs font-bold">Retry Generation</button>
+                    </div>
+                `;
+                lucide.createIcons();
+            } finally {
+                icon.classList.remove('animate-spin');
+            }
+        }
+
+        function copy7DaysText() {
+            const content = document.getElementById('last-7-days-content').innerText;
+            const el = document.createElement('textarea');
+            el.value = content;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const btnText = document.getElementById('copy-7days-btn-text');
+            btnText.innerText = 'Copied!';
+            setTimeout(() => { btnText.innerText = 'Copy Digest'; }, 2000);
+        }
+
+        function print7DaysDigest() {
+            const content = document.getElementById('last-7-days-content').innerHTML;
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>NTN Last 7 Days Executive Digest</title>
+                    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+                    <style>
+                        body { font-family: sans-serif; padding: 40px; color: #111; }
+                    </style>
+                </head>
+                <body>
+                    <h1 class="text-2xl font-bold border-b pb-3 mb-6">NTN & Direct-to-Cell Weekly Digest</h1>
+                    <p class="text-xs text-gray-500 mb-6">Period: May 24, 2026 - May 31, 2026 | Generated on MNO Strategy Hub</p>
+                    <div class="prose text-sm">${content}</div>
+                    <script>window.print();<\/script>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        // ==========================================
+        //  AI ACCIONES: AUDITORÍA DE COMPATIBILIDAD
+        // ==========================================
+        async function generateAIDeviceReport() {
+            const container = document.getElementById('ai-report-content');
+            const modal = document.getElementById('ai-report-modal');
+            
+            // Obtener el estado del checklist
+            const q1 = document.getElementById('q-spectrum').checked;
+            const q2 = document.getElementById('q-carrier-config').checked;
+            const q3 = document.getElementById('q-entitlements').checked;
+            const q4 = document.getElementById('q-plmn').checked;
+            const currentScore = document.getElementById('score-val').innerText;
+
+            modal.classList.remove('hidden');
+            container.innerHTML = `
+                <div class="flex flex-col items-center justify-center py-12 space-y-4">
+                    <div class="p-3 bg-brand-500/10 text-brand-500 rounded-full animate-bounce">
+                        <i data-lucide="sparkles" class="w-8 h-8"></i>
+                    </div>
+                    <p class="text-sm font-semibold animate-pulse text-zinc-500 dark:text-zinc-400">Gemini is compiling your device strategy report...</p>
+                    <p class="text-[10px] text-zinc-400 max-w-xs text-center">Analyzing RF spectra, NAS configuration rules, and GSMA entitlement guidelines for a score of ${currentScore}.</p>
+                </div>
+            `;
+            lucide.createIcons();
+
+            const prompt = `
+                Analyze the incoming smartphone compliance results:
+                - Spectrum & Bands Compatibility: ${q1 ? 'COMPLIANT (MSS/Leased supported)' : 'FAILED/NOT SUPPORTED'}
+                - Carrier Config XML Integration: ${q2 ? 'COMPLIANT (XML rules present)' : 'FAILED/NOT SUPPORTED'}
+                - IMS Entitlement Gating: ${q3 ? 'COMPLIANT (TS.43 Server communication active)' : 'FAILED/NOT SUPPORTED'}
+                - PLMN NAS Scan Timer Optimization: ${q4 ? 'COMPLIANT (Optimized idle mode hunting)' : 'FAILED/NOT SUPPORTED'}
+                - Overall Compliance Ready Score: ${currentScore}
+
+                Provide a detailed technical report with:
+                1. Executive Summary & Strategy implications for our Mobile Network Operator.
+                2. Key Engineering Risks based on failed features.
+                3. Actionable XML code block / structural suggestions for Android Carrier Config XML to fix or improve integrations.
+                4. Immediate Next Steps for the Device Validation Lab.
+            `;
+
+            const systemPrompt = "You are a senior Principal Device Strategy and Telecommunications Engineer for a Tier-1 MNO, specializing in Non-Terrestrial Networks (NTN), 3GPP Rel-17/18 specs, and Android Telephony integration. Respond concisely but with high engineering depth.";
+
+            try {
+                const responseText = await callGemini(prompt, systemPrompt);
+                container.innerHTML = `
+                    <div class="p-4 bg-zinc-50 dark:bg-zinc-950/60 rounded-2xl border border-zinc-100 dark:border-zinc-800 space-y-2 mb-4">
+                        <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">DEVICE PROFILE COMPLIANCE HIGHLIGHT</span>
+                        <div class="flex justify-between items-center text-xs">
+                            <span>Scorecard Readiness: <strong class="text-brand-500 font-bold">${currentScore}</strong></span>
+                            <span>Target Standard: <strong class="text-zinc-800 dark:text-white">3GPP Rel-17 NB-NTN</strong></span>
+                        </div>
+                    </div>
+                    <div class="prose prose-sm dark:prose-invert max-w-none">
+                        ${formatMarkdownToHTML(responseText)}
+                    </div>
+                `;
+            } catch (error) {
+                container.innerHTML = `
+                    <div class="flex flex-col items-center justify-center py-12 space-y-3 text-rose-500">
+                        <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+                        <p class="text-xs font-semibold text-center">${error.message}</p>
+                        <button onclick="generateAIDeviceReport()" class="px-4 py-2 bg-brand-600 text-white rounded-lg text-xs font-bold">Retry Generation</button>
+                    </div>
+                `;
+                lucide.createIcons();
+            }
+        }
+
+        function closeAIReportModal() {
+            document.getElementById('ai-report-modal').classList.add('hidden');
+        }
+
+        function copyAIReportText() {
+            const textContent = document.getElementById('ai-report-content').innerText;
+            const el = document.createElement('textarea');
+            el.value = textContent;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const btnText = document.getElementById('copy-report-btn-text');
+            btnText.innerText = 'Copied!';
+            setTimeout(() => {
+                btnText.innerText = 'Copy Report';
+            }, 2000);
+        }
+
+        // ==========================================
+        //  AI ACCIONES: SCRIPT CONSULTOR 3GPP
+        // ==========================================
+        function setQueryAndRun(queryText) {
+            document.getElementById('ai-consultant-query').value = queryText;
+            runAIConsultant();
+        }
+
+        async function runAIConsultant() {
+            const queryInput = document.getElementById('ai-consultant-query');
+            const responseContainer = document.getElementById('ai-consultant-response');
+            const queryText = queryInput.value.trim();
+
+            if (!queryText) return;
+
+            responseContainer.innerHTML = `
+                <div class="h-full flex flex-col items-center justify-center space-y-2 py-8">
+                    <span class="animate-spin text-brand-500"><i data-lucide="loader-2" class="w-5 h-5"></i></span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-zinc-500 animate-pulse">Querying 3GPP AI Base...</span>
+                </div>
+            `;
+            lucide.createIcons();
+
+            const systemPrompt = "You are a distinguished Senior Architect at the 3GPP standardization working groups (SA2/RAN2). You write extremely precise, specific protocol layer specifications, timer assessments, and direct solutions for mobile operators seeking to deploy satellite Direct-to-Cell. Format answers directly using headers and clean spacing.";
+
+            try {
+                const aiResult = await callGemini(queryText, systemPrompt);
+                responseContainer.innerHTML = `
+                    <div class="prose prose-sm dark:prose-invert">
+                        ${formatMarkdownToHTML(aiResult)}
+                    </div>
+                `;
+            } catch (error) {
+                responseContainer.innerHTML = `
+                    <div class="h-full flex flex-col items-center justify-center text-rose-500 py-4 space-y-2">
+                        <i data-lucide="alert-circle" class="w-5 h-5"></i>
+                        <p class="text-[10px] font-bold text-center">${error.message}</p>
+                        <button onclick="runAIConsultant()" class="px-3 py-1 bg-zinc-800 text-zinc-100 rounded text-[10px]">Retry</button>
+                    </div>
+                `;
+                lucide.createIcons();
+            }
+        }
+
+        // ==========================================
+        //  ESTÁNDARES & MENÚS PREVIAMENTE EXISTENTES
+        // ==========================================
+
+        // Alternar el Modo Oscuro
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const darkIcon = document.getElementById('theme-icon-dark');
+            const lightIcon = document.getElementById('theme-icon-light');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            } else {
+                html.classList.add('dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        }
+
+        // Filtros de navegación rápida superior / dashboard
+        function setFilter(filterType) {
+            currentFilter = filterType;
+            
+            // Actualizar estilo visual de los botones de filtro
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.replace('bg-brand-500', 'bg-zinc-100');
+                btn.classList.replace('text-white', 'text-zinc-600');
+                btn.classList.add('dark:bg-zinc-800', 'dark:text-zinc-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-filter-${filterType}`);
+            if (activeBtn) {
+                activeBtn.classList.replace('bg-zinc-100', 'bg-brand-500');
+                activeBtn.classList.replace('text-zinc-600', 'text-white');
+                activeBtn.classList.remove('dark:bg-zinc-800', 'dark:text-zinc-300');
+            }
+
+            // Ocultar o mostrar secciones completas basado en el filtro
+            const sections = {
+                news: document.getElementById('news'),
+                providers: document.getElementById('providers'),
+                devices: document.getElementById('devices'),
+                satmode: document.getElementById('satmode'),
+                standards: document.getElementById('standards')
+            };
+
+            Object.keys(sections).forEach(key => {
+                if (filterType === 'all' || filterType === key) {
+                    sections[key].classList.remove('hidden');
+                } else {
+                    sections[key].classList.add('hidden');
+                }
+            });
+        }
+
+        // Pestañas de la sección específica de Noticias (Official, Media, etc.)
+        function setActiveNewsTab(tab) {
+            currentNewsTab = tab;
+            document.querySelectorAll('.news-tab-btn').forEach(btn => {
+                btn.classList.replace('border-brand-500', 'border-transparent');
+                btn.classList.replace('text-brand-600', 'text-zinc-500');
+                btn.classList.replace('dark:text-brand-400', 'dark:text-zinc-400');
+            });
+
+            const activeBtn = document.getElementById(`tab-news-${tab}`);
+            if (activeBtn) {
+                activeBtn.classList.replace('border-transparent', 'border-brand-500');
+                activeBtn.classList.add('text-brand-600', 'dark:text-brand-400');
+            }
+
+            renderNews();
+        }
+
+        // Renderizado Dinámico: Noticias
+        function renderNews() {
+            const container = document.getElementById('news-grid-container');
+            container.innerHTML = '';
+
+            let filteredNews = NTN_DATA.news;
+
+            // Filtrar según la pestaña de noticias seleccionada
+            if (currentNewsTab === 'top-official') {
+                filteredNews = NTN_DATA.news.filter(n => n.category === 'official');
+            } else if (currentNewsTab === 'tech-media') {
+                filteredNews = NTN_DATA.news.filter(n => n.category === 'techmedia');
+            } else if (currentNewsTab === 'ntn-sources') {
+                filteredNews = NTN_DATA.news.filter(n => n.category === 'standards' || n.category === 'rollout');
+            }
+
+            filteredNews.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4";
+                
+                // Determinar el color del tag de categoría
+                let tagColor = "bg-blue-500/10 text-blue-500 border-blue-500/20";
+                if (item.category === 'official') tagColor = "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
+                if (item.category === 'standards') tagColor = "bg-purple-500/10 text-purple-500 border-purple-500/20";
+                if (item.category === 'rollout') tagColor = "bg-amber-500/10 text-amber-500 border-amber-500/20";
+
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-[10px]">
+                            <span class="px-2 py-0.5 rounded-full font-semibold border ${tagColor}">${item.badge || item.category}</span>
+                            <span class="text-zinc-400 font-mono">${item.date}</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50 leading-snug hover:text-brand-500 transition-colors">
+                            <a href="${item.url}" target="_blank">${item.title}</a>
+                        </h3>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-3">${item.excerpt}</p>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-[11px] text-zinc-400">
+                        <span class="flex items-center"><i data-lucide="radio" class="w-3.5 h-3.5 mr-1 text-zinc-500"></i> ${item.source}</span>
+                        <a href="${item.url}" target="_blank" class="text-brand-500 hover:underline flex items-center">
+                            Official Source <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            lucide.createIcons();
+            document.getElementById('kpi-news-count').innerText = NTN_DATA.news.length;
+        }
+
+        // Renderizado Dinámico: Proveedores Satelitales (Fichas)
+        function renderProviders() {
+            const container = document.getElementById('providers-grid-container');
+            container.innerHTML = '';
+
+            NTN_DATA.providers.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4";
+                
+                card.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-brand-500/10 text-brand-500 dark:text-brand-400 border border-brand-500/20 font-bold text-xs rounded-xl flex items-center justify-center">
+                                    ${item.logoText}
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-zinc-950 dark:text-white">${item.name}</h3>
+                                    <span class="text-[10px] text-zinc-400 uppercase tracking-wider">${item.category}</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] bg-brand-500/10 text-brand-500 border border-brand-500/20 px-2 py-0.5 rounded font-semibold">${item.badge}</span>
+                        </div>
+
+                        <!-- Detalle Técnico -->
+                        <div class="space-y-2 text-xs">
+                            <div class="grid grid-cols-3 gap-1 border-t border-zinc-100 dark:border-zinc-800 pt-2">
+                                <span class="text-zinc-400 font-medium">D2C Model:</span>
+                                <span class="col-span-2 text-zinc-700 dark:text-zinc-300 font-semibold">${item.d2cModel}</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1">
+                                <span class="text-zinc-400 font-medium">Spectrum:</span>
+                                <span class="col-span-2 text-zinc-700 dark:text-zinc-300">${item.spectrum}</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1">
+                                <span class="text-zinc-400 font-medium">Devices:</span>
+                                <span class="col-span-2 text-zinc-700 dark:text-zinc-300">${item.deviceAssumptions}</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1">
+                                <span class="text-zinc-400 font-medium">MNO Relevance:</span>
+                                <span class="col-span-2 text-rose-500 dark:text-rose-400 font-medium">${item.mnoRelevance}</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-zinc-50 dark:bg-zinc-950 rounded-xl text-[11px] text-zinc-500 dark:text-zinc-400 leading-relaxed border border-zinc-100 dark:border-zinc-800">
+                            <strong>Note:</strong> ${item.notes}
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-xs">
+                        <a href="${item.officialWebsite}" target="_blank" class="text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white flex items-center">
+                            <i data-lucide="globe" class="w-3.5 h-3.5 mr-1"></i> Website
+                        </a>
+                        <a href="${item.pressPage}" target="_blank" class="text-brand-500 hover:underline flex items-center">
+                            Investor Press <i data-lucide="external-link" class="w-3.5 h-3.5 ml-1"></i>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            lucide.createIcons();
+            document.getElementById('kpi-providers-count').innerText = NTN_DATA.providers.length;
+        }
+
+        // Renderizado Dinámico: Mapeo del Ecosistema
+        function renderEcosystemMapping() {
+            const tbody = document.getElementById('mapping-table-body');
+            tbody.innerHTML = '';
+
+            NTN_DATA.ecosystemMapping.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-zinc-50 dark:hover:bg-zinc-900/60 transition-colors";
+                tr.innerHTML = `
+                    <td class="p-4 font-bold text-zinc-950 dark:text-white">${item.provider}</td>
+                    <td class="p-4 text-zinc-600 dark:text-zinc-300 font-medium">${item.enabler}</td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400">${item.mnoPartners}</td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400 font-medium">${item.devices}</td>
+                    <td class="p-4"><code class="code-font text-[11px] bg-zinc-100 dark:bg-zinc-800 text-rose-500 px-1.5 py-0.5 rounded">${item.chipsets}</code></td>
+                    <td class="p-4"><span class="px-2 py-0.5 bg-brand-500/10 text-brand-500 rounded text-[10px] font-bold border border-brand-500/20">${item.standards}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Renderizado Dinámico: Estándares 3GPP (Editable)
+        function renderStandards() {
+            const tbody = document.getElementById('specs-table-body');
+            tbody.innerHTML = '';
+
+            NTN_DATA.standards.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-zinc-50 dark:hover:bg-zinc-900/60 transition-colors";
+
+                let badgeColor = "bg-blue-500/10 text-blue-500 border-blue-500/20";
+                if (item.status === 'Core Reference') badgeColor = "bg-brand-500/10 text-brand-500 border-brand-500/20";
+                if (item.status === 'Draft Target') badgeColor = "bg-amber-500/10 text-amber-500 border-amber-500/20";
+
+                tr.innerHTML = `
+                    <td class="p-4 font-bold font-mono text-zinc-950 dark:text-white">${item.specNumber}</td>
+                    <td class="p-4 font-medium text-zinc-700 dark:text-zinc-300">${item.title}
+                        <p class="text-[10px] text-zinc-400 mt-0.5">${item.notes}</p>
+                    </td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400">${item.release}</td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400">${item.topic}</td>
+                    <td class="p-4"><span class="px-2 py-0.5 text-[10px] font-semibold rounded border ${badgeColor}">${item.status}</span></td>
+                    <td class="p-4">
+                        <button onclick="deleteSpec('${item.id}')" class="text-rose-500 hover:text-rose-700 transition-colors" title="Delete spec">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            lucide.createIcons();
+            document.getElementById('kpi-standards-count').innerText = NTN_DATA.standards.length;
+        }
+
+        // Buscador Global Reactivo
+        function runGlobalSearch() {
+            const q = document.getElementById('global-search').value.toLowerCase();
+            
+            // Si el buscador está vacío, volvemos a la renderización total
+            if (!q) {
+                renderProviders();
+                renderNews();
+                renderStandards();
+                return;
+            }
+
+            // Filtrar y renderizar Providers de acuerdo a coincidencia
+            const providerCards = document.getElementById('providers-grid-container');
+            providerCards.innerHTML = '';
+            const filteredProviders = NTN_DATA.providers.filter(p => 
+                p.name.toLowerCase().includes(q) || 
+                p.category.toLowerCase().includes(q) || 
+                p.notes.toLowerCase().includes(q) || 
+                p.d2cModel.toLowerCase().includes(q)
+            );
+            filteredProviders.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4";
+                card.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-brand-500/10 text-brand-500 dark:text-brand-400 border border-brand-500/20 font-bold text-xs rounded-xl flex items-center justify-center">${item.logoText}</div>
+                                <div>
+                                    <h3 class="font-bold text-sm text-zinc-950 dark:text-white">${item.name}</h3>
+                                    <span class="text-[10px] text-zinc-400 uppercase tracking-wider">${item.category}</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] bg-brand-500/10 text-brand-500 border border-brand-500/20 px-2 py-0.5 rounded font-semibold">${item.badge}</span>
+                        </div>
+                        <div class="space-y-2 text-xs">
+                            <div class="grid grid-cols-3 gap-1 border-t border-zinc-100 dark:border-zinc-800 pt-2">
+                                <span class="text-zinc-400 font-medium">Model:</span>
+                                <span class="col-span-2 text-zinc-700 dark:text-zinc-300 font-semibold">${item.d2cModel}</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1">
+                                <span class="text-zinc-400 font-medium">Notes:</span>
+                                <span class="col-span-2 text-zinc-500 dark:text-zinc-400">${item.notes}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-xs">
+                        <a href="${item.officialWebsite}" target="_blank" class="text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-white flex items-center">Website</a>
+                    </div>
+                `;
+                providerCards.appendChild(card);
+            });
+
+            // Filtrar y renderizar Noticias
+            const newsGrid = document.getElementById('news-grid-container');
+            newsGrid.innerHTML = '';
+            const filteredNews = NTN_DATA.news.filter(n => 
+                n.title.toLowerCase().includes(q) || 
+                n.excerpt.toLowerCase().includes(q) || 
+                n.source.toLowerCase().includes(q)
+            );
+            filteredNews.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm flex flex-col justify-between space-y-4";
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex justify-between items-center text-[10px]">
+                            <span class="px-2 py-0.5 rounded-full font-semibold border bg-zinc-100 dark:bg-zinc-800">${item.badge || item.category}</span>
+                            <span class="text-zinc-400 font-mono">${item.date}</span>
+                        </div>
+                        <h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50"><a href="${item.url}" target="_blank">${item.title}</a></h3>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-3">${item.excerpt}</p>
+                    </div>
+                `;
+                newsGrid.appendChild(card);
+            });
+
+            // Filtrar y renderizar Standards en la tabla
+            const specsTbody = document.getElementById('specs-table-body');
+            specsTbody.innerHTML = '';
+            const filteredSpecs = NTN_DATA.standards.filter(s => 
+                s.specNumber.toLowerCase().includes(q) || 
+                s.title.toLowerCase().includes(q) || 
+                s.topic.toLowerCase().includes(q)
+            );
+            filteredSpecs.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td class="p-4 font-bold font-mono text-zinc-950 dark:text-white">${item.specNumber}</td>
+                    <td class="p-4 font-medium text-zinc-700 dark:text-zinc-300">${item.title}</td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400">${item.release}</td>
+                    <td class="p-4 text-zinc-500 dark:text-zinc-400">${item.topic}</td>
+                    <td class="p-4"><span class="px-2 py-0.5 text-[10px] bg-brand-500/10 text-brand-500 rounded">${item.status}</span></td>
+                    <td class="p-4"></td>
+                `;
+                specsTbody.appendChild(tr);
+            });
+            lucide.createIcons();
+        }
+
+        // Evaluador de Dispositivos (Scorecard)
+        function calculateScore() {
+            let score = 0;
+            const q1 = document.getElementById('q-spectrum').checked;
+            const q2 = document.getElementById('q-carrier-config').checked;
+            const q3 = document.getElementById('q-entitlements').checked;
+            const q4 = document.getElementById('q-plmn').checked;
+
+            if (q1) score += 25;
+            if (q2) score += 25;
+            if (q3) score += 25;
+            if (q4) score += 25;
+
+            // Actualizar visualizaciones del Score
+            document.getElementById('score-val').innerText = `${score}%`;
+            document.getElementById('score-bar').style.width = `${score}%`;
+
+            const verdict = document.getElementById('evaluation-verdict');
+            if (score === 0) {
+                verdict.innerText = "No parameters checked. Start checking the parameters above to run real-time evaluation.";
+                verdict.className = "italic font-medium text-amber-500 text-xs";
+            } else if (score === 25) {
+                verdict.innerText = "Basic compliance. Only hardware bands identified. Missing critical carrier configurations & security logic.";
+                verdict.className = "italic font-medium text-rose-500 text-xs";
+            } else if (score === 50) {
+                verdict.innerText = "Moderate compliance. Device can search physical frequencies, but lacks entitlement validation for MNO subscription gating.";
+                verdict.className = "italic font-medium text-amber-500 text-xs";
+            } else if (score === 75) {
+                verdict.innerText = "High compliance. Strong software architecture, but missing optimized NAS timer scanning configurations (danger of battery drain).";
+                verdict.className = "italic font-medium text-blue-500 text-xs";
+            } else if (score === 100) {
+                verdict.innerText = "Full compliant. Device contains complete 3GPP and GSMA baseline hooks. Ready for deployment on our networks.";
+                verdict.className = "italic font-medium text-brand-500 text-xs";
+            }
+        }
+
+        // Gestión de Especificaciones 3GPP (Modal)
+        function openAddSpecModal() {
+            document.getElementById('add-spec-modal').classList.remove('hidden');
+        }
+
+        // Cerrar modal
+        function closeAddSpecModal() {
+            document.getElementById('add-spec-modal').classList.add('hidden');
+        }
+
+        function handleNewSpec(event) {
+            event.preventDefault();
+            const specId = "spec_" + Date.now();
+            const specNumber = document.getElementById('modal-spec-number').value;
+            const title = document.getElementById('modal-spec-title').value;
+            const release = document.getElementById('modal-spec-release').value;
+            const topic = document.getElementById('modal-spec-topic').value;
+            const status = document.getElementById('modal-spec-status').value;
+
+            const newSpec = {
+                id: specId,
+                specNumber,
+                title,
+                release,
+                topic,
+                status,
+                notes: "Manually registered in active working session."
+            };
+
+            NTN_DATA.standards.unshift(newSpec);
+            renderStandards();
+            updateJSONConsole();
+            closeAddSpecModal();
+
+            // Limpiar formulario
+            document.getElementById('modal-spec-number').value = '';
+            document.getElementById('modal-spec-title').value = '';
+            document.getElementById('modal-spec-release').value = '';
+            document.getElementById('modal-spec-topic').value = '';
+        }
+
+        function deleteSpec(id) {
+            NTN_DATA.standards = NTN_DATA.standards.filter(s => s.id !== id);
+            renderStandards();
+            updateJSONConsole();
+        }
+
+        // Consola de Esquema JSON (Sincronización de Datos del equipo)
+        function updateJSONConsole() {
+            const viewer = document.getElementById('raw-json-viewer');
+            viewer.textContent = JSON.stringify(NTN_DATA, null, 4);
+        }
+
+        // Copiar el esquema JSON de configuración al portapapeles
+        function copyConfigCode() {
+            const codeText = document.getElementById('raw-json-viewer').textContent;
+            
+            // Usando fallback seguro para copiado en iframe
+            const el = document.createElement('textarea');
+            el.value = codeText;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            const copyBtnText = document.getElementById('copy-text');
+            copyBtnText.innerText = 'Copied!';
+            setTimeout(() => {
+                copyBtnText.innerText = 'Copy JSON';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
