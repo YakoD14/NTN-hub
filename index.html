@@ -72,7 +72,7 @@
                     mnoRelevance: "Critical. Acts as an overlay roaming partner using standard MNO core integration. No satellite ownership, purely service management.",
                     officialWebsite: "https://www.skylo.tech/",
                     pressPage: "https://www.skylo.tech/about-us",
-                    notes: "Focuses on IoT and wearables first, expanding to standard Android smartphones via modern chipsets (Qualcomm, MediaTek, Samsung LSI). Highly relevant for MNO roaming agreements.",
+                    notes: "Focuses on IoT and wearables first, expanding to standard Android smartphones via modern 5G-Advanced chipsets (Qualcomm X105/X85, MediaTek M90, Samsung Exynos 5400/5500). Highly relevant for MNO roaming agreements.",
                     badge: "NB-IoT NTN",
                     logoText: "SK"
                 },
@@ -253,9 +253,9 @@
             ],
             ecosystemMapping: [
                 { provider: "Starlink D2C", enabler: "SpaceX Payload", mnoPartners: "T-Mobile US, Salt, Rogers, Optus, KDDI, One NZ", devices: "Standard LTE Smartphones", chipsets: "Standard cellular modems (Qualcomm, MediaTek, Apple)", standards: "Proprietary LTE interface on standard 3GPP spectrum" },
-                { provider: "Skylo", enabler: "Skylo Core Network Gateway", mnoPartners: "Deutsche Telekom, Telefonica, SoftBank, KDDI", devices: "Google Pixel 9 series, Cat phones, Bullitt Key, Wearables", chipsets: "Qualcomm Snapdragon X75, MediaTek MT6825, Samsung Exynos 5300", standards: "3GPP Rel-17 NB-IoT NTN" },
-                { provider: "AST SpaceMobile", enabler: "AST Gateway & Phased Array", mnoPartners: "AT&T, Verizon, Vodafone, Rakuten, Orange", devices: "Unmodified 4G/5G Smartphones", chipsets: "Standard modern cellular modems", standards: "3GPP Rel-17/18 LTE & 5G NR" },
-                { provider: "Globalstar", enabler: "Globalstar Ground Station Engine", mnoPartners: "T-Mobile (spectrum partner), Apple (direct partnership)", devices: "Apple iPhone 14 / 15 / 16 series", chipsets: "Custom RF Front End + customized Qualcomm Basebands", standards: "Proprietary MSS with 3GPP Rel-17 roadmap" }
+                { provider: "Skylo", enabler: "Skylo Core Network Gateway", mnoPartners: "Deutsche Telekom, Telefonica, SoftBank, KDDI", devices: "Google Pixel 10/11 series, Wearables, rugged terminals", chipsets: "Qualcomm X105 / X85 5G, MediaTek M90, Samsung Exynos 5400/5500", standards: "3GPP Rel-17 NB-IoT NTN" },
+                { provider: "AST SpaceMobile", enabler: "AST Gateway & Phased Array", mnoPartners: "AT&T, Verizon, Vodafone, Rakuten, Orange", devices: "Unmodified 4G/5G Smartphones", chipsets: "Standard modern 5G-Advanced cellular modems", standards: "3GPP Rel-17/18 LTE & 5G NR" },
+                { provider: "Globalstar", enabler: "Globalstar Ground Station Engine", mnoPartners: "T-Mobile (spectrum partner), Apple (direct partnership)", devices: "Apple iPhone series", chipsets: "Custom RF Front End + customized Qualcomm Basebands", standards: "Proprietary MSS with 3GPP Rel-17 roadmap" }
             ]
         };
     </script>
@@ -289,13 +289,9 @@
 
                 <!-- Utilidades (Buscador, Dark Mode, Evaluador) -->
                 <div class="flex items-center space-x-3">
-                    <button onclick="scrollToSection('evaluator')" class="hidden sm:flex items-center space-x-1 px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg shadow-sm transition-colors">
-                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-                        <span>Device Evaluator</span>
-                    </button>
 
                     <!-- Toggle Modo Oscuro -->
-                    <button onclick="toggleDarkMode()" class="p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" title="Toggle theme">
+                    <button onclick="toggleDarkMode()" class="p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" title="Toggle theme">
                         <i data-lucide="sun" id="theme-icon-light" class="w-5 h-5 hidden"></i>
                         <i data-lucide="moon" id="theme-icon-dark" class="w-5 h-5"></i>
                     </button>
@@ -540,7 +536,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 4: DEVICE ECOSYSTEM & AI VALDIATOR -->
+        <!-- SECCIÓN 4: DEVICE ECOSYSTEM & COMPLIANCE EVALUATOR -->
         <section id="devices" class="scroll-mt-20 space-y-6 content-section">
             <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
                 <div class="flex items-center space-x-2">
@@ -560,10 +556,10 @@
                     </div>
                     <h3 class="font-bold text-base">Modem Integration</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        Qualcomm (Snapdragon X75 onwards), MediaTek (MT6825), and Samsung LSI (Exynos 5300) have deployed physical silicon supporting Rel-17 NB-NTN. For LTE-based Direct-to-Cell (Starlink/AST), any standard LTE baseband can connect, as the satellite emulates a standard terrestrial eNodeB.
+                        Qualcomm's newest X105 (Release 19-ready, 6G prototype foundation) and X85 (Release 18), alongside MediaTek's M90 and Samsung's Exynos 5400/5500, natively support standardized 5G-Advanced NR-NTN. These modems integrate dynamic timing advance and real-time Doppler shift compensation directly on-silicon, reducing power draw by up to 30% compared to legacy architectures.
                     </p>
                     <div class="text-[10px] bg-zinc-100 dark:bg-zinc-800 p-2 rounded text-zinc-500 dark:text-zinc-400 code-font">
-                        Key chips: MediaTek MT6825, Snapdragon X75/X80
+                        Key chips: Qualcomm X105/X85 5G, MediaTek M90, Samsung Exynos 5400/5500
                     </div>
                 </div>
 
@@ -590,7 +586,7 @@
                     </div>
                     <h3 class="font-bold text-base">Emergency vs Commercial</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        Apple's implementation on Globalstar is entirely proprietary, bypassing standard carrier core infrastructure. Google Pixel 9 utilizes Skylo's standard Rel-17 NB-NTN gateways but integrates unique Android system UIs to guide user orientation during transmission.
+                        Apple's implementation on Globalstar is entirely proprietary, bypassing standard carrier core infrastructure. Google Pixel 10/11 utilizes Skylo's standard Rel-17 NB-NTN gateways but integrates unique Android system UIs to guide user orientation during transmission.
                     </p>
                     <div class="text-[10px] bg-zinc-100 dark:bg-zinc-800 p-2 rounded text-zinc-500 dark:text-zinc-400 code-font">
                         Proprietary Apple vs Standardized Android Satellite API
@@ -598,158 +594,103 @@
                 </div>
             </div>
 
-            <!-- SECCIÓN INTERACTIVA: CRITICAL DECISIONS CHECKLIST & AI REPORT GENERATOR -->
-            <div id="evaluator" class="bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 md:p-8 space-y-6 scroll-mt-20">
-                <div class="space-y-2">
-                    <div class="flex items-center justify-between flex-wrap gap-4">
-                        <div class="flex items-center space-x-2 text-brand-500">
-                            <i data-lucide="check-square" class="w-5 h-5"></i>
-                            <h3 class="text-lg font-bold">MNO Device Validation & ✨ AI Audit</h3>
-                        </div>
-                        <span class="px-2.5 py-1 text-[10px] uppercase tracking-wider font-semibold bg-emerald-500/10 text-emerald-500 rounded-md border border-emerald-500/20">Powered by Gemini 3 Flash</span>
-                    </div>
-                    <p class="text-sm text-zinc-500 dark:text-zinc-400">
-                        Does your incoming smartphone properly support satellite networks without disrupting standard operations? Fill out this rapid check to evaluate compatibility score and let our Gemini AI compile a comprehensive validation report.
-                    </p>
-                </div>
-
-                <!-- Formulario de Evaluación Interactiva -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
-                    <div class="space-y-4">
-                        <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-400">Device Parameters Under Test</h4>
-                        
-                        <!-- Pregunta 1 -->
-                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
-                            <input type="checkbox" id="q-spectrum" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
-                            <label for="q-spectrum" class="text-xs leading-normal cursor-pointer select-none">
-                                <span class="font-bold block text-sm">Spectrum & Bands Compat</span>
-                                Does the device support MSS bands (e.g. Band n256, n255) or lease bands used by the target SNO?
-                            </label>
-                        </div>
-
-                        <!-- Pregunta 2 -->
-                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
-                            <input type="checkbox" id="q-carrier-config" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
-                            <label for="q-carrier-config" class="text-xs leading-normal cursor-pointer select-none">
-                                <span class="font-bold block text-sm">Carrier Config XML Support</span>
-                                Is there explicit support inside the OEM's software for carrier-provided satellite configurations and fallback behaviors?
-                            </label>
-                        </div>
-
-                        <!-- Pregunta 3 -->
-                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
-                            <input type="checkbox" id="q-entitlements" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
-                            <label for="q-entitlements" class="text-xs leading-normal cursor-pointer select-none">
-                                <span class="font-bold block text-sm">Entitlement Integration</span>
-                                Can the OS securely query the standard MNO entitlement server to check if the user's plan is licensed to attach to NTN?
-                            </label>
-                        </div>
-
-                        <!-- Pregunta 4 -->
-                        <div class="flex items-start space-x-3 bg-white dark:bg-zinc-950/40 p-3 rounded-xl border border-zinc-100 dark:border-zinc-800">
-                            <input type="checkbox" id="q-plmn" onchange="calculateScore()" class="mt-1 w-4 h-4 text-brand-600 bg-zinc-200 dark:bg-zinc-800 rounded border-zinc-300 dark:border-zinc-700 focus:ring-brand-500">
-                            <label for="q-plmn" class="text-xs leading-normal cursor-pointer select-none">
-                                <span class="font-bold block text-sm">PLMN ID Scan Optimization</span>
-                                Does the device's NAS protocol layer avoid high-power consumption scans during deep network searches?
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Cuadro de Resultados Interactivos -->
-                    <div class="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
-                        <div>
-                            <span class="text-xs uppercase font-bold tracking-wider text-zinc-400">Evaluation Result</span>
-                            <div class="flex items-baseline space-x-2 mt-2">
-                                <span class="text-5xl font-black" id="score-val">0%</span>
-                                <span class="text-sm font-semibold text-zinc-500 dark:text-zinc-400">Ready</span>
-                            </div>
-                            <div class="w-full bg-zinc-200 dark:bg-zinc-800 h-2.5 rounded-full mt-3 overflow-hidden">
-                                <div class="bg-brand-500 h-full transition-all duration-300" id="score-bar" style="width: 0%"></div>
-                            </div>
-                        </div>
-
-                        <div class="text-xs space-y-3 text-zinc-500 dark:text-zinc-400">
-                            <p id="evaluation-verdict" class="italic font-medium text-amber-500">No parameters checked. Start checking the parameters above to run real-time evaluation.</p>
-                            
-                            <!-- Botón de Generación de Reporte por IA -->
-                            <button onclick="generateAIDeviceReport()" class="w-full flex items-center justify-center space-x-2 px-4 py-2.5 bg-gradient-to-r from-brand-600 to-emerald-600 hover:from-brand-700 hover:to-emerald-700 text-white text-xs font-bold rounded-xl shadow-md transition-all">
-                                <span>✨ Generate AI Compliance Audit</span>
-                            </button>
-                        </div>
+            <!-- NOTA ESTRATÉGICA: COMPATIBILIDAD DIRECT-TO-CELL SIN CAMBIO DE HARDWARE (AST) -->
+            <div class="bg-emerald-500/10 border border-brand-500/30 rounded-2xl p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mt-6">
+                <div class="flex items-start space-x-3.5">
+                    <span class="p-2.5 bg-brand-500/20 text-brand-500 dark:text-brand-400 rounded-xl mt-0.5 md:mt-0 flex-shrink-0">
+                        <i data-lucide="info" class="w-5 h-5"></i>
+                    </span>
+                    <div>
+                        <h4 class="text-sm font-bold text-zinc-900 dark:text-white flex items-center gap-1.5">
+                            MNO Strategic Note: Zero Hardware Overhead for AST D2C Integration
+                        </h4>
+                        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mt-1">
+                            Unlike Narrowband IoT (NB-IoT NTN) frameworks which mandate standard Rel-17 hardware, broadband Direct-to-Cell (D2C) architectures like <strong>AST SpaceMobile</strong> require <strong>no chipset upgrades, physical RF front-end adjustments, or custom handset software layers</strong>. Because AST's massive space phased-arrays directly emulate terrestrial cell towers (eNodeB/gNodeB) from low-Earth orbit, any standard, unmodified LTE/5G handset already deployed in the market is natively compatible and capable of attaching seamlessly.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 5: SATMODE & OS LAYER -->
+        <!-- SECCIÓN 5: SATMODE & OS LAYER (EXPANDIDO) -->
         <section id="satmode" class="scroll-mt-20 space-y-6 content-section">
             <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
                 <div class="flex items-center space-x-2">
                     <i data-lucide="layers" class="w-5 h-5 text-brand-500"></i>
                     <h2 class="text-2xl font-bold tracking-tight">Satmode & OS Layer Architecture</h2>
                 </div>
-                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Exploring software behavior, entry conditions into satellite mode, and MNO policy hooks.</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">Deep-dive technical knowledge base outlining OS state machines, user interfaces, and carrier-gated access policies.</p>
             </div>
 
-            <!-- Accordion / Grid de Temas Técnicos de OS -->
+            <!-- Grid de Temas Técnicos de OS Expandidos -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Tema 1: Android OS Integration -->
+                <!-- Tema 1: What is Satmode & Why is it implemented? -->
                 <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
                     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-500">Entry Condition & APIs</span>
-                        <span class="px-2 py-0.5 text-[10px] bg-brand-500/10 text-brand-500 rounded font-bold">Android 15 / 16</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-brand-500">Framework Overview</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-brand-500/10 text-brand-500 rounded font-bold">OS Core</span>
                     </div>
-                    <h3 class="font-bold text-lg">Android Satmode APIs</h3>
+                    <h3 class="font-bold text-lg">What is Satmode & Why Implement It?</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        Google integrated native satellite support directly within Android's telephony stack. The system triggers satellite mode only when:
+                        <strong>Satmode (Satellite Mode)</strong> is a distinct hardware-software operational state in modern OS kernels (Android 15+ Telephony Service / iOS CoreTelephony) activated when standard terrestrial signals are absent.
+                    </p>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        <strong>Why it is implemented:</strong>
                     </p>
                     <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-2 list-disc pl-5">
-                        <li>The terrestrial signal is completely lost for a predefined duration (e.g., 5-10 minutes).</li>
-                        <li>The device detects a valid satellite PLMN ID inside standard radio scanning.</li>
-                        <li>No emergency terrestrial roaming partner is available.</li>
+                        <li><strong>Prevents Battery Drain:</strong> Standard modems search indefinitely for towers at max power (+23dBm). Satmode pauses regular scanning, employing conservative 3GPP search backoffs.</li>
+                        <li><strong>Path Loss & Timing:</strong> Adapts protocol layers to handle massive distance delays (600km - 36,000km) by expanding timing advance limits.</li>
+                        <li><strong>Data Restrictions:</strong> Shuts down background application daemon requests to preserve the thin, high-cost satellite link bandwidth (GEO/LEO).</li>
                     </ul>
                 </div>
 
-                <!-- Tema 2: Carrier Configuration Dependency -->
+                <!-- Tema 2: UI & UX Structural Differences -->
                 <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
                     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-rose-500">MNO Controls</span>
-                        <span class="px-2 py-0.5 text-[10px] bg-rose-500/10 text-rose-500 rounded font-bold">Carrier Config</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-500">Visual Stack</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-blue-500/10 text-blue-500 rounded font-bold">Handset UX</span>
                     </div>
-                    <h3 class="font-bold text-lg">Carrier Configuration Hooks</h3>
+                    <h3 class="font-bold text-lg">UI & UX Structural Differences</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        A major fear for MNO strategy teams is unauthorized devices or plans causing immense satellite roaming charges. Standardizing XML controls helps prevent this:
+                        Operating over satellite completely changes the way cellular interactions are visualised on terminal screens:
                     </p>
-                    <div class="bg-zinc-50 dark:bg-zinc-950 p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 text-[11px] code-font text-zinc-400 dark:text-zinc-400 space-y-1">
-                        <div>&lt;boolean name="key_satellite_supported_bool" value="true" /&gt;</div>
-                        <div>&lt;int-array name="satellite_plmn_carrier_list"&gt;</div>
-                        <div class="pl-4">&lt;item value="901-11" /&gt; &lt;!-- Standard Skylo / SNO --&gt;</div>
-                        <div>&lt;/int-array&gt;</div>
-                    </div>
+                    <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-2 list-disc pl-5">
+                        <li><strong>Status Bar Iconography:</strong> Standard signal bars (<i data-lucide="signal" class="w-3.5 h-3.5 inline"></i>) vanish. They are replaced by a dedicated satellite glyph (<i data-lucide="satellite" class="w-3.5 h-3.5 inline"></i>), indicating no terrestrial network can be scanned.</li>
+                        <li><strong>Real-Time Celestial Guidance:</strong> Because orbit paths are precise, the UI launches a magnetic compass alignment overlay. It guides the user dynamically to point their terminal directly at the nearest spacecraft (e.g., "Rotate 20° East; Clear of trees").</li>
+                        <li><strong>Message Queuing States:</strong> Standard instant delivery is disabled. Handset SMS/RCS stacks show status queues such as "Sending via Satellite - may take up to 2 minutes" to manage user expectations.</li>
+                    </ul>
                 </div>
 
-                <!-- Tema 3: Entitlement & Subscription logic -->
+                <!-- Tema 3: What is a Carrier Config / Bundle? -->
                 <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
                     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-500">Subscription Validation</span>
-                        <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-500 rounded font-bold">IMS Entitlements</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-amber-500">Configuration Files</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-amber-500/10 text-amber-500 rounded font-bold">MNO Provisioning</span>
                     </div>
-                    <h3 class="font-bold text-lg">Entitlement & Billing Routing</h3>
+                    <h3 class="font-bold text-lg">What are Carrier Configs & Bundles?</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        Before a device allows the user to open the Satellite UI, it queries the MNO Entitlement Server over HTTPS (using GSMA TS.43 standard). The response controls activation status. This prevents users without premium subscriptions from utilizing expensive satellite bandwidth.
+                        A <strong>Carrier Config</strong> (Android XML format) or <strong>Carrier Bundle</strong> (iOS `.plist` file) is a cryptographically signed profile deployed OTA (Over-the-Air) or pre-loaded into standard firmware. It lets mobile network operators securely customize telephony properties without altering the OS baseband kernel code.
+                    </p>
+                    <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        It serves as the definitive policy sheet for standard modems, dictating the carrier's proprietary network access, roaming exceptions, emergency dialing routings, and subscription validations.
                     </p>
                 </div>
 
-                <!-- Tema 4: User Experience & Orientation UI -->
+                <!-- Tema 4: How Carrier Config Applies to Satellite -->
                 <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 space-y-4">
                     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-3">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-blue-500">User Interface</span>
-                        <span class="px-2 py-0.5 text-[10px] bg-blue-500/10 text-blue-500 rounded font-bold">UX Core</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-rose-500">MNO Policy Execution</span>
+                        <span class="px-2 py-0.5 text-[10px] bg-rose-500/10 text-rose-500 rounded font-bold">Routing Gating</span>
                     </div>
-                    <h3 class="font-bold text-lg">UI Discoverability & Compass Flow</h3>
+                    <h3 class="font-bold text-lg">Applying Carrier Configs to Satmode</h3>
                     <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                        Because satellite orbits are precise, the OS must guide the user dynamically. Standard Android uses internal magnetometer APIs to show an overlay compass indicating where the satellite is located, urging the user to stay clear of trees or walls for optimal link performance.
+                        Without an authorized Carrier Config, standard smartphones are blind to satellite relays. The config manages critical connectivity loops:
                     </p>
+                    <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-2 list-disc pl-5">
+                        <li><strong>Access Whitelisting:</strong> Sets `key_satellite_supported_bool` to `true` and maps the authorized non-terrestrial PLMN IDs (e.g. `901-11` for Skylo) directly into the dialer scanning index.</li>
+                        <li><strong>Entitlement Gating:</strong> Pushes the secure MNO server HTTPS endpoint to verify if the subscriber's tariff allows satellite access before enabling antenna hardware.</li>
+                        <li><strong>Geofenced Restricting:</strong> Programs cell exclusionary zones to disable satellite attachment when the subscriber is within countries where satellite spectrum is barred.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -850,7 +791,7 @@
                 </div>
             </div>
 
-            <!-- Tabla de Referencias de Estándares Interactiva -->
+            <!-- Tabla de Referencias de Estándares -->
             <div class="space-y-4 pt-4">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                     <div>
@@ -949,35 +890,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- MODAL PARA MOSTRAR LOS REPORTES E INFORMES GENERADOS POR IA -->
-    <div id="ai-report-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 hidden backdrop-blur-md">
-        <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl p-6 w-full max-w-3xl mx-4 space-y-4 shadow-2xl flex flex-col max-h-[85vh]">
-            <div class="flex justify-between items-center border-b border-zinc-100 dark:border-zinc-800 pb-3">
-                <div class="flex items-center space-x-2 text-brand-600 dark:text-brand-400">
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
-                    <h3 class="text-lg font-bold">✨ AI Compliance validation report</h3>
-                </div>
-                <button onclick="closeAIReportModal()" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-white">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            
-            <!-- Cuerpo del informe con Scroll -->
-            <div class="flex-grow overflow-y-auto text-xs text-zinc-700 dark:text-zinc-300 space-y-4 pr-2 leading-relaxed" id="ai-report-content">
-                <!-- Se poblará dinámicamente -->
-            </div>
-
-            <!-- Botones de acción del reporte -->
-            <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end space-x-2">
-                <button onclick="copyAIReportText()" class="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-xl text-xs font-semibold flex items-center space-x-1.5 hover:bg-zinc-200 dark:hover:bg-zinc-700">
-                    <i data-lucide="copy" class="w-3.5 h-3.5"></i>
-                    <span id="copy-report-btn-text">Copy Report</span>
-                </button>
-                <button onclick="closeAIReportModal()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-xl text-xs font-semibold">Done</button>
-            </div>
-        </div>
-    </div>
 
     <!-- MODAL DE DIGEST EXCLUSIVO ULTIMOS 7 DIAS (REAL-TIME Y ANALÍTICO) -->
     <div id="last-7-days-modal" class="fixed inset-0 z-50 flex items-center justify-end bg-black/60 hidden backdrop-blur-md">
@@ -1175,30 +1087,29 @@
         // ==========================================
         const FALLBACK_ENGINE = {
             get7DaysDigest: () => {
-                return `## Executive NTN Strategy Movement (Last 7 Days)
+                return `## Executive NTN Strategy Weekly Digest
 May 24 – May 31, 2026
 
-### 1. SpaceX Starlink & T-Mobile US Beta Launch
-* **Highlight**: Starlink deployed another batch of Direct-to-Cell enabled satellites with advanced phased array eNodeB payloads.
-* **Spectrum Lease**: T-Mobile US confirmed successful test broadcasts inside selected G-Block (Band 25) dead-zones, maintaining a strict 0.05-second switching latency for initial unmodified cellular handovers.
-* **Operator Impact**: Strategic threat. We must expedite standard-based Rel-17/18 NB-NTN roaming agreements to counteract proprietary satellite lock-ins in remote rural areas.
+### 1. Qualcomm X105 Release 19 Modem Unveiled
+* **Highlight**: Qualcomm debuted the X105 5G Modem-RF system at MWC 2026, marking the world's first Release 19-capable chipset.
+* **Architecture**: Integrates on-device agentic AI for network selection and native NR-NTN satellite routing (voice/data) with 30% lower power draw than last-gen X85.
+* **MNO Takeaway**: Crucial hardware leap. This silicons the path for 5G-Advanced deployments and early 6G non-terrestrial field-testing.
 
-### 2. AST SpaceMobile Uplink Verifications
-* **Highlight**: Successfully executed a bidirectional voice call utilizing unmodified standard 5G smartphones connected directly to the BlueWalker satellite array.
-* **Spectrum Allocation**: AT&T and Verizon lease orchestration validated multi-carrier dynamic spectrum sharing, preventing interference to overlapping terrestrial macro sectors.
+### 2. MediaTek Dimensity Auto (MT2739) World's First
+* **Highlight**: MediaTek announced the Dimensity Auto telematics platform supporting Rel-18 5G NR-NTN satellite video calling directly from vehicles.
+* **Engineering**: Minimizes handover stutters by 30% through on-chip MMAI (MediaTek Modem AI) during rapid orbital cell tracking.
 
-### 3. Skylo Global Gateway Integrations
-* **Highlight**: Commenced official trial phase with major European MNOs. Enables seamless fallback to Viasat L-band satellite backhauls inside unmodified wearables and handsets.
-* **Standard**: 100% 3GPP Rel-17 NB-NTN compliant. Highly cost-effective; integrates into our existing roaming interface without hardware or core updates.
+### 3. SpaceX Starlink & T-Mobile US Beta Commercial Verification
+* **Highlight**: Starlink successfully deployed 22 additional Direct-to-Cell satellites carrying custom integrated LTE basestations.
+* **Spectrum Isolation**: T-Mobile US confirmed successful test airwave handovers inside rural zones on cellular Band 25, registering a 0.04-second latency shift.
 
-### 4. Regulatory Action Items for Device Strategy Teams
-* **Carrier Config XML**: Add PLMN \`901-11\` (Skylo) and leased frequencies as authorized secondary attachments inside our master Carrier Configurations to allow automatic satellite search when terrestrial coverage falls below -120 dBm RSRP.`;
+### 4. Apple Globalstar S-Band Roadmap
+* **Highlight**: Apple confirmed advanced RF front-end support for upcoming terminals, indicating gradual convergence towards standardized 3GPP terrestrial satellite bands.`;
             },
             
             getDeviceReport: (q1, q2, q3, q4, score) => {
                 let risks = "";
                 let xmlPatch = "";
-                let steps = "";
 
                 if (!q1) risks += "* **Spectrum Gap**: Handset lacks physical radio tuning for Band n256 or n255. High risk of complete RF path block.<br>";
                 if (!q2) risks += "* **Carrier Config Gap**: No XML parameters defining satellite behavior. Device will continue high-power terrestrial searches infinitely.<br>";
@@ -1241,8 +1152,8 @@ To prevent standard smartphones from destroying their battery life in continuous
 
 **Implementation Guideline**: These timers must be pushed via the MNO's OTA Carrier Config file to ensure standard handset behavior is controlled autonomously.`;
                 }
-                if (q.includes("carrier") || q.includes("xml")) {
-                    return `### Android Carrier Config XML Architecture
+                if (q.includes("carrier") || q.includes("xml") || q.includes("bundle")) {
+                    return `### Android Carrier Config & Apple Carrier Bundle XML Architecture
 For standard Android devices (Android 15+), the framework uses key telephony XML hooks. Here is a reference template used in Tier-1 MNO profiles:
 
 \`\`\`xml
@@ -1273,9 +1184,16 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
 
             getRealTimeNews: () => {
                 return [
-                    { title: "AST SpaceMobile secures milestone FCC spectrum approval for commercial US operations", source: "Fierce Network", url: "https://investors.ast-science.com/press-releases", date: "Last 24 Hours", excerpt: "The FCC has approved the dynamic spectrum sharing lease, allowing AST to broadcast terrestrial frequencies to standard mobile terminals in major blind zones.", category: "official" },
-                    { title: "Qualcomm and MediaTek sampling next-gen Rel-18 NTN basebands with advanced battery saving features", source: "TechCrunch", url: "https://techcrunch.com/", date: "2 days ago", excerpt: "Silicon vendors are testing the first unified modems that support both standardized 3GPP Rel-18 D2C and classic terrestrial cellular bands concurrently.", category: "techmedia" },
-                    { title: "GSMA updates TS.43 standard to officially incorporate satellite entitlement verification parameters", source: "GSMA Foundry", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: "Last week", excerpt: "The revised standards define how an MNO entitlement server returns explicit XML instructions to block or authorize device satellite mode toggles.", category: "standards" }
+                    { title: "AST SpaceMobile secures landmark FCC spectrum lease for commercial Direct-to-Cell in US", source: "Fierce Network", url: "https://investors.ast-science.com/press-releases", date: "May 2026", excerpt: "The FCC has approved AST's spectrum sharing requests with AT&T and Verizon. This allows the constellation to dynamically lease terrestrial Band 5/8 channels to broadcast 4G/5G signals directly inside terrestrial cell dead-zones.", category: "official" },
+                    { title: "SpaceX successfully orbits 22 more Direct-to-Cell Satellites to beef up global coverage", source: "SpaceNews", url: "https://starlink.com/business/direct-to-cell", date: "May 2026", excerpt: "With standard eNodeB orbital nodes growing weekly, T-Mobile and international partners are on track to support live commercial text alerts in late Q2 2026.", category: "rollout" },
+                    { title: "Qualcomm unveils R19-capable X105 5G Modem with on-device Agentic AI at MWC 2026", source: "Fierce Network", url: "https://www.qualcomm.com/modems/products", date: "May 2026", excerpt: "Leading the path to 6G development and testing, Qualcomm's fifth-generation AI-powered modem integrates dual-band NR-NTN support alongside quad-band GNSS for extreme position accuracy.", category: "techmedia" },
+                    { title: "GSMA publishes TS.43 v4.0 defining standard HTTPS parameters for satellite service entitlement servers", source: "GSMA Foundry", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: "May 2026", excerpt: "A critical step for MNO billing security, standardizing how smartphones query entitlement servers to activate or restrict their satellite RF basebands.", category: "standards" },
+                    { title: "MediaTek successfully achieves world's first Rel-19 5G-Advanced NR-NTN connection over Eutelsat LEO", source: "Light Reading", url: "https://www.mediatek.com/tek-talk-blogs/mediatek-demonstrates-live-nr-ntn-leo-satellite-connection-at-wireless-japan-2026", date: "May 2026", excerpt: "Successful trial utilizing Release 19 configurations of 50MHz bandwidth over Ku-band, paving the way for low-latency cellular broadband via LEO orbits.", category: "standards" },
+                    { title: "Apple expands Globalstar partnership with multi-million dollar satellite launch financing", source: "TechCrunch", url: "https://techcrunch.com/", date: "May 2026", excerpt: "The funding guarantees continuous L-band and S-band coverage enhancements, preparing Apple's platform for broader non-emergency D2C features.", category: "official" },
+                    { title: "MediaTek Dimensity Auto MT2739 debuts as world's first automotive chip supporting Rel-18 NTN video calls", source: "Mobile World Live", url: "https://www.mediatek.com/press-room/tag/technology", date: "May 2026", excerpt: "Includes built-in MediaTek Modem AI (MMAI) technology to drastically reduce stuttering by 30% in high-Doppler handover scenarios like mountain driving.", category: "techmedia" },
+                    { title: "FCC updates orbital debris regulations to accommodate dense Direct-to-Cell satellite constellations", source: "SatNews", url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/", date: "May 2026", excerpt: "New guidelines require rapid orbital de-pointing capability for active basestations in low-Earth orbit to maintain safe orbital density margins.", category: "standards" },
+                    { title: "Lynk Global initiates maritime Direct-to-Device SMS routing trials with regional South Pacific carriers", source: "Via Satellite", url: "https://lynk.world/how-we-do-it/", date: "May 2026", excerpt: "Unmodified handsets on commercial vessels successfully established voice and SMS channels to orbiting satellites in absolute zero terrestrial cell zones.", category: "rollout" },
+                    { title: "MNO strategy report highlights billing challenges for dynamic satellite-to-phone data roaming traffic", source: "Fierce Network", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: "May 2026", excerpt: "Telecom innovation teams warn that standard clearinghouses must adapt billing records (TAP/RAP) to handle multi-SNO roaming routes seamlessly.", category: "standards" }
                 ];
             }
         };
@@ -1295,7 +1213,7 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
 
             const queryPrompt = `
                 Perform a live google search for the most recent news on Non-Terrestrial Networks (NTN), satellite Direct-to-Cell (D2C), and mobile operators (MNO) partnerships from this current month (May 2026).
-                Collect up to 6 highly relevant, real articles from sources like GSMA Foundry, TechCrunch, Fierce Network, SpaceNews, Light Reading, or major satellite provider press releases.
+                Collect up to 10 highly relevant, real articles from sources like GSMA Foundry, TechCrunch, Fierce Network, SpaceNews, Light Reading, or major satellite provider press releases.
                 
                 Format the response STRICTLY as a JSON array matching the specified schema.
             `;
@@ -1340,7 +1258,7 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                     renderNews();
                     updateJSONConsole();
 
-                    statusIndicator.innerText = 'Live Feed Synced Successfully';
+                    statusIndicator.innerText = 'Live Feed Synced Successfully (10 items)';
                     statusIndicator.className = 'font-bold text-brand-500';
                 }
             } catch (error) {
@@ -1362,7 +1280,7 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                 renderNews();
                 updateJSONConsole();
 
-                statusIndicator.innerText = 'Live Feed (Cached Policy Core Activated)';
+                statusIndicator.innerText = 'Live Feed (Cached Policy Core Activated - 10 items)';
                 statusIndicator.className = 'font-bold text-emerald-500';
             } finally {
                 refreshIcon.classList.remove('animate-spin');
@@ -1715,9 +1633,25 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
 
             filteredNews.forEach(item => {
                 const card = document.createElement('div');
-                card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4";
                 
-                // Determinar el color del tag de categoría
+                // Determinar si es noticia de AST SpaceMobile para destacarla
+                const isAST = item.title.toLowerCase().includes('ast') || 
+                              item.excerpt.toLowerCase().includes('ast') || 
+                              item.source.toLowerCase().includes('ast');
+
+                let borderStyle = "border-zinc-200 dark:border-zinc-800";
+                let bgStyle = "bg-white dark:bg-zinc-900";
+                let astBadge = "";
+
+                if (isAST) {
+                    borderStyle = "border-brand-500/60 dark:border-brand-500/60 ring-1 ring-brand-500/20";
+                    bgStyle = "bg-brand-50/50 dark:bg-brand-950/20";
+                    astBadge = `<span class="px-2 py-0.5 rounded-full font-extrabold bg-brand-500 text-white text-[9px] animate-pulse uppercase tracking-wider flex items-center gap-1"><i data-lucide="sparkles" class="w-2.5 h-2.5"></i> AST Highlighted</span>`;
+                }
+
+                card.className = `${bgStyle} border ${borderStyle} rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4`;
+                
+                // Determinar el color del tag de categoría estándar
                 let tagColor = "bg-blue-500/10 text-blue-500 border-blue-500/20";
                 if (item.category === 'official') tagColor = "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
                 if (item.category === 'standards') tagColor = "bg-purple-500/10 text-purple-500 border-purple-500/20";
@@ -1727,7 +1661,10 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                     <div class="space-y-2">
                         <div class="flex justify-between items-center text-[10px]">
                             <span class="px-2 py-0.5 rounded-full font-semibold border ${tagColor}">${item.badge || item.category}</span>
-                            <span class="text-zinc-400 font-mono">${item.date}</span>
+                            <div class="flex items-center space-x-1.5">
+                                ${astBadge}
+                                <span class="text-zinc-400 font-mono">${item.date}</span>
+                            </div>
                         </div>
                         <h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50 leading-snug hover:text-brand-500 transition-colors">
                             <a href="${item.url}" target="_blank">${item.title}</a>
@@ -1965,42 +1902,6 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             lucide.createIcons();
         }
 
-        // Evaluador de Dispositivos (Scorecard)
-        function calculateScore() {
-            let score = 0;
-            const q1 = document.getElementById('q-spectrum').checked;
-            const q2 = document.getElementById('q-carrier-config').checked;
-            const q3 = document.getElementById('q-entitlements').checked;
-            const q4 = document.getElementById('q-plmn').checked;
-
-            if (q1) score += 25;
-            if (q2) score += 25;
-            if (q3) score += 25;
-            if (q4) score += 25;
-
-            // Actualizar visualizaciones del Score
-            document.getElementById('score-val').innerText = `${score}%`;
-            document.getElementById('score-bar').style.width = `${score}%`;
-
-            const verdict = document.getElementById('evaluation-verdict');
-            if (score === 0) {
-                verdict.innerText = "No parameters checked. Start checking the parameters above to run real-time evaluation.";
-                verdict.className = "italic font-medium text-amber-500 text-xs";
-            } else if (score === 25) {
-                verdict.innerText = "Basic compliance. Only hardware bands identified. Missing critical carrier configurations & security logic.";
-                verdict.className = "italic font-medium text-rose-500 text-xs";
-            } else if (score === 50) {
-                verdict.innerText = "Moderate compliance. Device can search physical frequencies, but lacks entitlement validation for MNO subscription gating.";
-                verdict.className = "italic font-medium text-amber-500 text-xs";
-            } else if (score === 75) {
-                verdict.innerText = "High compliance. Strong software architecture, but missing optimized NAS timer scanning configurations (danger of battery drain).";
-                verdict.className = "italic font-medium text-blue-500 text-xs";
-            } else if (score === 100) {
-                verdict.innerText = "Full compliant. Device contains complete 3GPP and GSMA baseline hooks. Ready for deployment on our networks.";
-                verdict.className = "italic font-medium text-brand-500 text-xs";
-            }
-        }
-
         // Gestión de Especificaciones 3GPP (Modal)
         function openAddSpecModal() {
             document.getElementById('add-spec-modal').classList.remove('hidden');
@@ -2042,7 +1943,6 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             document.getElementById('modal-spec-topic').value = '';
         }
 
-        // Eliminar una especificación
         function deleteSpec(id) {
             NTN_DATA.standards = NTN_DATA.standards.filter(s => s.id !== id);
             renderStandards();
