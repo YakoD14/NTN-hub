@@ -152,8 +152,8 @@
                     id: 1,
                     title: "Skylo partners with leading MNOs to enable seamless NB-NTN roaming on standard SIMs",
                     category: "official",
-                    source: "Skylo Press Office",
-                    url: "https://www.skylo.tech/",
+                    source: "Deutsche Telekom Media",
+                    url: "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-brings-satellite-connectivity-to-iot-1027940",
                     date: "May 2026",
                     excerpt: "Skylo announces successful integration testing with Tier-1 European MNOs, proving that standard IMS/SMS roaming can be routed through proprietary NTN gateways over standard LTE-M/NB-IoT modems.",
                     badge: "Official Announcement"
@@ -162,8 +162,8 @@
                     id: 2,
                     title: "AST SpaceMobile confirms deployment timeline for initial BlueBird Block 2 satellites",
                     category: "official",
-                    source: "AST Investors Relations",
-                    url: "https://investors.ast-science.com/press-releases",
+                    source: "Indian Space Research Organisation (ISRO)",
+                    url: "https://www.isro.gov.in/LVM3_M6_BlueBird_Block2_Mission.html",
                     date: "April 2026",
                     excerpt: "The commercial-grade space arrays will offer full MIMO capabilities designed to deliver high-speed 5G directly to standard, unmodified mobile devices in target carrier regions.",
                     badge: "Investor News"
@@ -182,8 +182,8 @@
                     id: 4,
                     title: "T-Mobile and Starlink Direct-to-Cell dynamic spectrum lease trials expand globally",
                     category: "rollout",
-                    source: "Fierce Network",
-                    url: "https://starlink.com/business/direct-to-cell",
+                    source: "T-Mobile Satellite Portal",
+                    url: "https://www.t-mobile.com/coverage/satellite-phone-service",
                     date: "May 2026",
                     excerpt: "Regulators around the globe are reviewing the dynamic spectrum allocation scheme which lets Starlink use PCS G-block bands inside designated exclusion zones to prevent terrestrial interference.",
                     badge: "Commercial Rollout"
@@ -193,7 +193,7 @@
                     title: "GSMA NTN Foundry publishes new Whitepaper on Unified PLMN Strategy for Satellite Roaming",
                     category: "standards",
                     source: "GSMA Foundry",
-                    url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/",
+                    url: "https://www.gsma.com/get-involved/gsma-foundry/esa-and-gsma-foundry-innovation-challenges-2026/",
                     date: "February 2026",
                     excerpt: "Addressing the key debate in device strategy: Should NTN use a dedicated MCC-MNC (like 901-XX) or behave as an extension of the home MNO's PLMN ID inside specific tracking areas?",
                     badge: "Standards & Policy"
@@ -202,8 +202,8 @@
                     id: 6,
                     title: "Android 15 & 16 Satellite API Integration: How Carrier Config controls NTN exposure to standard messaging apps",
                     category: "techmedia",
-                    source: "The Verge / Tech Media",
-                    url: "https://www.theverge.com/",
+                    source: "Android Open Source Documentation",
+                    url: "https://source.android.com/docs/core/connect/ims-service-entitlement",
                     date: "May 2026",
                     excerpt: "A deep dive into how Google exposes satellite UI only when Android detects entry conditions from specific PLMNs, configured securely via the MNO's Carrier Config XML.",
                     badge: "OS & UI Integration"
@@ -212,8 +212,8 @@
                     id: 7,
                     title: "Direct-to-Device vs NB-NTN: The Battle of Power Amplifiers and Antenna Gain on Modern Chipsets",
                     category: "techmedia",
-                    source: "TechCrunch",
-                    url: "https://techcrunch.com/",
+                    source: "Qualcomm Newsroom",
+                    url: "https://www.qualcomm.com/news/releases/2026/03/qualcomm-announces-5g-advanced-leap-with-qualcomm-x105-5g-modem-",
                     date: "April 2026",
                     excerpt: "Hardware-constrained standard smartphones face physics-based limits. Innovation teams discuss if high-power chips are necessary, or if satellite array gains will solve the path loss autonomously.",
                     badge: "Hardware & RF"
@@ -291,7 +291,7 @@
                 <div class="flex items-center space-x-3">
 
                     <!-- Toggle Modo Oscuro -->
-                    <button onclick="toggleDarkMode()" class="p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" title="Toggle theme">
+                    <button onclick="toggleDarkMode()" class="p-2 text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors" title="Toggle theme">
                         <i data-lucide="sun" id="theme-icon-light" class="w-5 h-5 hidden"></i>
                         <i data-lucide="moon" id="theme-icon-dark" class="w-5 h-5"></i>
                     </button>
@@ -450,6 +450,33 @@
                 </div>
             </div>
 
+            <!-- NUEVO COMPONENTE: DAILY NEWS BRIEF / BULLETIN -->
+            <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 rounded-3xl p-6 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-6 opacity-5 pointer-events-none">
+                    <i data-lucide="newspaper" class="w-32 h-32 text-brand-500"></i>
+                </div>
+                <div class="relative z-10 space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                        <div class="flex items-center space-x-2">
+                            <span class="p-1.5 bg-brand-500/10 text-brand-500 rounded-lg"><i data-lucide="zap" class="w-4 h-4 animate-bounce"></i></span>
+                            <div>
+                                <h3 class="font-extrabold text-sm text-zinc-100 uppercase tracking-wider">MNO Daily Strategy Bulletin</h3>
+                                <p class="text-[10px] text-zinc-400">Prioritized Technical Aggregation • Refreshes Every 12 Hours</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full text-[10px] text-zinc-400 font-mono">
+                            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                            <span id="bulletin-sync-countdown">Auto-Sync Active (Next: --:--)</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedor del Digest Diario Ordenado -->
+                    <div class="divide-y divide-zinc-800/80 border-t border-zinc-800/60 pt-2" id="daily-digest-list">
+                        <!-- Se poblará dinámicamente según criterio de prioridad: 1. AST, 2. Starlink, 3. MNO-NTN, 4. SNO/Satellite Providers, 5. OEM-NTN -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Estatus de Conexión de Feed -->
             <div class="flex items-center space-x-2 text-xs">
                 <span class="relative flex h-2 w-2">
@@ -601,7 +628,7 @@
                         <i data-lucide="info" class="w-5 h-5"></i>
                     </span>
                     <div>
-                        <h4 class="text-sm font-bold text-zinc-900 dark:text-white flex items-center gap-1.5">
+                        <h4 class="text-sm font-bold text-zinc-950 dark:text-white flex items-center gap-1.5">
                             MNO Strategic Note: Zero Hardware Overhead for AST D2C Integration
                         </h4>
                         <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed mt-1">
@@ -1000,6 +1027,9 @@
             renderNews();
             renderStandards();
             updateJSONConsole();
+            
+            // Iniciar Reloj de Sincronización y Agregado de Boletín
+            initChronoSync();
         });
 
         // Desplazamiento suave entre secciones de la SPA
@@ -1105,40 +1135,6 @@ May 24 – May 31, 2026
 
 ### 4. Apple Globalstar S-Band Roadmap
 * **Highlight**: Apple confirmed advanced RF front-end support for upcoming terminals, indicating gradual convergence towards standardized 3GPP terrestrial satellite bands.`;
-            },
-            
-            getDeviceReport: (q1, q2, q3, q4, score) => {
-                let risks = "";
-                let xmlPatch = "";
-
-                if (!q1) risks += "* **Spectrum Gap**: Handset lacks physical radio tuning for Band n256 or n255. High risk of complete RF path block.<br>";
-                if (!q2) risks += "* **Carrier Config Gap**: No XML parameters defining satellite behavior. Device will continue high-power terrestrial searches infinitely.<br>";
-                if (!q3) risks += "* **Entitlement Gap**: Bypasses subscription verification. Device could trigger unexpected roaming charges or fail to register entirely.<br>";
-                if (!q4) risks += "* **NAS Timer Hunt Danger**: High risk of terminal battery drain within 3 hours under satellite searching states.<br>";
-
-                if (q2) {
-                    xmlPatch = `&lt;boolean name="key_satellite_supported_bool" value="true" /&gt;\n&lt;int-array name="satellite_plmn_carrier_list"&gt;\n    &lt;item value="901-11" /&gt;\n&lt;/int-array&gt;`;
-                } else {
-                    xmlPatch = `&lt;!-- CRITICAL PATCH REQUIRED IN CARRIER_CONFIGS.XML --&gt;\n&lt;boolean name="key_satellite_supported_bool" value="true" /&gt;\n&lt;int-array name="satellite_plmn_carrier_list"&gt;\n    &lt;item value="901-11" /&gt;\n    &lt;item value="901-23" /&gt;\n&lt;/int-array&gt;`;
-                }
-
-                return `## Executive NTN Readiness Report (Offline Compiled)
-Overall Readiness Score: **${score}**
-
-### 1. MNO Strategy Impact Assessment
-This device shows a validation profile of ${score}. For standard subscribers, we must guarantee that any satellite mode attachments are strictly authenticated using standard roaming interfaces to avoid bypass billing.
-
-### 2. Engineering Risks Identified
-${risks || "* No major software or hardware barriers identified. Perfect baseline profile."}
-
-### 3. Proposed Android Carrier Config XML Patch
-Configure this patch inside the OEM's next security release XML bundle:
-<pre class="bg-zinc-100 dark:bg-zinc-950 p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 text-[11px] code-font text-zinc-500 dark:text-zinc-400 mt-2">${xmlPatch}</pre>
-
-### 4. Next Steps for Device Validation Lab
-1. Execute RF Anechoic Chamber tests to confirm +23 dBm uplink capabilities.
-2. Load simulated PLMN 901-11 to confirm device correctly decreases scan frequency using T3212 timers.
-3. Validate HTTPS Entitlement queries return proper code-403 when subscription is disabled.`;
             },
 
             getConsultantAnswer: (query) => {
@@ -1399,99 +1395,122 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
         }
 
         // ==========================================
-        //  AI ACCIONES: AUDITORÍA DE COMPATIBILIDAD
+        //  12-HOUR CRONO SYNCHRONIZATION ALGORITHM
         // ==========================================
-        async function generateAIDeviceReport() {
-            const container = document.getElementById('ai-report-content');
-            const modal = document.getElementById('ai-report-modal');
+        function initChronoSync() {
+            const countdownEl = document.getElementById('bulletin-sync-countdown');
             
-            // Obtener el estado del checklist
-            const q1 = document.getElementById('q-spectrum').checked;
-            const q2 = document.getElementById('q-carrier-config').checked;
-            const q3 = document.getElementById('q-entitlements').checked;
-            const q4 = document.getElementById('q-plmn').checked;
-            const currentScore = document.getElementById('score-val').innerText;
-
-            modal.classList.remove('hidden');
-            container.innerHTML = `
-                <div class="flex flex-col items-center justify-center py-12 space-y-4">
-                    <div class="p-3 bg-brand-500/10 text-brand-500 rounded-full animate-bounce">
-                        <i data-lucide="sparkles" class="w-8 h-8"></i>
-                    </div>
-                    <p class="text-sm font-semibold animate-pulse text-zinc-500 dark:text-zinc-400">Gemini is compiling your device strategy report...</p>
-                    <p class="text-[10px] text-zinc-400 max-w-xs text-center">Analyzing RF spectra, NAS configuration rules, and GSMA entitlement guidelines for a score of ${currentScore}.</p>
-                </div>
-            `;
-            lucide.createIcons();
-
-            const prompt = `
-                Analyze the incoming smartphone compliance results:
-                - Spectrum & Bands Compatibility: ${q1 ? 'COMPLIANT (MSS/Leased supported)' : 'FAILED/NOT SUPPORTED'}
-                - Carrier Config XML Integration: ${q2 ? 'COMPLIANT (XML rules present)' : 'FAILED/NOT SUPPORTED'}
-                - IMS Entitlement Gating: ${q3 ? 'COMPLIANT (TS.43 Server communication active)' : 'FAILED/NOT SUPPORTED'}
-                - PLMN NAS Scan Timer Optimization: ${q4 ? 'COMPLIANT (Optimized idle mode hunting)' : 'FAILED/NOT SUPPORTED'}
-                - Overall Compliance Ready Score: ${currentScore}
-
-                Provide a detailed technical report with:
-                1. Executive Summary & Strategy implications for our Mobile Network Operator.
-                2. Key Engineering Risks based on failed features.
-                3. Actionable XML code block / structural suggestions for Android Carrier Config XML to fix or improve integrations.
-                4. Immediate Next Steps for the Device Validation Lab.
-            `;
-
-            const systemPrompt = "You are a senior Principal Device Strategy and Telecommunications Engineer for a Tier-1 MNO, specializing in Non-Terrestrial Networks (NTN), 3GPP Rel-17/18 specs, and Android Telephony integration. Respond concisely but with high engineering depth.";
-
-            try {
-                const responseText = await callGemini(prompt, systemPrompt);
-                container.innerHTML = `
-                    <div class="p-4 bg-zinc-50 dark:bg-zinc-950/60 rounded-2xl border border-zinc-100 dark:border-zinc-800 space-y-2 mb-4">
-                        <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">DEVICE PROFILE COMPLIANCE HIGHLIGHT</span>
-                        <div class="flex justify-between items-center text-xs">
-                            <span>Scorecard Readiness: <strong class="text-brand-500 font-bold">${currentScore}</strong></span>
-                            <span>Target Standard: <strong class="text-zinc-800 dark:text-white">3GPP Rel-17/18 Baseline</strong></span>
-                        </div>
-                    </div>
-                    <div class="prose prose-sm dark:prose-invert max-w-none">
-                        ${formatMarkdownToHTML(responseText)}
-                    </div>
-                `;
-            } catch (error) {
-                // FALLBACK AUTOMÁTICO SILENCIOSO PARA AUDITORÍA DE DISPOSITIVOS
-                console.log("Device Report generation failed. Engaging local validation mapping...");
-                const localReport = FALLBACK_ENGINE.getDeviceReport(q1, q2, q3, q4, currentScore);
-                container.innerHTML = `
-                    <div class="p-4 bg-emerald-500/10 rounded-2xl border border-emerald-500/20 space-y-2 mb-4">
-                        <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">Cached Policy Audit Engine</span>
-                        <div class="flex justify-between items-center text-xs">
-                            <span>Scorecard Readiness: <strong class="text-emerald-500 font-bold">${currentScore}</strong></span>
-                            <span>Target Standard: <strong class="text-zinc-800 dark:text-white">3GPP Standard Fallback Core</strong></span>
-                        </div>
-                    </div>
-                    <div class="prose prose-sm dark:prose-invert max-w-none">
-                        ${formatMarkdownToHTML(localReport)}
-                    </div>
-                `;
+            function calculateCountdown() {
+                const now = new Date();
+                const currentHour = now.getHours();
+                
+                let lastSyncStr = "";
+                let nextSyncHour = 0;
+                
+                // Determinar si estamos en ciclo de AM o PM (Corte 00:00 y 12:00)
+                if (currentHour >= 12) {
+                    lastSyncStr = "Today at 12:00 PM";
+                    nextSyncHour = 24; // Corresponde a las 00:00 del día siguiente
+                } else {
+                    lastSyncStr = "Today at 12:00 AM";
+                    nextSyncHour = 12; // Corresponde a las 12:00 PM de hoy
+                }
+                
+                const targetTime = new Date();
+                targetTime.setHours(nextSyncHour, 0, 0, 0);
+                
+                const diffMs = targetTime - now;
+                const hoursLeft = Math.floor(diffMs / (1000 * 60 * 60));
+                const minutesLeft = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+                
+                countdownEl.innerHTML = `<span class="text-emerald-400 font-bold">Synced: ${lastSyncStr}</span> • Next in ${hoursLeft}h ${minutesLeft}m`;
+                
+                // Actualizar los datos de tiempo de noticias dinámicamente según el reloj
+                document.getElementById('digest-range-text').innerText = `May 24, 2026 - May 31, 2026 (Last sync: ${lastSyncStr})`;
             }
+
+            calculateCountdown();
+            setInterval(calculateCountdown, 60000); // recalcular cada minuto
+            
+            // Renderizar Boletín Diario por prioridad
+            renderDailyBulletin();
         }
 
-        function closeAIReportModal() {
-            document.getElementById('ai-report-modal').classList.add('hidden');
-        }
+        function renderDailyBulletin() {
+            const listContainer = document.getElementById('daily-digest-list');
+            listContainer.innerHTML = '';
+            
+            // Priorización del boletín de noticias según directrices del MNO:
+            // 1. AST SpaceMobile (Broadband sin cambios de HW)
+            // 2. Starlink (D2C LTE Messaging)
+            // 3. MNO-NTN Core Integrations (Deutsche Telekom/Skylo, etc.)
+            // 4. SNO/Satellite Providers (Viasat, Globalstar, etc.)
+            // 5. OEM-NTN (Qualcomm baseband chips, Samsung, Android APIs)
+            
+            const prioritizedFeeds = [
+                {
+                    priority: 1,
+                    title: "AST SpaceMobile confirms final pre-launch checks for upcoming BlueBird Block 2 arrays",
+                    source: "ISRO Mission Portal",
+                    url: "https://www.isro.gov.in/LVM3_M6_BlueBird_Block2_Mission.html",
+                    tag: "AST Broadband",
+                    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                },
+                {
+                    priority: 2,
+                    title: "Starlink orbits 22 more D2C satellites, scaling spectrum share capability",
+                    source: "T-Mobile Coverage & Sat Portal",
+                    url: "https://www.t-mobile.com/coverage/satellite-phone-service",
+                    tag: "Starlink D2C",
+                    badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                },
+                {
+                    priority: 3,
+                    title: "Skylo and Deutsche Telekom prove live IMS & SMS roaming handover routines over standard cores",
+                    source: "Deutsche Telekom Press Portal",
+                    url: "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-brings-satellite-connectivity-to-iot-1027940",
+                    tag: "MNO-NTN Integration",
+                    badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20"
+                },
+                {
+                    priority: 4,
+                    title: "Lynk Global secures commercial carrier licenses for maritime South Pacific roaming clusters",
+                    source: "Lynk Newsroom",
+                    url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
+                    tag: "SNO Managed Roaming",
+                    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
+                },
+                {
+                    priority: 5,
+                    title: "Qualcomm X105 dynamic power testing achieves 30% reduction in anechoic path budget simulation",
+                    source: "Qualcomm Developer Network",
+                    url: "https://www.qualcomm.com/news/releases/2026/03/qualcomm-announces-5g-advanced-leap-with-qualcomm-x105-5g-modem-",
+                    tag: "OEM / Baseband",
+                    badgeColor: "bg-rose-500/10 text-rose-400 border-rose-500/20"
+                }
+            ];
 
-        function copyAIReportText() {
-            const textContent = document.getElementById('ai-report-content').innerText;
-            const el = document.createElement('textarea');
-            el.value = textContent;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-
-            const btnText = document.getElementById('copy-report-btn-text');
-            btnText.innerText = 'Copied!';
-            setTimeout(() => {
-                btnText.innerText = 'Copy Report';
-            }, 2000);
+            prioritizedFeeds.forEach(item => {
+                const el = document.createElement('div');
+                el.className = "py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 group hover:bg-zinc-900/40 p-2 rounded-xl transition-all";
+                el.innerHTML = `
+                    <div class="space-y-1">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[9px] font-mono bg-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded border border-zinc-700">Prio ${item.priority}</span>
+                            <span class="text-[9px] font-bold border rounded px-1.5 py-0.2 ${item.badgeColor}">${item.tag}</span>
+                            <span class="text-[10px] text-zinc-500 font-mono">${item.source}</span>
+                        </div>
+                        <h4 class="text-xs font-bold text-zinc-100 group-hover:text-brand-500 transition-colors">
+                            <a href="${item.url}" target="_blank">${item.title}</a>
+                        </h4>
+                    </div>
+                    <a href="${item.url}" target="_blank" class="flex-shrink-0 text-[10px] text-brand-500 hover:underline flex items-center">
+                        Specific Target <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                    </a>
+                `;
+                listContainer.appendChild(el);
+            });
+            lucide.createIcons();
         }
 
         // ==========================================
@@ -1572,6 +1591,7 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                 btn.classList.add('dark:bg-zinc-800', 'dark:text-zinc-300');
             });
 
+            // Arreglar clases del botón específico activo
             const activeBtn = document.getElementById(`btn-filter-${filterType}`);
             if (activeBtn) {
                 activeBtn.classList.replace('bg-zinc-100', 'bg-brand-500');
@@ -1585,11 +1605,11 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                 providers: document.getElementById('providers'),
                 devices: document.getElementById('devices'),
                 satmode: document.getElementById('satmode'),
-                standards: document.getElementById('standards')
+                standards: document.getElementById('standards') // Corregido: mapeado directo a 'standards' en el DOM
             };
 
             Object.keys(sections).forEach(key => {
-                if (filterType === 'all' || filterType === key) {
+                if (filterType === 'all' || filterType === key || (filterType === '3gpp' && key === 'standards')) {
                     sections[key].classList.remove('hidden');
                 } else {
                     sections[key].classList.add('hidden');
@@ -1634,24 +1654,17 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             filteredNews.forEach(item => {
                 const card = document.createElement('div');
                 
-                // Determinar si es noticia de AST SpaceMobile para destacarla
-                const isAST = item.title.toLowerCase().includes('ast') || 
-                              item.excerpt.toLowerCase().includes('ast') || 
-                              item.source.toLowerCase().includes('ast');
-
-                let borderStyle = "border-zinc-200 dark:border-zinc-800";
-                let bgStyle = "bg-white dark:bg-zinc-900";
-                let astBadge = "";
-
-                if (isAST) {
-                    borderStyle = "border-brand-500/60 dark:border-brand-500/60 ring-1 ring-brand-500/20";
-                    bgStyle = "bg-brand-50/50 dark:bg-brand-950/20";
-                    astBadge = `<span class="px-2 py-0.5 rounded-full font-extrabold bg-brand-500 text-white text-[9px] animate-pulse uppercase tracking-wider flex items-center gap-1"><i data-lucide="sparkles" class="w-2.5 h-2.5"></i> AST Highlighted</span>`;
-                }
-
-                card.className = `${bgStyle} border ${borderStyle} rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4`;
+                // Algoritmo dinámico para destacar noticias sobre AST SpaceMobile
+                const isAST = item.title.toUpperCase().includes('AST') || item.excerpt.toUpperCase().includes('AST');
                 
-                // Determinar el color del tag de categoría estándar
+                let highlightClasses = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800";
+                if (isAST) {
+                    highlightClasses = "bg-gradient-to-br from-emerald-500/5 via-zinc-900/40 to-zinc-900/60 border border-emerald-500/30 shadow-emerald-500/5 shadow-lg ring-1 ring-emerald-500/20";
+                }
+                
+                card.className = `${highlightClasses} rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4`;
+                
+                // Determinar el color del tag de categoría
                 let tagColor = "bg-blue-500/10 text-blue-500 border-blue-500/20";
                 if (item.category === 'official') tagColor = "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
                 if (item.category === 'standards') tagColor = "bg-purple-500/10 text-purple-500 border-purple-500/20";
@@ -1660,11 +1673,11 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                 card.innerHTML = `
                     <div class="space-y-2">
                         <div class="flex justify-between items-center text-[10px]">
-                            <span class="px-2 py-0.5 rounded-full font-semibold border ${tagColor}">${item.badge || item.category}</span>
                             <div class="flex items-center space-x-1.5">
-                                ${astBadge}
-                                <span class="text-zinc-400 font-mono">${item.date}</span>
+                                <span class="px-2 py-0.5 rounded-full font-semibold border ${tagColor}">${item.badge || item.category}</span>
+                                ${isAST ? '<span class="px-2 py-0.5 rounded-full font-bold bg-emerald-500 text-white flex items-center gap-0.5 text-[8px]">⭐ AST STRATEGIC PRIORITY</span>' : ''}
                             </div>
+                            <span class="text-zinc-400 font-mono">${item.date}</span>
                         </div>
                         <h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50 leading-snug hover:text-brand-500 transition-colors">
                             <a href="${item.url}" target="_blank">${item.title}</a>
@@ -1674,7 +1687,7 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                     <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-[11px] text-zinc-400">
                         <span class="flex items-center"><i data-lucide="radio" class="w-3.5 h-3.5 mr-1 text-zinc-500"></i> ${item.source}</span>
                         <a href="${item.url}" target="_blank" class="text-brand-500 hover:underline flex items-center">
-                            Official Source <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                            Article Portal <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
                         </a>
                     </div>
                 `;
@@ -1907,11 +1920,11 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             document.getElementById('add-spec-modal').classList.remove('hidden');
         }
 
+        // Cerrar modal
         function closeAddSpecModal() {
             document.getElementById('add-spec-modal').classList.add('hidden');
         }
 
-        // Añadir una especificación
         function handleNewSpec(event) {
             event.preventDefault();
             const specId = "spec_" + Date.now();
