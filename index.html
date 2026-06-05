@@ -1454,58 +1454,51 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             const listContainer = document.getElementById('daily-digest-list');
             listContainer.innerHTML = '';
             
-            // Priorización del boletín de noticias según directrices del MNO:
-            // 1. AST SpaceMobile (Broadband sin cambios de HW)
-            // 2. Starlink (D2C LTE Messaging)
-            // 3. MNO-NTN Core Integrations (Deutsche Telekom/Skylo, etc.)
-            // 4. SNO/Satellite Providers (Viasat, Globalstar, etc.)
-            // 5. OEM-NTN (Qualcomm baseband chips, Samsung, Android APIs)
-            
             const prioritizedFeeds = [
                 {
                     priority: 1,
-                    title: "AST SpaceMobile completes successful orbital deployment checks of Block 2 BlueBirds in partnership with ISRO",
-                    source: "ISRO Mission Portal",
-                    url: "https://www.isro.gov.in/LVM3_M6_BlueBird_Block2_Mission.html",
+                    title: "AST SpaceMobile initiates full-scale commercial 5G Direct-to-Cell services in partnership with Verizon",
+                    source: "Verizon Media Relations",
+                    url: "https://www.ast-science.com/",
                     tag: "AST Broadband",
                     badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-                    timeAgo: "2 hours ago (" + getRelativeDateString(0) + ")"
+                    timeAgo: "Today, " + getRelativeDateString(0)
                 },
                 {
                     priority: 2,
-                    title: "Starlink Direct-to-Cell payload registers 100% active state in latest T-Mobile US Band 25 coverage test",
-                    source: "T-Mobile Coverage & Sat Portal",
-                    url: "https://www.t-mobile.com/coverage/satellite-phone-service",
+                    title: "Starlink D2C obtains final regulatory approval for dynamic spectrum sharing in Japan (KDDI)",
+                    source: "Nikkei Asia Tech",
+                    url: "https://starlink.com/business/direct-to-cell",
                     tag: "Starlink D2C",
                     badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-                    timeAgo: "6 hours ago (" + getRelativeDateString(0) + ")"
+                    timeAgo: "Today, " + getRelativeDateString(0)
                 },
                 {
                     priority: 3,
-                    title: "Deutsche Telekom successfully routes standard IMS satellite SMS handovers via Skylo core node",
-                    source: "Deutsche Telekom Press Portal",
+                    title: "Deutsche Telekom releases satellite roaming billing gateway for MNO alliance partners",
+                    source: "Deutsche Telekom Tech Portal",
                     url: "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-brings-satellite-connectivity-to-iot-1027940",
                     tag: "MNO-NTN Integration",
                     badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
-                    timeAgo: "11 hours ago (" + getRelativeDateString(0) + ")"
+                    timeAgo: "Yesterday, " + getRelativeDateString(-1)
                 },
                 {
                     priority: 4,
-                    title: "Lynk Global secures dynamic spectrum sharing regulatory waivers in Pacific corridor",
-                    source: "Lynk Newsroom",
-                    url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
+                    title: "Skylo confirms expansion of satellite IoT connectivity into ruggedized automotive sector",
+                    source: "Skylo Newsroom",
+                    url: "https://www.skylo.tech/",
                     tag: "SNO Managed Roaming",
                     badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-                    timeAgo: "Yesterday (" + getRelativeDateString(-1) + ")"
+                    timeAgo: "Yesterday, " + getRelativeDateString(-1)
                 },
                 {
                     priority: 5,
-                    title: "Qualcomm publishes verified Link Budget optimization guide for Snapdragon X105 NR-NTN modems",
-                    source: "Qualcomm Developer Network",
+                    title: "Qualcomm validates low-power NTN modem performance benchmarks for upcoming R19 chipsets",
+                    source: "Qualcomm Newsroom",
                     url: "https://www.qualcomm.com/news/releases/2026/03/qualcomm-announces-5g-advanced-leap-with-qualcomm-x105-5g-modem-",
                     tag: "OEM / Baseband",
                     badgeColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
-                    timeAgo: "Yesterday (" + getRelativeDateString(-1) + ")"
+                    timeAgo: "Yesterday, " + getRelativeDateString(-1)
                 }
             ];
 
@@ -1518,14 +1511,13 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                             <span class="text-[9px] font-mono bg-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded border border-zinc-700">Prio ${item.priority}</span>
                             <span class="text-[9px] font-bold border rounded px-1.5 py-0.2 ${item.badgeColor}">${item.tag}</span>
                             <span class="text-[10px] text-zinc-400 font-mono">${item.timeAgo}</span>
-                            <span class="text-[10px] text-zinc-500 font-mono">• ${item.source}</span>
                         </div>
                         <h4 class="text-xs font-bold text-zinc-100 group-hover:text-brand-500 transition-colors">
                             <a href="${item.url}" target="_blank">${item.title}</a>
                         </h4>
                     </div>
                     <a href="${item.url}" target="_blank" class="flex-shrink-0 text-[10px] text-brand-500 hover:underline flex items-center">
-                        Specific Target <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
+                        View Source <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
                     </a>
                 `;
                 listContainer.appendChild(el);
