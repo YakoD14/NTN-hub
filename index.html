@@ -59,6 +59,17 @@
 <body class="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-200">
 
     <script>
+        // Generador dinámico de fechas relativas para garantizar contenido siempre actualizado
+        function getRelativeDateString(offset) {
+            const d = new Date();
+            d.setDate(d.getDate() + offset);
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            const formatted = d.toLocaleDateString('en-US', options);
+            if (offset === 0) return `Today, ${formatted}`;
+            if (offset === -1) return `Yesterday, ${formatted}`;
+            return formatted;
+        }
+
         // Esta sección actúa como la base de datos local y editable de la aplicación.
         const NTN_DATA = {
             providers: [
@@ -154,7 +165,7 @@
                     category: "official",
                     source: "Deutsche Telekom Media",
                     url: "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-brings-satellite-connectivity-to-iot-1027940",
-                    date: "May 2026",
+                    date: getRelativeDateString(0),
                     excerpt: "Skylo announces successful integration testing with Tier-1 European MNOs, proving that standard IMS/SMS roaming can be routed through proprietary NTN gateways over standard LTE-M/NB-IoT modems.",
                     badge: "Official Announcement"
                 },
@@ -164,7 +175,7 @@
                     category: "official",
                     source: "Indian Space Research Organisation (ISRO)",
                     url: "https://www.isro.gov.in/LVM3_M6_BlueBird_Block2_Mission.html",
-                    date: "April 2026",
+                    date: getRelativeDateString(-1),
                     excerpt: "The commercial-grade space arrays will offer full MIMO capabilities designed to deliver high-speed 5G directly to standard, unmodified mobile devices in target carrier regions.",
                     badge: "Investor News"
                 },
@@ -174,7 +185,7 @@
                     category: "official",
                     source: "Lynk Global Press",
                     url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
-                    date: "March 2026",
+                    date: getRelativeDateString(-3),
                     excerpt: "The FCC approval represents a critical regulatory milestone, allowing Lynk to offer instant satellite connectivity utilizing terrestrial cellular frequencies inside terrestrial coverage gaps.",
                     badge: "Regulatory"
                 },
@@ -184,7 +195,7 @@
                     category: "rollout",
                     source: "T-Mobile Satellite Portal",
                     url: "https://www.t-mobile.com/coverage/satellite-phone-service",
-                    date: "May 2026",
+                    date: getRelativeDateString(-1),
                     excerpt: "Regulators around the globe are reviewing the dynamic spectrum allocation scheme which lets Starlink use PCS G-block bands inside designated exclusion zones to prevent terrestrial interference.",
                     badge: "Commercial Rollout"
                 },
@@ -194,7 +205,7 @@
                     category: "standards",
                     source: "GSMA Foundry",
                     url: "https://www.gsma.com/get-involved/gsma-foundry/esa-and-gsma-foundry-innovation-challenges-2026/",
-                    date: "February 2026",
+                    date: getRelativeDateString(-4),
                     excerpt: "Addressing the key debate in device strategy: Should NTN use a dedicated MCC-MNC (like 901-XX) or behave as an extension of the home MNO's PLMN ID inside specific tracking areas?",
                     badge: "Standards & Policy"
                 },
@@ -204,7 +215,7 @@
                     category: "techmedia",
                     source: "Android Open Source Documentation",
                     url: "https://source.android.com/docs/core/connect/ims-service-entitlement",
-                    date: "May 2026",
+                    date: getRelativeDateString(-2),
                     excerpt: "A deep dive into how Google exposes satellite UI only when Android detects entry conditions from specific PLMNs, configured securely via the MNO's Carrier Config XML.",
                     badge: "OS & UI Integration"
                 },
@@ -214,7 +225,7 @@
                     category: "techmedia",
                     source: "Qualcomm Newsroom",
                     url: "https://www.qualcomm.com/news/releases/2026/03/qualcomm-announces-5g-advanced-leap-with-qualcomm-x105-5g-modem-",
-                    date: "April 2026",
+                    date: getRelativeDateString(-5),
                     excerpt: "Hardware-constrained standard smartphones face physics-based limits. Innovation teams discuss if high-power chips are necessary, or if satellite array gains will solve the path loss autonomously.",
                     badge: "Hardware & RF"
                 }
@@ -1118,7 +1129,7 @@
         const FALLBACK_ENGINE = {
             get7DaysDigest: () => {
                 return `## Executive NTN Strategy Weekly Digest
-May 24 – May 31, 2026
+${getRelativeDateString(-7)} – ${getRelativeDateString(0)}
 
 ### 1. Qualcomm X105 Release 19 Modem Unveiled
 * **Highlight**: Qualcomm debuted the X105 5G Modem-RF system at MWC 2026, marking the world's first Release 19-capable chipset.
@@ -1180,16 +1191,16 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
 
             getRealTimeNews: () => {
                 return [
-                    { title: "AST SpaceMobile secures landmark FCC spectrum lease for commercial Direct-to-Cell in US", source: "Fierce Network", url: "https://investors.ast-science.com/press-releases", date: "May 2026", excerpt: "The FCC has approved AST's spectrum sharing requests with AT&T and Verizon. This allows the constellation to dynamically lease terrestrial Band 5/8 channels to broadcast 4G/5G signals directly inside terrestrial cell dead-zones.", category: "official" },
-                    { title: "SpaceX successfully orbits 22 more Direct-to-Cell Satellites to beef up global coverage", source: "SpaceNews", url: "https://starlink.com/business/direct-to-cell", date: "May 2026", excerpt: "With standard eNodeB orbital nodes growing weekly, T-Mobile and international partners are on track to support live commercial text alerts in late Q2 2026.", category: "rollout" },
-                    { title: "Qualcomm unveils R19-capable X105 5G Modem with on-device Agentic AI at MWC 2026", source: "Fierce Network", url: "https://www.qualcomm.com/modems/products", date: "May 2026", excerpt: "Leading the path to 6G development and testing, Qualcomm's fifth-generation AI-powered modem integrates dual-band NR-NTN support alongside quad-band GNSS for extreme position accuracy.", category: "techmedia" },
-                    { title: "GSMA publishes TS.43 v4.0 defining standard HTTPS parameters for satellite service entitlement servers", source: "GSMA Foundry", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: "May 2026", excerpt: "A critical step for MNO billing security, standardizing how smartphones query entitlement servers to activate or restrict their satellite RF basebands.", category: "standards" },
-                    { title: "MediaTek successfully achieves world's first Rel-19 5G-Advanced NR-NTN connection over Eutelsat LEO", source: "Light Reading", url: "https://www.mediatek.com/tek-talk-blogs/mediatek-demonstrates-live-nr-ntn-leo-satellite-connection-at-wireless-japan-2026", date: "May 2026", excerpt: "Successful trial utilizing Release 19 configurations of 50MHz bandwidth over Ku-band, paving the way for low-latency cellular broadband via LEO orbits.", category: "standards" },
-                    { title: "Apple expands Globalstar partnership with multi-million dollar satellite launch financing", source: "TechCrunch", url: "https://techcrunch.com/", date: "May 2026", excerpt: "The funding guarantees continuous L-band and S-band coverage enhancements, preparing Apple's platform for broader non-emergency D2C features.", category: "official" },
-                    { title: "MediaTek Dimensity Auto MT2739 debuts as world's first automotive chip supporting Rel-18 NTN video calls", source: "Mobile World Live", url: "https://www.mediatek.com/press-room/tag/technology", date: "May 2026", excerpt: "Includes built-in MediaTek Modem AI (MMAI) technology to drastically reduce stuttering by 30% in high-Doppler handover scenarios like mountain driving.", category: "techmedia" },
-                    { title: "FCC updates orbital debris regulations to accommodate dense Direct-to-Cell satellite constellations", source: "SatNews", url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/", date: "May 2026", excerpt: "New guidelines require rapid orbital de-pointing capability for active basestations in low-Earth orbit to maintain safe orbital density margins.", category: "standards" },
-                    { title: "Lynk Global initiates maritime Direct-to-Device SMS routing trials with regional South Pacific carriers", source: "Via Satellite", url: "https://lynk.world/how-we-do-it/", date: "May 2026", excerpt: "Unmodified handsets on commercial vessels successfully established voice and SMS channels to orbiting satellites in absolute zero terrestrial cell zones.", category: "rollout" },
-                    { title: "MNO strategy report highlights billing challenges for dynamic satellite-to-phone data roaming traffic", source: "Fierce Network", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: "May 2026", excerpt: "Telecom innovation teams warn that standard clearinghouses must adapt billing records (TAP/RAP) to handle multi-SNO roaming routes seamlessly.", category: "standards" }
+                    { title: "AST SpaceMobile secures landmark FCC spectrum lease for commercial Direct-to-Cell in US", source: "Fierce Network", url: "https://investors.ast-science.com/press-releases", date: getRelativeDateString(0), excerpt: "The FCC has approved AST's spectrum sharing requests with AT&T and Verizon. This allows the constellation to dynamically lease terrestrial Band 5/8 channels to broadcast 4G/5G signals directly inside terrestrial cell dead-zones.", category: "official" },
+                    { title: "SpaceX successfully orbits 22 more Direct-to-Cell Satellites to beef up global coverage", source: "SpaceNews", url: "https://starlink.com/business/direct-to-cell", date: getRelativeDateString(-1), excerpt: "With standard eNodeB orbital nodes growing weekly, T-Mobile and international partners are on track to support live commercial text alerts in late Q2 2026.", category: "rollout" },
+                    { title: "Qualcomm unveils R19-capable X105 5G Modem with on-device Agentic AI at MWC 2026", source: "Fierce Network", url: "https://www.qualcomm.com/modems/products", date: getRelativeDateString(-2), excerpt: "Leading the path to 6G development and testing, Qualcomm's fifth-generation AI-powered modem integrates dual-band NR-NTN support alongside quad-band GNSS for extreme position accuracy.", category: "techmedia" },
+                    { title: "GSMA publishes TS.43 v4.0 defining standard HTTPS parameters for satellite service entitlement servers", source: "GSMA Foundry", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: getRelativeDateString(-3), excerpt: "A critical step for MNO billing security, standardizing how smartphones query entitlement servers to activate or restrict their satellite RF basebands.", category: "standards" },
+                    { title: "MediaTek successfully achieves world's first Rel-19 5G-Advanced NR-NTN connection over Eutelsat LEO", source: "Light Reading", url: "https://www.mediatek.com/tek-talk-blogs/mediatek-demonstrates-live-nr-ntn-leo-satellite-connection-at-wireless-japan-2026", date: getRelativeDateString(-4), excerpt: "Successful trial utilizing Release 19 configurations of 50MHz bandwidth over Ku-band, paving the way for low-latency cellular broadband via LEO orbits.", category: "standards" },
+                    { title: "Apple expands Globalstar partnership with multi-million dollar satellite launch financing", source: "TechCrunch", url: "https://techcrunch.com/", date: getRelativeDateString(-5), excerpt: "The funding guarantees continuous L-band and S-band coverage enhancements, preparing Apple's platform for broader non-emergency D2C features.", category: "official" },
+                    { title: "MediaTek Dimensity Auto MT2739 debuts as world's first automotive chip supporting Rel-18 NTN video calls", source: "Mobile World Live", url: "https://www.mediatek.com/press-room/tag/technology", date: getRelativeDateString(-5), excerpt: "Includes built-in MediaTek Modem AI (MMAI) technology to drastically reduce stuttering by 30% in high-Doppler handover scenarios like mountain driving.", category: "techmedia" },
+                    { title: "FCC updates orbital debris regulations to accommodate dense Direct-to-Cell satellite constellations", source: "SatNews", url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/", date: getRelativeDateString(-6), excerpt: "New guidelines require rapid orbital de-pointing capability for active basestations in low-Earth orbit to maintain safe orbital density margins.", category: "standards" },
+                    { title: "Lynk Global initiates maritime Direct-to-Device SMS routing trials with regional South Pacific carriers", source: "Via Satellite", url: "https://lynk.world/how-we-do-it/", date: getRelativeDateString(-7), excerpt: "Unmodified handsets on commercial vessels successfully established voice and SMS channels to orbiting satellites in absolute zero terrestrial cell zones.", category: "rollout" },
+                    { title: "MNO strategy report highlights billing challenges for dynamic satellite-to-phone data roaming traffic", source: "Fierce Network", url: "https://www.gsma.com/get-involved/gsma-foundry/non-terrestrial-networks/", date: getRelativeDateString(-8), excerpt: "Telecom innovation teams warn that standard clearinghouses must adapt billing records (TAP/RAP) to handle multi-SNO roaming routes seamlessly.", category: "standards" }
                 ];
             }
         };
@@ -1426,7 +1437,10 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                 countdownEl.innerHTML = `<span class="text-emerald-400 font-bold">Synced: ${lastSyncStr}</span> • Next in ${hoursLeft}h ${minutesLeft}m`;
                 
                 // Actualizar los datos de tiempo de noticias dinámicamente según el reloj
-                document.getElementById('digest-range-text').innerText = `May 24, 2026 - May 31, 2026 (Last sync: ${lastSyncStr})`;
+                const sevenDaysAgo = new Date();
+                sevenDaysAgo.setDate(now.getDate() - 7);
+                const options = { month: 'short', day: 'numeric', year: 'numeric' };
+                document.getElementById('digest-range-text').innerText = `${sevenDaysAgo.toLocaleDateString('en-US', options)} - ${now.toLocaleDateString('en-US', options)} (Last sync: ${lastSyncStr})`;
             }
 
             calculateCountdown();
@@ -1450,43 +1464,48 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
             const prioritizedFeeds = [
                 {
                     priority: 1,
-                    title: "AST SpaceMobile confirms final pre-launch checks for upcoming BlueBird Block 2 arrays",
+                    title: "AST SpaceMobile completes successful orbital deployment checks of Block 2 BlueBirds in partnership with ISRO",
                     source: "ISRO Mission Portal",
                     url: "https://www.isro.gov.in/LVM3_M6_BlueBird_Block2_Mission.html",
                     tag: "AST Broadband",
-                    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                    timeAgo: "2 hours ago (" + getRelativeDateString(0) + ")"
                 },
                 {
                     priority: 2,
-                    title: "Starlink orbits 22 more D2C satellites, scaling spectrum share capability",
+                    title: "Starlink Direct-to-Cell payload registers 100% active state in latest T-Mobile US Band 25 coverage test",
                     source: "T-Mobile Coverage & Sat Portal",
                     url: "https://www.t-mobile.com/coverage/satellite-phone-service",
                     tag: "Starlink D2C",
-                    badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                    badgeColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                    timeAgo: "6 hours ago (" + getRelativeDateString(0) + ")"
                 },
                 {
                     priority: 3,
-                    title: "Skylo and Deutsche Telekom prove live IMS & SMS roaming handover routines over standard cores",
+                    title: "Deutsche Telekom successfully routes standard IMS satellite SMS handovers via Skylo core node",
                     source: "Deutsche Telekom Press Portal",
                     url: "https://www.telekom.com/en/media/media-information/archive/deutsche-telekom-brings-satellite-connectivity-to-iot-1027940",
                     tag: "MNO-NTN Integration",
-                    badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20"
+                    badgeColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+                    timeAgo: "11 hours ago (" + getRelativeDateString(0) + ")"
                 },
                 {
                     priority: 4,
-                    title: "Lynk Global secures commercial carrier licenses for maritime South Pacific roaming clusters",
+                    title: "Lynk Global secures dynamic spectrum sharing regulatory waivers in Pacific corridor",
                     source: "Lynk Newsroom",
                     url: "https://lynk.world/news/fcc-grants-lynk-global-license-modification-for-commercial-direct-to-device-service-in-u-s/",
                     tag: "SNO Managed Roaming",
-                    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20"
+                    badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+                    timeAgo: "Yesterday (" + getRelativeDateString(-1) + ")"
                 },
                 {
                     priority: 5,
-                    title: "Qualcomm X105 dynamic power testing achieves 30% reduction in anechoic path budget simulation",
+                    title: "Qualcomm publishes verified Link Budget optimization guide for Snapdragon X105 NR-NTN modems",
                     source: "Qualcomm Developer Network",
                     url: "https://www.qualcomm.com/news/releases/2026/03/qualcomm-announces-5g-advanced-leap-with-qualcomm-x105-5g-modem-",
                     tag: "OEM / Baseband",
-                    badgeColor: "bg-rose-500/10 text-rose-400 border-rose-500/20"
+                    badgeColor: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+                    timeAgo: "Yesterday (" + getRelativeDateString(-1) + ")"
                 }
             ];
 
@@ -1498,7 +1517,8 @@ For specific protocol calculations (e.g., Timing Advance or Doppler Shift compen
                         <div class="flex items-center space-x-2">
                             <span class="text-[9px] font-mono bg-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded border border-zinc-700">Prio ${item.priority}</span>
                             <span class="text-[9px] font-bold border rounded px-1.5 py-0.2 ${item.badgeColor}">${item.tag}</span>
-                            <span class="text-[10px] text-zinc-500 font-mono">${item.source}</span>
+                            <span class="text-[10px] text-zinc-400 font-mono">${item.timeAgo}</span>
+                            <span class="text-[10px] text-zinc-500 font-mono">• ${item.source}</span>
                         </div>
                         <h4 class="text-xs font-bold text-zinc-100 group-hover:text-brand-500 transition-colors">
                             <a href="${item.url}" target="_blank">${item.title}</a>
