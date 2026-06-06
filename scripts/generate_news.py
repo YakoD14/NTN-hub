@@ -11,6 +11,9 @@ OUTPUT_PATH = 'data/news.json'
 MAX_ITEMS = 10           # máximo en el JSON
 MIN_ITEMS = 5            # mínimo que queremos mostrar siempre
 CUTOFF_HOURS = 24 * 7    # ventana: últimos 7 días
+MAX_AST_ITEMS = 4
+MIN_DIVERSITY_ITEMS = 2
+DIVERSITY_TAGS = {'Starlink', 'Skylo', 'Android', 'iOS', 'MNO', 'D2C', 'Chipset', '3GPP'}
 
 # Consultas centradas en AST, D2C, Starlink, Skylo, MNOs, Android/iOS, 3GPP
 queries = [
@@ -178,11 +181,39 @@ def main():
                 deduped[key] = normalized
 
     # Ordenar por score y fecha
-    items = sorted(
-        deduped.values(),
-        key=lambda x: (x['score'], x['publishedAt']),
-        reverse=True
-    )[:MAX_ITEMS]
+   ranked = sorted(
+    deduped.values(),
+    key=lambda x: (x['score'], x['publishedAt']),
+    reverse=True
+)
+
+items = []
+ast_count = 0
+diversity_count = 0
+
+for item in ranked:
+    if len(items) >= MAX_ITEMS:
+        break
+
+    if item.get('tag') == 'AST':
+        if ast_count >= MAX_AST_ITEMS:
+            continue
+        ast_count += 1
+
+    if item.get('tag') in DIVERSITY_TAGS:
+        diversity_count += 1
+
+    items.append(item)
+
+if diversity_count < MIN_DIVERSITY_ITEMS:
+    existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
+    for art in fallback['items']:
+        key = art['url'].split('#')[0].lower()
+        if key not in existing_keys:
+            items.append(art)
+            existing_keys.add(key)
+        if len(items) >= MIN_ITEMS:
+            break
 
     # Rellenar con fallback si tenemos menos de MIN_ITEMS
     if len(items) < MIN_ITEMS:
