@@ -7,8 +7,10 @@ from urllib.request import Request, urlopen
 
 API_KEY = os.environ.get('GNEWS_API_KEY', '').strip()
 OUTPUT_PATH = 'data/news.json'
-MAX_ITEMS = 10
-CUTOFF_HOURS = 48  # solo noticias de las últimas 48h
+
+MAX_ITEMS = 10           # máximo en el JSON
+MIN_ITEMS = 5            # mínimo que queremos mostrar siempre
+CUTOFF_HOURS = 24 * 7    # ventana: últimos 7 días
 
 # Consultas centradas en AST, D2C, Starlink, Skylo, MNOs, Android/iOS, 3GPP
 queries = [
@@ -54,21 +56,21 @@ fallback = {
             'title': 'AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space',
             'url': 'https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/',
             'source': 'AST SpaceMobile Press',
-            'publishedAt': datetime.now(timezone.utc).isoformat(),
+            'publishedAt': '2023-09-19T00:00:00+00:00',
             'excerpt': 'First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.',
-            'score': 94,
+            'score': 50,
             'tag': 'AST',
-            'badge': 'Fallback Source'
+            'badge': 'Canonical Fallback'
         },
         {
             'title': 'T-Mobile Takes Coverage Above and Beyond With SpaceX',
             'url': 'https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex',
             'source': 'T-Mobile Newsroom',
-            'publishedAt': datetime.now(timezone.utc).isoformat(),
+            'publishedAt': '2022-08-25T00:00:00+00:00',
             'excerpt': 'T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.',
-            'score': 88,
+            'score': 45,
             'tag': 'Starlink',
-            'badge': 'Fallback Source'
+            'badge': 'Canonical Fallback'
         }
     ],
     'count': 2,
@@ -166,30 +168,42 @@ def main():
                 continue
 
             normalized = score_article(article)
-            if not normalized['url'] or normalized['score'] < 20:
+            if not normalized['url']:
                 continue
 
             key = normalized['url'].split('#')[0].lower()
             existing = deduped.get(key)
             if existing is None or normalized['score'] > existing['score']:
-                deduped[key] = normalized
+                deduped[key = normalized]
 
     items = sorted(
-        deduped.values(),
+        [v for v in deduped.values()],
         key=lambda x: (x['score'], x['publishedAt']),
         reverse=True
     )[:MAX_ITEMS]
 
-    payload = {
-        'items': items,
-        'count': len(items),
-        'lastUpdated': datetime.now(timezone.utc).isoformat(),
-        'generator': 'github-actions-gnews'
-    }
+    # Rellenar con fallback si tenemos menos de MIN_ITEMS
+    if len(items) < MIN_ITEMS:
+        existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
+        for art in fallback['items']:
+            key = art['url'].split('#')[0].lower()
+            if key not in existing_keys:
+                items.append(art)
+                existing_keys.add(key)
+            if len(items) >= MIN_ITEMS:
+                break
 
+    # Si aún así no hay nada, usar fallback completo
     if not items:
         payload = fallback
         payload['lastUpdated'] = datetime.now(timezone.utc).isoformat()
+    else:
+        payload = {
+            'items': items,
+            'count': len(items),
+            'lastUpdated': datetime.now(timezone.utc).isoformat(),
+            'generator': 'github-actions-gnews+fallback' if len(items) < MAX_ITEMS else 'github-actions-gnews'
+        }
 
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=2)
