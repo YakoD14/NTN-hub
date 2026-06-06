@@ -41,11 +41,11 @@ source_boost = {
 
 # Reglas de scoring por tema
 keyword_rules = [
-    {'tag': 'AST', 'badge': 'AST / D2C', 'weight': 30, 'patterns': ['ast spacemobile', 'asts', 'bluebird']},
+    {'tag': 'MNO', 'badge': 'Operator Strategy', 'weight': 30, 'patterns': ['mno', 'operator', 'vodafone', 'orange', 'at&t', 'verizon', 't-mobile', 'rakuten', 'rogers', 'optus', 'kddi']},
     {'tag': 'D2C', 'badge': 'Direct-to-Cell', 'weight': 28, 'patterns': ['direct-to-cell', 'direct to cell', 'd2c', 'satellite-to-cell']},
-    {'tag': 'MNO', 'badge': 'Operator Strategy', 'weight': 26, 'patterns': ['mno', 'operator', 'vodafone', 'orange', 'at&t', 'verizon', 't-mobile', 'rakuten', 'rogers', 'optus', 'kddi']},
     {'tag': 'Starlink', 'badge': 'Starlink', 'weight': 24, 'patterns': ['starlink', 'spacex']},
     {'tag': 'Skylo', 'badge': 'Skylo / NTN', 'weight': 22, 'patterns': ['skylo', 'ntn', 'non-terrestrial network', 'nb-iot ntn']},
+    {'tag': 'AST', 'badge': 'AST / D2C', 'weight': 20, 'patterns': ['ast spacemobile', 'asts', 'bluebird']},
     {'tag': 'Android', 'badge': 'Android / SatMode', 'weight': 14, 'patterns': ['android', 'satmode', 'pixel']},
     {'tag': 'iOS', 'badge': 'iOS / Satellite', 'weight': 14, 'patterns': ['ios', 'iphone', 'apple satellite', 'globalstar']},
     {'tag': 'Chipset', 'badge': 'Chipset / RF', 'weight': 12, 'patterns': ['qualcomm', 'mediatek', 'modem', 'chipset', 'x85', 'x80', 'm90']},
@@ -205,6 +205,7 @@ def main():
 
         items.append(item)
 
+
     if diversity_count < MIN_DIVERSITY_ITEMS:
         existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
         for art in fallback['items']:
@@ -212,9 +213,9 @@ def main():
             if key not in existing_keys:
                 items.append(art)
                 existing_keys.add(key)
-            if len(items) >= MIN_ITEMS:
+            if len(items) >= MAX_ITEMS:
                 break
-
+        
     # Rellenar con fallback si tenemos menos de MIN_ITEMS
     if len(items) < MIN_ITEMS:
         existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
