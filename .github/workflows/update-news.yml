@@ -21,6 +21,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Debug show generate_news.py
+        run: |
+          echo "===== generate_news.py (líneas 160-190) ====="
+          sed -n '160,190p' scripts/generate_news.py
+
       - name: Generate news.json
         env:
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
