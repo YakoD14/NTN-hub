@@ -205,8 +205,7 @@ def main():
 
         items.append(item)
 
-
-        if diversity_count < MIN_DIVERSITY_ITEMS:
+    if diversity_count < MIN_DIVERSITY_ITEMS:
         existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
         for art in fallback['items']:
             key = art['url'].split('#')[0].lower()
@@ -245,6 +244,7 @@ def main():
                 existing_keys.add(key)
             if len(items) >= MAX_ITEMS:
                 break
+      
 
     # Si aún así no hay nada, usar fallback completo
     if not items:
