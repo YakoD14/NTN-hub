@@ -150,6 +150,7 @@ def main():
     cutoff = datetime.now(timezone.utc) - timedelta(hours=CUTOFF_HOURS)
     deduped = {}
 
+    # Buscar noticias en cada query
     for query in queries:
         try:
             result = fetch_query(query)
@@ -174,10 +175,11 @@ def main():
             key = normalized['url'].split('#')[0].lower()
             existing = deduped.get(key)
             if existing is None or normalized['score'] > existing['score']:
-                deduped[key = normalized]
+                deduped[key] = normalized
 
+    # Ordenar por score y fecha
     items = sorted(
-        [v for v in deduped.values()],
+        deduped.values(),
         key=lambda x: (x['score'], x['publishedAt']),
         reverse=True
     )[:MAX_ITEMS]
