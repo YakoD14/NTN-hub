@@ -210,9 +210,19 @@ def main():
         existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
         for art in fallback['items']:
             key = art['url'].split('#')[0].lower()
-            if key not in existing_keys:
-                items.append(art)
-                existing_keys.add(key)
+        if key not in existing_keys:
+            art_copy = dict(art)
+            scored = score_article({
+                'title': art_copy.get('title', ''),
+                'description': art_copy.get('excerpt', ''),
+                'url': art_copy.get('url', ''),
+                'publishedAt': art_copy.get('publishedAt', ''),
+                'source': {'name': art_copy.get('source', '')}
+            })
+            art_copy['tag'] = scored['tag']
+            art_copy['badge'] = scored['badge']
+            items.append(art_copy)
+            existing_keys.add(key)
             if len(items) >= MAX_ITEMS:
                 break
         
@@ -221,9 +231,19 @@ def main():
         existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
         for art in fallback['items']:
             key = art['url'].split('#')[0].lower()
-            if key not in existing_keys:
-                items.append(art)
-                existing_keys.add(key)
+        if key not in existing_keys:
+            art_copy = dict(art)
+            scored = score_article({
+                'title': art_copy.get('title', ''),
+                'description': art_copy.get('excerpt', ''),
+                'url': art_copy.get('url', ''),
+                'publishedAt': art_copy.get('publishedAt', ''),
+                'source': {'name': art_copy.get('source', '')}
+            })
+            art_copy['tag'] = scored['tag']
+            art_copy['badge'] = scored['badge']
+            items.append(art_copy)
+            existing_keys.add(key)
             if len(items) >= MIN_ITEMS:
                 break
 
