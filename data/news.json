@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
+      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
+      "source": "AST SpaceMobile Press",
+      "publishedAt": "2026-06-06T06:00:00+00:00",
+      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
+      "score": 94,
+      "tag": "AST",
+      "badge": "Fallback Source"
+    },
+    {
+      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
+      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
+      "source": "T-Mobile Newsroom",
+      "publishedAt": "2026-06-05T18:00:00+00:00",
+      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
+      "score": 88,
+      "tag": "Starlink",
+      "badge": "Fallback Source"
+    }
+  ],
+  "count": 2,
+  "lastUpdated": "2026-06-06T06:00:00+00:00",
+  "generator": "seed"
+}
