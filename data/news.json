@@ -41,37 +41,17 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Stock Surges Tuesday: What's Happening?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52940781/ast-spacemobile-stock-surges-tuesday-whats-happening",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-02T14:14:51Z",
-      "excerpt": "AST SpaceMobile shares are rising Tuesday, bouncing back from strong selling pressure on Monday that swept the broader space sector lower.",
-      "score": 30,
+      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
+      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
+      "source": "AST SpaceMobile Press",
+      "publishedAt": "2023-09-19T00:00:00+00:00",
+      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
+      "score": 50,
       "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "What's Going On With The Slide In AST SpaceMobile Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52917897/whats-going-on-with-the-slide-in-ast-spacemobile-stock",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-01T17:44:27Z",
-      "excerpt": "AST SpaceMobile is sliding Monday as traders take profits after a multi‑week surge, even with the Nasdaq up 0.52% and S&P 500 up 0.10%.",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "Deutsche Bank Downgrades AST SpaceMobile to Hold From Buy, Cuts Price Target to $106 From $117",
-      "url": "https://www.marketscreener.com/news/deutsche-bank-downgrades-ast-spacemobile-to-hold-from-buy-cuts-price-target-to-106-from-117-ce7f5dd9d989f027",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-01T11:18:29Z",
-      "excerpt": "AST SpaceMobile has an average rating of Hold and mean price target of $87.75, according to analysts polled by FactSet. ...",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
+      "badge": "Canonical Fallback"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-06-06T15:59:28.661547+00:00",
+  "count": 5,
+  "lastUpdated": "2026-06-06T19:42:20.070702+00:00",
   "generator": "github-actions-gnews+fallback"
 }
