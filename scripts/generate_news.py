@@ -180,40 +180,40 @@ def main():
             if existing is None or normalized['score'] > existing['score']:
                 deduped[key] = normalized
 
-    # Ordenar por score y fecha
-       ranked = sorted(
-            deduped.values(),
-            key=lambda x: (x['score'], x['publishedAt']),
-            reverse=True
-        )    
+       # Ordenar por score y fecha
+    ranked = sorted(
+        deduped.values(),
+        key=lambda x: (x['score'], x['publishedAt']),
+        reverse=True
+    )
 
-        items = []
-        ast_count = 0
-        diversity_count = 0
-    
-        for item in ranked:
-            if len(items) >= MAX_ITEMS:
+    items = []
+    ast_count = 0
+    diversity_count = 0
+
+    for item in ranked:
+        if len(items) >= MAX_ITEMS:
+            break
+
+        if item.get('tag') == 'AST':
+            if ast_count >= MAX_AST_ITEMS:
+                continue
+            ast_count += 1
+
+        if item.get('tag') in DIVERSITY_TAGS:
+            diversity_count += 1
+
+        items.append(item)
+
+    if diversity_count < MIN_DIVERSITY_ITEMS:
+        existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
+        for art in fallback['items']:
+            key = art['url'].split('#')[0].lower()
+            if key not in existing_keys:
+                items.append(art)
+                existing_keys.add(key)
+            if len(items) >= MIN_ITEMS:
                 break
-        
-            if item.get('tag') == 'AST':
-                if ast_count >= MAX_AST_ITEMS:
-                    continue
-                ast_count += 1
-        
-            if item.get('tag') in DIVERSITY_TAGS:
-                diversity_count += 1
-        
-            items.append(item)
-        
-        if diversity_count < MIN_DIVERSITY_ITEMS:
-            existing_keys = {it['url'].split('#')[0].lower() for it in items if it.get('url')}
-                for art in fallback['items']:
-                    key = art['url'].split('#')[0].lower()
-                    if key not in existing_keys:
-                        items.append(art)
-                        existing_keys.add(key)
-                    if len(items) >= MIN_ITEMS:
-                        break
 
     # Rellenar con fallback si tenemos menos de MIN_ITEMS
     if len(items) < MIN_ITEMS:
