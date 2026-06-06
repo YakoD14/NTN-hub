@@ -1,27 +1,77 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
-      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
-      "source": "AST SpaceMobile Press",
-      "publishedAt": "2023-09-19T00:00:00+00:00",
-      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
-      "score": 50,
+      "title": "AST SpaceMobile: Failing Upwards",
+      "url": "https://seekingalpha.com/article/4910526-ast-spacemobile-failing-upwards",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-01T11:30:00Z",
+      "excerpt": "AST SpaceMobile faces launch delays, thin demand, and Starlink competition—despite a $44B cap. Click here to read more on the ASTS stock",
+      "score": 94,
       "tag": "AST",
-      "badge": "Canonical Fallback"
+      "badge": "AST / D2C"
     },
     {
-      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
-      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
-      "source": "T-Mobile Newsroom",
-      "publishedAt": "2022-08-25T00:00:00+00:00",
-      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
-      "score": 45,
-      "tag": "Starlink",
-      "badge": "Canonical Fallback"
+      "title": "AST SpaceMobile sees New Glenn setback delaying initial commercial service into 2027",
+      "url": "https://spacenews.com/ast-spacemobile-sees-new-glenn-setback-delaying-initial-commercial-service-into-2027/",
+      "source": "SpaceNews",
+      "publishedAt": "2026-06-03T21:12:58Z",
+      "excerpt": "AST SpaceMobile expects Blue Origin’s recent launchpad explosion will delay its direct-to-smartphone constellation by three to six months, investment bank William Blair said in an equity research note, pushing initial commercial services into the first half of 2027.",
+      "score": 60,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "SpaceX IPO on 12 June: Why These 2 Stocks Matter?",
+      "url": "https://coingape.com/markets/spacex-ipo-on-12-june-why-these-2-stocks-matter/",
+      "source": "CoinGape",
+      "publishedAt": "2026-06-01T18:31:55Z",
+      "excerpt": "SpaceX IPO could lift AST SpaceMobile and Rocket Lab as investors seek public exposure to the growing space economy.",
+      "score": 54,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Space stock rally cracks as SpaceX IPO nears and Blue Origin explodes",
+      "url": "https://thenextweb.com/news/the-space-stock-rally-is-cracking-as-investors-prepare-to-swap-proxies-for-spacex-itself",
+      "source": "TNW",
+      "publishedAt": "2026-06-01T18:28:09Z",
+      "excerpt": "Rocket Lab, Intuitive Machines, and AST SpaceMobile drop 17-23% in two days as investors prepare to swap space proxies for SpaceX once the record IPO lands.",
+      "score": 54,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "AST SpaceMobile Stock Surges Tuesday: What's Happening?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52940781/ast-spacemobile-stock-surges-tuesday-whats-happening",
+      "source": "Benzinga",
+      "publishedAt": "2026-06-02T14:14:51Z",
+      "excerpt": "AST SpaceMobile shares are rising Tuesday, bouncing back from strong selling pressure on Monday that swept the broader space sector lower.",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "What's Going On With The Slide In AST SpaceMobile Stock?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52917897/whats-going-on-with-the-slide-in-ast-spacemobile-stock",
+      "source": "Benzinga",
+      "publishedAt": "2026-06-01T17:44:27Z",
+      "excerpt": "AST SpaceMobile is sliding Monday as traders take profits after a multi‑week surge, even with the Nasdaq up 0.52% and S&P 500 up 0.10%.",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Deutsche Bank Downgrades AST SpaceMobile to Hold From Buy, Cuts Price Target to $106 From $117",
+      "url": "https://www.marketscreener.com/news/deutsche-bank-downgrades-ast-spacemobile-to-hold-from-buy-cuts-price-target-to-106-from-117-ce7f5dd9d989f027",
+      "source": "MarketScreener",
+      "publishedAt": "2026-06-01T11:18:29Z",
+      "excerpt": "AST SpaceMobile has an average rating of Hold and mean price target of $87.75, according to analysts polled by FactSet. ...",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
     }
   ],
-  "count": 2,
-  "lastUpdated": "2026-06-06T15:11:14.394657+00:00",
+  "count": 7,
+  "lastUpdated": "2026-06-06T15:17:52.692164+00:00",
   "generator": "github-actions-gnews+fallback"
 }
