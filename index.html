@@ -404,7 +404,9 @@
                             <span class="p-1.5 bg-brand-500/10 text-brand-500 rounded-lg"><i data-lucide="zap" class="w-4 h-4 animate-bounce"></i></span>
                             <div>
                                 <h3 class="font-extrabold text-sm text-zinc-100 uppercase tracking-wider">MNO Strategy Bulletin: Yesterday's Recap</h3>
-                                <p class="text-[10px] text-zinc-400">Deep Links to Verified Articles • Refreshes Every 12 Hours</p>
+                                <p id="bulletin-helper-text" class="text-[10px] text-zinc-400">
+                                Deep Links to Verified Articles • Refreshes Every 12 Hours
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-center space-x-2 bg-zinc-900 border border-zinc-800 px-3 py-1 rounded-full text-[10px] text-zinc-400 font-mono">
@@ -1163,73 +1165,109 @@ Adjusting **T3212** and **T3245** prevents standard phones from attempting const
             renderDailyBulletin();
         }
 
-        function renderDailyBulletin() {
-            const listContainer = document.getElementById('daily-digest-list');
-            listContainer.innerHTML = '';
-            
-            // LA REGLA CLAVE: Solo procesar noticias que tengan exactamente la fecha de AYER (offset -1)
-            const yesterdayString = getRelativeDateString(-1);
-            let currentNews = NTN_DATA.news.filter(n => n.date === yesterdayString);
-            
-            currentNews = currentNews.map(item => {
-                let priority = 5;
-                let tag = "OEM / Baseband";
-                let badgeColor = "bg-rose-500/10 text-rose-400 border-rose-500/20";
-                
-                const t = item.title.toUpperCase();
-                
-                if (t.includes('AST')) {
-                    priority = 1;
-                    tag = "AST Broadband";
-                    badgeColor = "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
-                } else if (t.includes('STARLINK') || t.includes('SPACEX')) {
-                    priority = 2;
-                    tag = "Starlink D2C";
-                    badgeColor = "bg-amber-500/10 text-amber-400 border-amber-500/20";
-                } else if (item.category === 'official' || item.category === 'rollout') {
-                    priority = 3;
-                    tag = "MNO-NTN Integration";
-                    badgeColor = "bg-indigo-500/10 text-indigo-400 border-indigo-500/20";
-                } else if (item.category === 'standards') {
-                    priority = 4;
-                    tag = "Standards & Policy";
-                    badgeColor = "bg-purple-500/10 text-purple-400 border-purple-500/20";
-                }
-                
-                return { ...item, priority, tag, badgeColor };
-            });
-            
-            currentNews.sort((a, b) => a.priority - b.priority);
-            const topNews = currentNews.slice(0, 10);
-            
-            if (topNews.length === 0) {
-                listContainer.innerHTML = '<div class="p-4 text-center text-zinc-500 text-xs">No strategic updates from yesterday available. Click "Fetch Yesterday\'s News" to sync.</div>';
-                return;
-            }
-            
-            topNews.forEach(item => {
-                const el = document.createElement('div');
-                el.className = "py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 group hover:bg-zinc-900/40 p-2 rounded-xl transition-all";
-                el.innerHTML = `
-                    <div class="space-y-1">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-[9px] font-mono bg-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded border border-zinc-700">Prio ${item.priority}</span>
-                            <span class="text-[9px] font-bold border rounded px-1.5 py-0.2 ${item.badgeColor}">${item.tag}</span>
-                            <span class="text-[10px] text-zinc-400 font-mono">${item.date}</span>
-                        </div>
-                        <h4 class="text-xs font-bold text-zinc-100 group-hover:text-brand-500 transition-colors">
-                            <a href="${item.url}" target="_blank">${item.title}</a>
-                        </h4>
-                    </div>
-                    <a href="${item.url}" target="_blank" class="flex-shrink-0 text-[10px] text-brand-500 hover:underline flex items-center">
-                        View Source <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
-                    </a>
-                `;
-                listContainer.appendChild(el);
-            });
-            lucide.createIcons();
+        async function renderDailyBulletin() {
+    const listContainer = document.getElementById('daily-digest-list');
+    if (!listContainer) return;
+
+    const helperText = document.getElementById('bulletin-helper-text');
+    const statusEl = document.getElementById('live-feed-status');
+
+    function renderFromItems(items) {
+        if (!items || !items.length) {
+            listContainer.innerHTML = `
+                <div class="py-3 text-sm text-zinc-400">
+                    No high-priority satellite/MNO news found for today or yesterday.
+                </div>
+            `;
+            return;
         }
 
+        listContainer.innerHTML = items.map(item => {
+            const title = item.title || 'Untitled';
+            const url = item.url || '#';
+            const source = item.source || 'Unknown source';
+            const tag = item.tag || item.badge || 'General';
+            const excerpt = item.excerpt || '';
+            const dateText = item.publishedAt || item.dateText || item.date || '';
+
+            return `
+                <div class="py-3 flex justify-between items-start md:items-center gap-3 group">
+                    <div class="pr-3">
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <span class="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-zinc-800 text-zinc-300 border border-zinc-700">
+                                ${tag}
+                            </span>
+                            <span class="text-[9px] uppercase text-zinc-400">
+                                ${source}
+                            </span>
+                        </div>
+                        ${dateText ? `
+                            <span class="text-[9px] uppercase font-bold text-zinc-500">
+                                ${dateText}
+                            </span>` : ''
+                        }
+                        <h4 class="text-xs font-bold text-zinc-100 mt-0.5">
+                            <a href="${url}" target="_blank" rel="noopener noreferrer"
+                               class="hover:text-brand-500 transition-colors">
+                                ${title}
+                            </a>
+                        </h4>
+                        ${excerpt ? `
+                            <p class="text-[11px] text-zinc-400 mt-0.5">
+                                ${excerpt}
+                            </p>` : ''
+                        }
+                    </div>
+                    <a href="${url}" target="_blank" rel="noopener noreferrer"
+                       class="text-[10px] text-zinc-500 underline">
+                        Source
+                    </a>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // Primero intentamos data/news.json
+    try {
+        const resp = await fetch('./data/news.json', { cache: 'no-store' });
+        if (!resp.ok) throw new Error(`news.json error ${resp.status}`);
+        const data = await resp.json();
+        const items = Array.isArray(data.items) ? data.items : [];
+        renderFromItems(items);
+
+        if (statusEl) {
+            statusEl.textContent = `Live JSON • ${items.length} stories loaded`;
+            statusEl.className = 'font-bold text-emerald-500';
+        }
+        if (helperText && data.lastUpdated) {
+            helperText.textContent = `Static JSON feed generated by GitHub Actions • Last sync ${data.lastUpdated}`;
+        }
+        return;
+    } catch (e) {
+        console.error('Error loading news.json, using NTN_DATA fallback:', e);
+    }
+
+    // Fallback: NTN_DATA.news
+    const fallbackItems = (NTN_DATA?.news || []).map((item, idx) => ({
+        id: item.id || idx + 1,
+        title: item.title,
+        url: item.url,
+        source: item.source,
+        dateText: item.date,
+        excerpt: item.excerpt,
+        tag: item.badge || item.category || 'General'
+    }));
+
+    renderFromItems(fallbackItems);
+
+    if (statusEl) {
+        statusEl.textContent = 'Fallback mode • local bulletin loaded';
+        statusEl.className = 'font-bold text-amber-500';
+    }
+    if (helperText) {
+        helperText.textContent = 'news.json unavailable • local fallback active';
+    }
+}
         // ==========================================
         //  UI / RENDER FUNCTIONS
         // ==========================================
