@@ -54,6 +54,145 @@
             background: #e4e4e7;
             border-radius: 3px;
         }
+        .news-card {
+          background: linear-gradient(180deg, rgba(20,24,31,.92), rgba(16,19,26,.96));
+          border: 1px solid rgba(90, 110, 130, 0.22);
+          border-radius: 20px;
+          overflow: hidden;
+          transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+        
+        .news-card--featured {
+          border-color: rgba(0, 224, 150, 0.38);
+          box-shadow: 0 0 0 1px rgba(0, 224, 150, 0.08), 0 18px 40px rgba(0, 0, 0, 0.28);
+        }
+        
+        .news-card:hover {
+          transform: translateY(-2px);
+          border-color: rgba(120, 160, 190, 0.35);
+        }
+        
+        .news-card__link {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          padding: 22px;
+          min-height: 100%;
+          color: inherit;
+          text-decoration: none;
+        }
+        
+        .news-card__top,
+        .news-card__bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+        }
+        
+        .news-card__tag {
+          display: inline-flex;
+          align-items: center;
+          min-height: 30px;
+          padding: 0 12px;
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: .02em;
+          border: 1px solid transparent;
+        }
+        
+        .news-card__tag--official {
+          color: #7ff7c6;
+          background: rgba(0, 224, 150, 0.10);
+          border-color: rgba(0, 224, 150, 0.24);
+        }
+        
+        .news-card__tag--regulatory {
+          color: #9ae6ff;
+          background: rgba(59, 130, 246, 0.10);
+          border-color: rgba(59, 130, 246, 0.22);
+        }
+        
+        .news-card__tag--rollout {
+          color: #fcd34d;
+          background: rgba(245, 158, 11, 0.10);
+          border-color: rgba(245, 158, 11, 0.22);
+        }
+        
+        .news-card__tag--techmedia {
+          color: #c4b5fd;
+          background: rgba(168, 85, 247, 0.10);
+          border-color: rgba(168, 85, 247, 0.22);
+        }
+        
+        .news-card__tag--standards {
+          color: #93c5fd;
+          background: rgba(59, 130, 246, 0.10);
+          border-color: rgba(59, 130, 246, 0.18);
+        }
+        
+        .news-card__date {
+          font-size: 12px;
+          color: rgba(204, 214, 226, 0.68);
+          white-space: nowrap;
+        }
+        
+        .news-card__title {
+          margin: 0;
+          font-size: 24px;
+          line-height: 1.15;
+          font-weight: 700;
+          color: #f5f7fb;
+          text-wrap: balance;
+        }
+        
+        .news-card:not(.news-card--featured) .news-card__title {
+          font-size: 20px;
+        }
+        
+        .news-card__excerpt {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.55;
+          color: rgba(214, 221, 230, 0.82);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .news-card__source {
+          font-size: 13px;
+          color: rgba(204, 214, 226, 0.72);
+        }
+        
+        .news-card__cta {
+          font-size: 13px;
+          font-weight: 600;
+          color: #56f0b5;
+        }
+        
+        @media (max-width: 768px) {
+          .news-card__link {
+            padding: 18px;
+          }
+        
+          .news-card__title,
+          .news-card:not(.news-card--featured) .news-card__title {
+            font-size: 20px;
+          }
+        
+          .news-card__top,
+          .news-card__bottom {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        
+          .news-card__date {
+            white-space: normal;
+          }
+        }
     </style>
 </head>
 <body class="bg-zinc-50 dark:bg-slate-950 text-zinc-900 dark:text-zinc-100 min-h-screen transition-colors duration-200">
@@ -416,7 +555,7 @@
                     </div>
                     
                     <!-- Contenedor del Digest Diario Ordenado -->
-                    <div class="divide-y divide-zinc-800/80 border-t border-zinc-800/60 pt-2" id="daily-digest-list">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 pt-2" id="daily-digest-list">
                         <!-- Se poblará dinámicamente según criterio de prioridad con SOLO noticias de Ayer (-1) -->
                     </div>
                 </div>
@@ -1181,48 +1320,34 @@ Adjusting **T3212** and **T3245** prevents standard phones from attempting const
             `;
             return;
         }
-
-        listContainer.innerHTML = items.map(item => {
+        listContainer.className = 'grid grid-cols-1 lg:grid-cols-2 gap-4';
+        listContainer.innerHTML = items.map((item, index) => {
             const title = item.title || 'Untitled';
             const url = item.url || '#';
             const source = item.source || 'Unknown source';
             const tag = item.tag || item.badge || 'General';
             const excerpt = item.excerpt || '';
             const dateText = item.publishedAt || item.dateText || item.date || '';
+            const category = item.category || 'official';
 
             return `
-                <div class="py-3 flex justify-between items-start md:items-center gap-3 group">
-                    <div class="pr-3">
-                        <div class="flex items-center gap-2 mb-0.5">
-                            <span class="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-zinc-800 text-zinc-300 border border-zinc-700">
-                                ${tag}
-                            </span>
-                            <span class="text-[9px] uppercase text-zinc-400">
-                                ${source}
-                            </span>
+                <article class="news-card ${index === 0 ? 'news-card--featured' : ''}">
+                    <a href="${url}" target="_blank" rel="noopener noreferrer" class="news-card__link">
+                        <div class="news-card__top">
+                            <span class="news-card__tag news-card__tag--${category}">${tag}</span>
+                            <time class="news-card__date">${dateText}</time>
                         </div>
-                        ${dateText ? `
-                            <span class="text-[9px] uppercase font-bold text-zinc-500">
-                                ${dateText}
-                            </span>` : ''
-                        }
-                        <h4 class="text-xs font-bold text-zinc-100 mt-0.5">
-                            <a href="${url}" target="_blank" rel="noopener noreferrer"
-                               class="hover:text-brand-500 transition-colors">
-                                ${title}
-                            </a>
-                        </h4>
-                        ${excerpt ? `
-                            <p class="text-[11px] text-zinc-400 mt-0.5">
-                                ${excerpt}
-                            </p>` : ''
-                        }
-                    </div>
-                    <a href="${url}" target="_blank" rel="noopener noreferrer"
-                       class="text-[10px] text-zinc-500 underline">
-                        Source
+
+                        <h3 class="news-card__title">${title}</h3>
+
+                        ${excerpt ? `<p class="news-card__excerpt">${excerpt}</p>` : ''}
+
+                        <div class="news-card__bottom">
+                            <span class="news-card__source">${source}</span>
+                            <span class="news-card__cta">Read article ↗</span>
+                        </div>
                     </a>
-                </div>
+                </article>
             `;
         }).join('');
     }
@@ -1340,36 +1465,24 @@ Adjusting **T3212** and **T3245** prevents standard phones from attempting const
 
             filteredNews.forEach(item => {
                 const card = document.createElement('div');
-                const isAST = item.title.toUpperCase().includes('AST') || (item.excerpt && item.excerpt.toUpperCase().includes('AST'));
-                let highlightClasses = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800";
-                if (isAST) highlightClasses = "bg-gradient-to-br from-emerald-500/5 via-zinc-900/40 to-zinc-900/60 border border-emerald-500/30 shadow-emerald-500/5 shadow-lg ring-1 ring-emerald-500/20";
-                card.className = `${highlightClasses} rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between space-y-4`;
-                
-                let tagColor = "bg-blue-500/10 text-blue-500 border-blue-500/20";
-                if (item.category === 'official') tagColor = "bg-emerald-500/10 text-emerald-500 border-emerald-500/20";
-                if (item.category === 'standards') tagColor = "bg-purple-500/10 text-purple-500 border-purple-500/20";
-                if (item.category === 'rollout') tagColor = "bg-amber-500/10 text-amber-500 border-amber-500/20";
+                card.className = `news-card`;
 
                 card.innerHTML = `
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-[10px]">
-                            <div class="flex items-center space-x-1.5">
-                                <span class="px-2 py-0.5 rounded-full font-semibold border ${tagColor}">${item.badge || item.category}</span>
-                                ${isAST ? '<span class="px-2 py-0.5 rounded-full font-bold bg-emerald-500 text-white flex items-center gap-0.5 text-[8px]">⭐ AST STRATEGIC PRIORITY</span>' : ''}
-                            </div>
-                            <span class="text-zinc-400 font-mono">${item.date}</span>
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-card__link">
+                        <div class="news-card__top">
+                            <span class="news-card__tag news-card__tag--${item.category || 'official'}">${item.badge || 'News'}</span>
+                            <time class="news-card__date">${item.date || ''}</time>
                         </div>
-                        <h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50 leading-snug hover:text-brand-500 transition-colors">
-                            <a href="${item.url}" target="_blank">${item.title}</a>
-                        </h3>
-                        <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-3">${item.excerpt || ''}</p>
-                    </div>
-                    <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-[11px] text-zinc-400">
-                        <span class="flex items-center"><i data-lucide="radio" class="w-3.5 h-3.5 mr-1 text-zinc-500"></i> ${item.source}</span>
-                        <a href="${item.url}" target="_blank" class="text-brand-500 hover:underline flex items-center">
-                            Article Portal <i data-lucide="external-link" class="w-3 h-3 ml-1"></i>
-                        </a>
-                    </div>
+                
+                        <h3 class="news-card__title">${item.title}</h3>
+                
+                        <p class="news-card__excerpt">${item.excerpt || ''}</p>
+                
+                        <div class="news-card__bottom">
+                            <span class="news-card__source">${item.source || ''}</span>
+                            <span class="news-card__cta">Read article ↗</span>
+                        </div>
+                    </a>
                 `;
                 container.appendChild(card);
             });
@@ -1469,11 +1582,30 @@ Adjusting **T3212** and **T3245** prevents standard phones from attempting const
                 });
             const newsGrid = document.getElementById('news-grid-container');
             newsGrid.innerHTML = '';
-            NTN_DATA.news.filter(n => n.title.toLowerCase().includes(q) || n.excerpt.toLowerCase().includes(q) || n.source.toLowerCase().includes(q))
+            NTN_DATA.news
+                .filter(n => n.title.toLowerCase().includes(q) || n.excerpt.toLowerCase().includes(q) || n.source.toLowerCase().includes(q))
                 .forEach(item => {
                     const card = document.createElement('div');
-                    card.className = "bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm flex flex-col justify-between space-y-4";
-                    card.innerHTML = `<div class="space-y-2"><div class="flex justify-between items-center text-[10px]"><span class="px-2 py-0.5 rounded-full font-semibold border bg-zinc-100 dark:bg-zinc-800">${item.badge || item.category}</span><span class="text-zinc-400 font-mono">${item.date}</span></div><h3 class="font-bold text-sm text-zinc-950 dark:text-zinc-50"><a href="${item.url}" target="_blank">${item.title}</a></h3><p class="text-xs text-zinc-500 dark:text-zinc-400 line-clamp-3">${item.excerpt}</p></div>`;
+                    card.className = `news-card`;
+            
+                    card.innerHTML = `
+                        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-card__link">
+                            <div class="news-card__top">
+                                <span class="news-card__tag news-card__tag--${item.category || 'official'}">${item.badge || 'News'}</span>
+                                <time class="news-card__date">${item.date || ''}</time>
+                            </div>
+            
+                            <h3 class="news-card__title">${item.title}</h3>
+            
+                            <p class="news-card__excerpt">${item.excerpt || ''}</p>
+            
+                            <div class="news-card__bottom">
+                                <span class="news-card__source">${item.source || ''}</span>
+                                <span class="news-card__cta">Read article ↗</span>
+                            </div>
+                        </a>
+                    `;
+            
                     newsGrid.appendChild(card);
                 });
             const specsTbody = document.getElementById('specs-table-body');
