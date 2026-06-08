@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile: Failing Upwards",
-      "url": "https://seekingalpha.com/article/4910526-ast-spacemobile-failing-upwards",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-01T11:30:00Z",
-      "excerpt": "AST SpaceMobile faces launch delays, thin demand, and Starlink competition—despite a $44B cap. Click here to read more on the ASTS stock",
-      "score": 74,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST SpaceMobile sees New Glenn setback delaying initial commercial service into 2027",
       "url": "https://spacenews.com/ast-spacemobile-sees-new-glenn-setback-delaying-initial-commercial-service-into-2027/",
       "source": "SpaceNews",
@@ -61,16 +51,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Deutsche Bank Downgrades AST SpaceMobile to Hold From Buy, Cuts Price Target to $106 From $117",
-      "url": "https://www.marketscreener.com/news/deutsche-bank-downgrades-ast-spacemobile-to-hold-from-buy-cuts-price-target-to-106-from-117-ce7f5dd9d989f027",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-01T11:18:29Z",
-      "excerpt": "AST SpaceMobile has an average rating of Hold and mean price target of $87.75, according to analysts polled by FactSet. ...",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -91,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 9,
-  "lastUpdated": "2026-06-07T16:54:15.958891+00:00",
+  "count": 7,
+  "lastUpdated": "2026-06-08T14:40:42.633291+00:00",
   "generator": "github-actions-gnews+fallback"
 }
