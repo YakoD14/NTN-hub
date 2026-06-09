@@ -11,16 +11,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Stock Surges Tuesday: What's Happening?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52940781/ast-spacemobile-stock-surges-tuesday-whats-happening",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-02T14:14:51Z",
-      "excerpt": "AST SpaceMobile shares are rising Tuesday, bouncing back from strong selling pressure on Monday that swept the broader space sector lower.",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -41,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-06-09T11:44:04.738716+00:00",
+  "count": 3,
+  "lastUpdated": "2026-06-09T19:35:32.806921+00:00",
   "generator": "github-actions-gnews+fallback"
 }
