@@ -11,41 +11,11 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "SpaceX IPO on 12 June: Why These 2 Stocks Matter?",
-      "url": "https://coingape.com/markets/spacex-ipo-on-12-june-why-these-2-stocks-matter/",
-      "source": "CoinGape",
-      "publishedAt": "2026-06-01T18:31:55Z",
-      "excerpt": "SpaceX IPO could lift AST SpaceMobile and Rocket Lab as investors seek public exposure to the growing space economy.",
-      "score": 44,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
-      "title": "Space stock rally cracks as SpaceX IPO nears and Blue Origin explodes",
-      "url": "https://thenextweb.com/news/the-space-stock-rally-is-cracking-as-investors-prepare-to-swap-proxies-for-spacex-itself",
-      "source": "TNW",
-      "publishedAt": "2026-06-01T18:28:09Z",
-      "excerpt": "Rocket Lab, Intuitive Machines, and AST SpaceMobile drop 17-23% in two days as investors prepare to swap space proxies for SpaceX once the record IPO lands.",
-      "score": 44,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST SpaceMobile Stock Surges Tuesday: What's Happening?",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52940781/ast-spacemobile-stock-surges-tuesday-whats-happening",
       "source": "Benzinga",
       "publishedAt": "2026-06-02T14:14:51Z",
       "excerpt": "AST SpaceMobile shares are rising Tuesday, bouncing back from strong selling pressure on Monday that swept the broader space sector lower.",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "What's Going On With The Slide In AST SpaceMobile Stock?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/52917897/whats-going-on-with-the-slide-in-ast-spacemobile-stock",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-01T17:44:27Z",
-      "excerpt": "AST SpaceMobile is sliding Monday as traders take profits after a multi‑week surge, even with the Nasdaq up 0.52% and S&P 500 up 0.10%.",
       "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -71,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-06-08T14:40:42.633291+00:00",
+  "count": 4,
+  "lastUpdated": "2026-06-09T11:44:04.738716+00:00",
   "generator": "github-actions-gnews+fallback"
 }
