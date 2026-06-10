@@ -1,6 +1,36 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile Announces Launch Date for BlueBird Satellites 8, 9, and 10",
+      "url": "https://www.businesswire.com/news/home/20260609326230/en/AST-SpaceMobile-Announces-Launch-Date-for-BlueBird-Satellites-8-9-and-10",
+      "source": "Business Wire",
+      "publishedAt": "2026-06-09T11:00:00Z",
+      "excerpt": "AST SpaceMobile, Inc. (“AST SpaceMobile”) (NASDAQ: ASTS), the company building the first and only space-based cellular broadband network accessible directly ...",
+      "score": 70,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "What's Going On With AST SpaceMobile Stock Tuesday?",
+      "url": "https://www.benzinga.com/markets/large-cap/26/06/53098851/ast-spacemobile-sets-june-17-launch-date-for-bluebird-satellites",
+      "source": "Benzinga",
+      "publishedAt": "2026-06-09T18:06:56Z",
+      "excerpt": "ASTS stock dips 2.5% amid market sell-off despite upcoming satellite launch. Discover key AST SpaceMobile support and resistance levels.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Three new BlueBird satellites are go.",
+      "url": "https://www.theverge.com/science/946698/three-new-bluebird-satellites-are-go",
+      "source": "The Verge",
+      "publishedAt": "2026-06-09T11:57:46Z",
+      "excerpt": "After Jeff Bezos’s New Glenn rocket failed to put BlueBird 7 into orbit, AST SpaceMobile will use Elon Musk’s trusty Falcon 9 to help build out AST’s space-based cellular broadband network useable by everyday smartphones. The delivery of those giant BlueBird 8,9, and 10 satellites — which feature the largest commercial communications arrays ever deployed in low Earth orbit — is currently scheduled for Wednesday, June 17th. [Image: AST SpaceMobile’s Bluebird 8, 9, 10 stacked and ready for payload integration. Don’t ask about Bluebird 7. https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/PR_graphic_final.jpg?quality=90&strip=all]",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile sees New Glenn setback delaying initial commercial service into 2027",
       "url": "https://spacenews.com/ast-spacemobile-sees-new-glenn-setback-delaying-initial-commercial-service-into-2027/",
       "source": "SpaceNews",
@@ -31,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 3,
-  "lastUpdated": "2026-06-09T19:35:32.806921+00:00",
+  "count": 6,
+  "lastUpdated": "2026-06-10T12:40:15.308556+00:00",
   "generator": "github-actions-gnews+fallback"
 }
