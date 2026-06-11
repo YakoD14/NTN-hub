@@ -25,17 +25,7 @@
       "url": "https://www.theverge.com/science/946698/three-new-bluebird-satellites-are-go",
       "source": "The Verge",
       "publishedAt": "2026-06-09T11:57:46Z",
-      "excerpt": "After Jeff Bezos’s New Glenn rocket failed to put BlueBird 7 into orbit, AST SpaceMobile will use Elon Musk’s trusty Falcon 9 to help build out AST’s space-based cellular broadband network useable by everyday smartphones. The delivery of those giant BlueBird 8,9, and 10 satellites — which feature the largest commercial communications arrays ever deployed in low Earth orbit — is currently scheduled for Wednesday, June 17th. [Image: AST SpaceMobile’s Bluebird 8, 9, 10 stacked and ready for payload integration. Don’t ask about Bluebird 7. https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/PR_graphic_final.jpg?quality=90&strip=all]",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile sees New Glenn setback delaying initial commercial service into 2027",
-      "url": "https://spacenews.com/ast-spacemobile-sees-new-glenn-setback-delaying-initial-commercial-service-into-2027/",
-      "source": "SpaceNews",
-      "publishedAt": "2026-06-03T21:12:58Z",
-      "excerpt": "AST SpaceMobile expects Blue Origin’s recent launchpad explosion will delay its direct-to-smartphone constellation by three to six months, investment bank William Blair said in an equity research note, pushing initial commercial services into the first half of 2027.",
+      "excerpt": "After Jeff Bezos’s New Glenn rocket failed to put BlueBird 7 into orbit, AST SpaceMobile will use Elon Musk’s trusty Falcon 9 to help build out AST’s space-based cellular broadband network useable by everyday smartphones. The delivery of those giant BlueBird 8, 9, and 10 satellites — which feature the largest commercial communications arrays ever deployed in low Earth orbit — is currently scheduled for Wednesday, June 17th. [Image: AST SpaceMobile’s Bluebird 8, 9, 10 stacked and ready for payload integration. Don’t ask about Bluebird 7. https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/PR_graphic_final.jpg?quality=90&strip=all]",
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -61,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-06-10T12:40:15.308556+00:00",
+  "count": 5,
+  "lastUpdated": "2026-06-11T13:04:45.164469+00:00",
   "generator": "github-actions-gnews+fallback"
 }
