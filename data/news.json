@@ -1,14 +1,14 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Announces Launch Date for BlueBird Satellites 8, 9, and 10",
-      "url": "https://www.businesswire.com/news/home/20260609326230/en/AST-SpaceMobile-Announces-Launch-Date-for-BlueBird-Satellites-8-9-and-10",
-      "source": "Business Wire",
-      "publishedAt": "2026-06-09T11:00:00Z",
-      "excerpt": "AST SpaceMobile, Inc. (“AST SpaceMobile”) (NASDAQ: ASTS), the company building the first and only space-based cellular broadband network accessible directly ...",
-      "score": 70,
-      "tag": "AST",
-      "badge": "AST / D2C"
+      "title": "SpaceX prepares to launch AST SpaceMobile BlueBird satellites from Florida",
+      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/15/spacex-to-launch-3-ast-spacemobile-satellites-from-cape-canaveral-space-force-station-florida/90556659007/",
+      "source": "TCPalm",
+      "publishedAt": "2026-06-15T14:32:07Z",
+      "excerpt": "SpaceX is preparing to launch three AST SpaceMobile BlueBirds during early morning hours Wednesday, June 17, from Cape Canaveral Space Force Station.",
+      "score": 74,
+      "tag": "Starlink",
+      "badge": "Starlink"
     },
     {
       "title": "SpaceX, Adobe, Virgin Galactic, AST SpaceMobile And SanDisk: Why These 5 Stocks Are On Investors' Radars",
@@ -21,6 +21,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "AST SpaceMobile: Beyond Space-Based Connectivity, A Defense Powerhouse In The Making",
+      "url": "https://seekingalpha.com/article/4915176-ast-spacemobile-beyond-space-based-connectivity-a-defense-powerhouse-in-the-making",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-16T01:42:36Z",
+      "excerpt": "AST SpaceMobile aims to deploy a global space-based 4G/5G network, targeting both commercial and defense markets. Read why ASTS stock is a Buy.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "Dear AST SpaceMobile Stock Fans, Mark Your Calendars for June 17",
       "url": "https://www.barchart.com/story/news/2424934/dear-ast-spacemobile-stock-fans-mark-your-calendars-for-june-17",
       "source": "Barchart",
@@ -31,22 +41,22 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "What's Going On With AST SpaceMobile Stock Tuesday?",
-      "url": "https://www.benzinga.com/markets/large-cap/26/06/53098851/ast-spacemobile-sets-june-17-launch-date-for-bluebird-satellites",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-09T18:06:56Z",
-      "excerpt": "ASTS stock dips 2.5% amid market sell-off despite upcoming satellite launch. Discover key AST SpaceMobile support and resistance levels.",
-      "score": 50,
+      "title": "Why AST SpaceMobile May Be One Of The Market's Biggest Asymmetric Bets",
+      "url": "https://seekingalpha.com/article/4914839-why-ast-spacemobile-may-be-one-of-the-markets-biggest-asymmetric-bets",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-14T12:25:00Z",
+      "excerpt": "AST SpaceMobile (ASTS) gets a Strong Buy as it scales satellite-to-smartphone broadband. Read the full analysis here.",
+      "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
     },
     {
-      "title": "Three new BlueBird satellites are go.",
-      "url": "https://www.theverge.com/science/946698/three-new-bluebird-satellites-are-go",
-      "source": "The Verge",
-      "publishedAt": "2026-06-09T11:57:46Z",
-      "excerpt": "After Jeff Bezos’s New Glenn rocket failed to put BlueBird 7 into orbit, AST SpaceMobile will use Elon Musk’s trusty Falcon 9 to help build out AST’s space-based cellular broadband network useable by everyday smartphones. The delivery of those giant BlueBird 8, 9, and 10 satellites — which feature the largest commercial communications arrays ever deployed in low Earth orbit — is currently scheduled for Wednesday, June 17th. [Image: AST SpaceMobile’s Bluebird 8, 9, 10 stacked and ready for payload integration. Don’t ask about Bluebird 7. https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/PR_graphic_final.jpg?quality=90&strip=all]",
-      "score": 50,
+      "title": "AST SpaceMobile Stock: The Next Phase Could Be Massive (NASDAQ:ASTS)",
+      "url": "https://seekingalpha.com/article/4914436-ast-spacemobile-next-phase-could-be-massive",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-12T07:16:32Z",
+      "excerpt": "AST SpaceMobile has scaled manufacturing to over 500,000 square feet and targets production of six fully assembled satellites monthly. Read why ASTS stock is a buy.",
+      "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -71,7 +81,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-06-15T18:08:22.674366+00:00",
+  "count": 8,
+  "lastUpdated": "2026-06-16T18:19:27.709260+00:00",
   "generator": "github-actions-gnews+fallback"
 }
