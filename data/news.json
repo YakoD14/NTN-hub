@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "Watch SpaceX launch 3 huge BlueBird direct-to-cell satellites from Florida early on June 17",
+      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-bluebird-8-to-10-direct-to-cell-launch",
+      "source": "Space.com",
+      "publishedAt": "2026-06-16T12:00:00Z",
+      "excerpt": "A SpaceX Falcon 9 rocket will launch three of AST SpaceMobile's BlueBird direct-to-cell satellites early Wednesday morning (June 17), and you can watch the action live.",
+      "score": 102,
+      "tag": "D2C",
+      "badge": "Direct-to-Cell"
+    },
+    {
       "title": "SpaceX prepares to launch AST SpaceMobile BlueBird satellites from Florida",
       "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/15/spacex-to-launch-3-ast-spacemobile-satellites-from-cape-canaveral-space-force-station-florida/90556659007/",
       "source": "TCPalm",
@@ -17,6 +27,16 @@
       "publishedAt": "2026-06-12T01:53:03Z",
       "excerpt": "SPCX, ADBE, SPCE, ASTS, SNDK were among trending stocks on Thursday, June 11, 2026.",
       "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "SpaceX rocket to launch 3 AST SpaceMobile satellites",
+      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/16/spacex-launch-day-heres-information-on-todays-ast-spacemobile-launch-from-cape-canaveral-florida--live/90556473007/",
+      "source": "TCPalm",
+      "publishedAt": "2026-06-16T20:00:38Z",
+      "excerpt": "Follow FLORIDA TODAY Space Team live updates from SpaceX’s upcoming rocket launch on an AST SpaceMobile mission from Cape Canaveral Space Force Station.",
+      "score": 54,
       "tag": "Starlink",
       "badge": "Starlink"
     },
@@ -81,7 +101,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 8,
-  "lastUpdated": "2026-06-16T18:19:27.709260+00:00",
-  "generator": "github-actions-gnews+fallback"
+  "count": 10,
+  "lastUpdated": "2026-06-17T13:02:21.027467+00:00",
+  "generator": "github-actions-gnews"
 }
