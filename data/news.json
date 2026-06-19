@@ -1,34 +1,14 @@
 {
   "items": [
     {
-      "title": "SpaceX launches 3 huge BlueBird direct-to-cell satellites from Florida",
-      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-bluebird-8-to-10-direct-to-cell-launch",
-      "source": "Space.com",
-      "publishedAt": "2026-06-16T12:00:00Z",
-      "excerpt": "A SpaceX Falcon 9 rocket launched three of AST SpaceMobile's giant BlueBird direct-to-cell satellites early Wednesday morning (June 17).",
-      "score": 102,
-      "tag": "D2C",
-      "badge": "Direct-to-Cell"
-    },
-    {
-      "title": "SpaceX Confirms Deployment of All 3 Bluebird Satellites, SPCX Stock Gains",
-      "url": "https://coingape.com/spacex-confirms-deployment-of-all-3-bluebird-satellites-spcx-stock-gains/",
-      "source": "CoinGape",
-      "publishedAt": "2026-06-17T08:53:48Z",
-      "excerpt": "Elon Musk's SpaceX revealed it successfully launched AST SpaceMobile's new batch of BlueBird satellites from Florida. After this announcement, SPCX shares",
-      "score": 74,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
-      "title": "SpaceX prepares to launch AST SpaceMobile BlueBird satellites from Florida",
-      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/15/spacex-to-launch-3-ast-spacemobile-satellites-from-cape-canaveral-space-force-station-florida/90556659007/",
-      "source": "TCPalm",
-      "publishedAt": "2026-06-15T14:32:07Z",
-      "excerpt": "SpaceX is preparing to launch three AST SpaceMobile BlueBirds during early morning hours Wednesday, June 17, from Cape Canaveral Space Force Station.",
-      "score": 74,
-      "tag": "Starlink",
-      "badge": "Starlink"
+      "title": "AST SpaceMobile Shares Rise on Successful Bluebird Satellite Launches. What This Means for ASTS Stock.",
+      "url": "https://www.barchart.com/story/news/2540842/ast-spacemobile-shares-rise-on-successful-bluebird-satellite-launches-what-this-means-for-asts-stock",
+      "source": "Barchart",
+      "publishedAt": "2026-06-18T16:06:44Z",
+      "excerpt": "AST SpaceMobile's next cadence of satellites is also set to launch soon.",
+      "score": 70,
+      "tag": "AST",
+      "badge": "AST / D2C"
     },
     {
       "title": "ASTS Stock Pops as AST SpaceMobile Launches Bluebird Satellites",
@@ -51,21 +31,11 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "SpaceX rocket to launch 3 AST SpaceMobile satellites",
-      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/16/spacex-launch-day-heres-information-on-todays-ast-spacemobile-launch-from-cape-canaveral-florida--live/90556473007/",
-      "source": "TCPalm",
-      "publishedAt": "2026-06-16T20:00:38Z",
-      "excerpt": "Follow FLORIDA TODAY Space Team live updates from SpaceX’s upcoming rocket launch on an AST SpaceMobile mission from Cape Canaveral Space Force Station.",
-      "score": 54,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
-      "title": "AST SpaceMobile: Beyond Space-Based Connectivity, A Defense Powerhouse In The Making",
-      "url": "https://seekingalpha.com/article/4915176-ast-spacemobile-beyond-space-based-connectivity-a-defense-powerhouse-in-the-making",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-16T01:42:36Z",
-      "excerpt": "AST SpaceMobile aims to deploy a global space-based 4G/5G network, targeting both commercial and defense markets. Read why ASTS stock is a Buy.",
+      "title": "AST SpaceMobile announces launch of three new satellites",
+      "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
+      "source": "MobileSyrup",
+      "publishedAt": "2026-06-18T21:17:10Z",
+      "excerpt": "AST SpaceMobile has announced the launch of three new BlueBird satellites as part of its satellite-to-mobile service.",
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -91,17 +61,27 @@
       "badge": "Starlink"
     },
     {
-      "title": "RKLB vs. ASTS: Analysts Say One Space Stock Looks Stronger Near-Term",
-      "url": "https://markets.businessinsider.com/news/stocks/rklb-vs-asts-analysts-say-one-space-stock-looks-stronger-near-term-1036258606",
-      "source": "Markets Insider",
-      "publishedAt": "2026-06-18T00:20:26Z",
-      "excerpt": "The space sector has been one of the market’s busiest themes this year, but Wall Street’s view of Rocket Lab (RKLB) and AST SpaceMobile (ASTS) i...",
-      "score": 40,
+      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
+      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
+      "source": "AST SpaceMobile Press",
+      "publishedAt": "2023-09-19T00:00:00+00:00",
+      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
+      "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
+    },
+    {
+      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
+      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
+      "source": "T-Mobile Newsroom",
+      "publishedAt": "2022-08-25T00:00:00+00:00",
+      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
+      "score": 45,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
     }
   ],
-  "count": 10,
-  "lastUpdated": "2026-06-18T12:32:52.709552+00:00",
-  "generator": "github-actions-gnews"
+  "count": 8,
+  "lastUpdated": "2026-06-19T13:00:29.838298+00:00",
+  "generator": "github-actions-gnews+fallback"
 }
