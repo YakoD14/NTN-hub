@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile: SpaceX Drawdown Triggers Dip Buying Opportunity - FY2027 Monetization Inflection (Rating Upgrade)",
+      "url": "https://seekingalpha.com/article/4916383-ast-spacemobile-spacex-drawdown-triggers-dip-buying-opportunity-fy2027-monetization-inflection-rating-upgrade",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-19T21:13:16Z",
+      "excerpt": "ASTS accelerates satellite launches, targeting 45 BlueBirds in orbit by year-end while leveraging the strong $3.5B cash position to fund over 100 satellites.",
+      "score": 94,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "AST SpaceMobile's Moat Is Growing",
+      "url": "https://seekingalpha.com/article/4916261-ast-spacemobile-stock-moat-is-growing",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-19T15:15:44Z",
+      "excerpt": "ASTS SpaceMobile has secured partnerships with roughly 60 MNOs, providing access to nearly 3 billion potential subscribers globally. Learn why ASTS stock is a buy.",
+      "score": 80,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
+    },
+    {
       "title": "AST SpaceMobile Shares Rise on Successful Bluebird Satellite Launches. What This Means for ASTS Stock.",
       "url": "https://www.barchart.com/story/news/2540842/ast-spacemobile-shares-rise-on-successful-bluebird-satellite-launches-what-this-means-for-asts-stock",
       "source": "Barchart",
@@ -21,16 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Why Is AST SpaceMobile Stock Gaining Wednesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53244627/why-is-ast-spacemobile-stock-gaining-wednesday",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-17T11:02:01Z",
-      "excerpt": "AST SpaceMobile successfully launches BlueBirds 8, 9, & 10, doubling data speeds. See how ASTS stock is reacting to the major milestone.",
-      "score": 70,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile announces launch of three new satellites",
       "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
       "source": "MobileSyrup",
@@ -41,21 +51,21 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "AST SpaceMobile: Commercial Commencement Unlocks Substantial Operating Leverage (ASTS)",
+      "url": "https://seekingalpha.com/article/4916060-ast-spacemobile-fy27-commercial-commencement-unlocks-substantial-operating-leverage",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-18T15:14:53Z",
+      "excerpt": "AST SpaceMobile (ASTS) upgraded to Buy with $103 target.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "The Biggest IPO in History Just Put Space Stocks on the Map. Here Are the Ones Built to Win.",
       "url": "https://www.barchart.com/story/news/2523678/the-biggest-ipo-in-history-just-put-space-stocks-on-the-map-here-are-the-ones-built-to-win",
       "source": "Barchart",
       "publishedAt": "2026-06-17T20:36:34Z",
       "excerpt": "SpaceX's record-setting IPO has investors rushing into space stocks. From Rocket Lab to AST SpaceMobile, here's how to separate the durable winners from the hype in a fast-growing $1 trillion market.",
-      "score": 44,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
-      "title": "Momentus, AST SpaceMobile Lead The Thaw In Space Stocks",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/53251369/momentus-ast-spacemobile-lead-the-thaw-in-space-stocks",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-17T14:24:59Z",
-      "excerpt": "Momentus and AST SpaceMobile lead gains in the space sector following the SpaceX initial public offering on June 12.",
       "score": 44,
       "tag": "Starlink",
       "badge": "Starlink"
@@ -81,7 +91,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 8,
-  "lastUpdated": "2026-06-19T13:00:29.838298+00:00",
+  "count": 9,
+  "lastUpdated": "2026-06-20T10:19:30.585830+00:00",
   "generator": "github-actions-gnews+fallback"
 }
