@@ -31,14 +31,14 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "ASTS Stock Pops as AST SpaceMobile Launches Bluebird Satellites",
-      "url": "https://www.barchart.com/story/news/2524617/asts-stock-pops-as-ast-spacemobile-launches-bluebird-satellites",
-      "source": "Barchart",
-      "publishedAt": "2026-06-17T21:16:27Z",
-      "excerpt": "AST SpaceMobile stock rallied today on the successful launch of BlueBird 8,9, and 10 satellites. But does that warrant buying ASTS shares today?",
-      "score": 70,
-      "tag": "AST",
-      "badge": "AST / D2C"
+      "title": "AST SpaceMobile: My Bet On The New Telecommunications Order",
+      "url": "https://seekingalpha.com/article/4916804-ast-spacemobile-my-bet-on-the-new-telecommunications-order",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-22T20:41:39Z",
+      "excerpt": "Discover why AST SpaceMobile (ASTS) could be a high-risk, high-reward direct-to-cell satellite telecom play with 200 Mbps tech and 3B-user upside—read the full analysis here.",
+      "score": 68,
+      "tag": "D2C",
+      "badge": "Direct-to-Cell"
     },
     {
       "title": "AST SpaceMobile announces launch of three new satellites",
@@ -71,6 +71,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "I'm Bullish On AST SpaceMobile But Holding ASTX - Here's The Distinction",
+      "url": "https://seekingalpha.com/article/4916110-im-bullish-on-ast-spacemobile-but-holding-astx-heres-the-distinction",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-06-18T18:30:00Z",
+      "excerpt": "ASTX offers 200% daily exposure to AST SpaceMobile, targeting traders seeking amplified returns from ASTS volatility. Read more on ASTX ETF here.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -91,7 +101,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 9,
-  "lastUpdated": "2026-06-22T17:56:20.945203+00:00",
-  "generator": "github-actions-gnews+fallback"
+  "count": 10,
+  "lastUpdated": "2026-06-23T11:42:19.382754+00:00",
+  "generator": "github-actions-gnews"
 }
