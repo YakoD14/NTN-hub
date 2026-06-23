@@ -41,6 +41,16 @@
       "badge": "Direct-to-Cell"
     },
     {
+      "title": "SpaceX IPO, Cape launch complexes, AST SpaceMobile lead space newsletter",
+      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/22/spacex-ipo-cape-launch-complexes-ast-spacemobile-lead-florida-today-space-newsletter-321-launch/90652553007/",
+      "source": "TCPalm",
+      "publishedAt": "2026-06-23T01:16:34Z",
+      "excerpt": "SpaceX IPO, new launch sites at Cape Canaveral and AST SpaceMobile satellite highlight 321 Launch, FLORIDA TODAY's weekly space newsletter.",
+      "score": 54,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "AST SpaceMobile announces launch of three new satellites",
       "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
       "source": "MobileSyrup",
@@ -89,19 +99,9 @@
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
-    },
-    {
-      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
-      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
-      "source": "T-Mobile Newsroom",
-      "publishedAt": "2022-08-25T00:00:00+00:00",
-      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
-      "score": 45,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-06-23T11:42:19.382754+00:00",
+  "lastUpdated": "2026-06-23T19:23:17.471052+00:00",
   "generator": "github-actions-gnews"
 }
