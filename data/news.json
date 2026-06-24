@@ -21,11 +21,11 @@
       "badge": "Operator Strategy"
     },
     {
-      "title": "AST SpaceMobile Shares Rise on Successful Bluebird Satellite Launches. What This Means for ASTS Stock.",
-      "url": "https://www.barchart.com/story/news/2540842/ast-spacemobile-shares-rise-on-successful-bluebird-satellite-launches-what-this-means-for-asts-stock",
-      "source": "Barchart",
-      "publishedAt": "2026-06-18T16:06:44Z",
-      "excerpt": "AST SpaceMobile's next cadence of satellites is also set to launch soon.",
+      "title": "Why Is AST SpaceMobile Stock Gaining Tuesday?",
+      "url": "https://www.benzinga.com/markets/tech/26/06/60050423/why-is-ast-spacemobile-stock-gaining-tuesday",
+      "source": "Benzinga",
+      "publishedAt": "2026-06-23T16:39:49Z",
+      "excerpt": "AST SpaceMobile ($ASTS) jumps 4.4% on BlueBird launch news, defying a major Nasdaq sell-off. Get the latest price action and targets.",
       "score": 70,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -51,21 +51,31 @@
       "badge": "Starlink"
     },
     {
-      "title": "AST SpaceMobile announces launch of three new satellites",
-      "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
-      "source": "MobileSyrup",
-      "publishedAt": "2026-06-18T21:17:10Z",
-      "excerpt": "AST SpaceMobile has announced the launch of three new BlueBird satellites as part of its satellite-to-mobile service.",
+      "title": "AST SpaceMobile Announces Launch Of BlueBirds 11, 12, And 13 Satellites",
+      "url": "https://www.marketscreener.com/news/ast-spacemobile-announces-launch-of-bluebirds-11-12-and-13-satellites-ce7f5fdad188f427",
+      "source": "MarketScreener",
+      "publishedAt": "2026-06-23T15:36:25Z",
+      "excerpt": "AST SpaceMobile announced that BlueBird satellites 11, 12, and 13 are targeted to launch from Cape Canaveral, Florida in the first half of August. The mission will carry the next batch of...",
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile: Commercial Commencement Unlocks Substantial Operating Leverage (ASTS)",
-      "url": "https://seekingalpha.com/article/4916060-ast-spacemobile-fy27-commercial-commencement-unlocks-substantial-operating-leverage",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-18T15:14:53Z",
-      "excerpt": "AST SpaceMobile (ASTS) upgraded to Buy with $103 target.",
+      "title": "AST SpaceMobile Targets August Launch for Three BlueBird Satellites",
+      "url": "https://www.marketscreener.com/news/ast-spacemobile-targets-august-launch-for-three-bluebird-satellites-ce7f5fdade8dff27",
+      "source": "MarketScreener",
+      "publishedAt": "2026-06-23T14:30:19Z",
+      "excerpt": "AST SpaceMobile said Tuesday that BlueBird satellites 11, 12 and 13 are targeted for launch aboard a Falcon 9 rocket from Cape Canaveral in the first half of August. The mission will deploy the...",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "AST SpaceMobile announces launch of three new satellites",
+      "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
+      "source": "MobileSyrup",
+      "publishedAt": "2026-06-18T21:17:10Z",
+      "excerpt": "AST SpaceMobile has announced the launch of three new BlueBird satellites as part of its satellite-to-mobile service.",
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -81,16 +91,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "I'm Bullish On AST SpaceMobile But Holding ASTX - Here's The Distinction",
-      "url": "https://seekingalpha.com/article/4916110-im-bullish-on-ast-spacemobile-but-holding-astx-heres-the-distinction",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-18T18:30:00Z",
-      "excerpt": "ASTX offers 200% daily exposure to AST SpaceMobile, targeting traders seeking amplified returns from ASTS volatility. Read more on ASTX ETF here.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -102,6 +102,6 @@
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-06-23T19:23:17.471052+00:00",
+  "lastUpdated": "2026-06-24T10:36:05.328409+00:00",
   "generator": "github-actions-gnews"
 }
