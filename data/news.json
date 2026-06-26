@@ -11,16 +11,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "AST SpaceMobile's Moat Is Growing",
-      "url": "https://seekingalpha.com/article/4916261-ast-spacemobile-stock-moat-is-growing",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-19T15:15:44Z",
-      "excerpt": "ASTS SpaceMobile has secured partnerships with roughly 60 MNOs, providing access to nearly 3 billion potential subscribers globally. Learn why ASTS stock is a buy.",
-      "score": 80,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
-    },
-    {
       "title": "Why Is AST SpaceMobile Stock Gaining Tuesday?",
       "url": "https://www.benzinga.com/markets/tech/26/06/60050423/why-is-ast-spacemobile-stock-gaining-tuesday",
       "source": "Benzinga",
@@ -101,7 +91,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 10,
-  "lastUpdated": "2026-06-26T10:39:45.872322+00:00",
-  "generator": "github-actions-gnews"
+  "count": 9,
+  "lastUpdated": "2026-06-26T18:11:58.823518+00:00",
+  "generator": "github-actions-gnews+fallback"
 }
