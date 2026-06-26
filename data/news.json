@@ -71,16 +71,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile announces launch of three new satellites",
-      "url": "https://mobilesyrup.com/2026/06/18/ast-spacemobile-announces-launch-of-three-new-bluebird-satellites/",
-      "source": "MobileSyrup",
-      "publishedAt": "2026-06-18T21:17:10Z",
-      "excerpt": "AST SpaceMobile has announced the launch of three new BlueBird satellites as part of its satellite-to-mobile service.",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "Rocket Lab or AST SpaceMobile: One Space Stock Is a Buy, One Is a Pass, Says Top Investor",
       "url": "https://markets.businessinsider.com/news/stocks/rocket-lab-or-ast-spacemobile-one-space-stock-is-a-buy-one-is-a-pass-says-top-investor-1036264045",
       "source": "Markets Insider",
@@ -99,9 +89,19 @@
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
+    },
+    {
+      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
+      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
+      "source": "T-Mobile Newsroom",
+      "publishedAt": "2022-08-25T00:00:00+00:00",
+      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
+      "score": 45,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-06-25T19:19:58.444662+00:00",
+  "lastUpdated": "2026-06-26T10:39:45.872322+00:00",
   "generator": "github-actions-gnews"
 }
