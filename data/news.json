@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile: SpaceX Drawdown Triggers Dip Buying Opportunity - FY2027 Monetization Inflection (Rating Upgrade)",
-      "url": "https://seekingalpha.com/article/4916383-ast-spacemobile-spacex-drawdown-triggers-dip-buying-opportunity-fy2027-monetization-inflection-rating-upgrade",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-19T21:13:16Z",
-      "excerpt": "ASTS accelerates satellite launches, targeting 45 BlueBirds in orbit by year-end while leveraging the strong $3.5B cash position to fund over 100 satellites.",
-      "score": 94,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Why Is AST SpaceMobile Stock Gaining Tuesday?",
       "url": "https://www.benzinga.com/markets/tech/26/06/60050423/why-is-ast-spacemobile-stock-gaining-tuesday",
       "source": "Benzinga",
@@ -71,6 +61,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "Why Is AST SpaceMobile Stock (ASTS) Suddenly Soaring Today, 6/26/26?",
+      "url": "https://markets.businessinsider.com/news/stocks/why-is-ast-spacemobile-stock-asts-suddenly-soaring-today-6-26-26-1036280643",
+      "source": "Markets Insider",
+      "publishedAt": "2026-06-26T18:14:57Z",
+      "excerpt": "Satellite telecom company AST SpaceMobile (ASTS) dropped roughly 14% over the last five days, closing each day lower. However, its shares jumped...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -92,6 +92,6 @@
     }
   ],
   "count": 9,
-  "lastUpdated": "2026-06-26T18:11:58.823518+00:00",
+  "lastUpdated": "2026-06-27T09:18:25.990856+00:00",
   "generator": "github-actions-gnews+fallback"
 }
