@@ -61,16 +61,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Globalstar, Inc.(NasdaqGS:GSAT) dropped from Russell 2000 Index",
-      "url": "https://www.marketscreener.com/news/globalstar-inc-nasdaqgs-gsat-dropped-from-russell-2000-index-ce7f5fdfda8df221",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-29T18:38:55Z",
-      "excerpt": "Globalstar, Inc. dropped from Russell 2000 Index...",
-      "score": 14,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -91,7 +81,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 9,
-  "lastUpdated": "2026-06-30T11:26:22.228367+00:00",
+  "count": 8,
+  "lastUpdated": "2026-06-30T13:55:01.032184+00:00",
   "generator": "github-actions-gnews+fallback"
 }
