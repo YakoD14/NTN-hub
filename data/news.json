@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "What's Going On With AST SpaceMobile Stock Monday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60151757/whats-going-on-with-ast-spacemobile-stock-monday-3",
+      "source": "Benzinga",
+      "publishedAt": "2026-06-29T11:16:59Z",
+      "excerpt": "AST SpaceMobile stock jumps on SpaceX IPO filing and upcoming BlueBird satellite launch updates. Read the key levels to watch here.",
+      "score": 74,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "Why Is AST SpaceMobile Stock Gaining Tuesday?",
       "url": "https://www.benzinga.com/markets/tech/26/06/60050423/why-is-ast-spacemobile-stock-gaining-tuesday",
       "source": "Benzinga",
@@ -9,26 +19,6 @@
       "score": 70,
       "tag": "AST",
       "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile: My Bet On The New Telecommunications Order",
-      "url": "https://seekingalpha.com/article/4916804-ast-spacemobile-my-bet-on-the-new-telecommunications-order",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-06-22T20:41:39Z",
-      "excerpt": "Discover why AST SpaceMobile (ASTS) could be a high-risk, high-reward direct-to-cell satellite telecom play with 200 Mbps tech and 3B-user upside—read the full analysis here.",
-      "score": 68,
-      "tag": "D2C",
-      "badge": "Direct-to-Cell"
-    },
-    {
-      "title": "SpaceX IPO, Cape launch complexes, AST SpaceMobile lead space newsletter",
-      "url": "https://www.tcpalm.com/story/tech/science/space/2026/06/22/spacex-ipo-cape-launch-complexes-ast-spacemobile-lead-florida-today-space-newsletter-321-launch/90652553007/",
-      "source": "TCPalm",
-      "publishedAt": "2026-06-23T01:16:34Z",
-      "excerpt": "SpaceX IPO, new launch sites at Cape Canaveral and AST SpaceMobile satellite highlight 321 Launch, FLORIDA TODAY's weekly space newsletter.",
-      "score": 54,
-      "tag": "Starlink",
-      "badge": "Starlink"
     },
     {
       "title": "AST SpaceMobile Announces Launch Of BlueBirds 11, 12, And 13 Satellites",
@@ -71,6 +61,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "Globalstar, Inc.(NasdaqGS:GSAT) dropped from Russell 2000 Index",
+      "url": "https://www.marketscreener.com/news/globalstar-inc-nasdaqgs-gsat-dropped-from-russell-2000-index-ce7f5fdfda8df221",
+      "source": "MarketScreener",
+      "publishedAt": "2026-06-29T18:38:55Z",
+      "excerpt": "Globalstar, Inc. dropped from Russell 2000 Index...",
+      "score": 14,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -92,6 +92,6 @@
     }
   ],
   "count": 9,
-  "lastUpdated": "2026-06-29T14:39:23.628482+00:00",
+  "lastUpdated": "2026-06-30T11:26:22.228367+00:00",
   "generator": "github-actions-gnews+fallback"
 }
