@@ -11,36 +11,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "Why Is AST SpaceMobile Stock Gaining Tuesday?",
-      "url": "https://www.benzinga.com/markets/tech/26/06/60050423/why-is-ast-spacemobile-stock-gaining-tuesday",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-23T16:39:49Z",
-      "excerpt": "AST SpaceMobile ($ASTS) jumps 4.4% on BlueBird launch news, defying a major Nasdaq sell-off. Get the latest price action and targets.",
-      "score": 70,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile Announces Launch Of BlueBirds 11, 12, And 13 Satellites",
-      "url": "https://www.marketscreener.com/news/ast-spacemobile-announces-launch-of-bluebirds-11-12-and-13-satellites-ce7f5fdad188f427",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-23T15:36:25Z",
-      "excerpt": "AST SpaceMobile announced that BlueBird satellites 11, 12, and 13 are targeted to launch from Cape Canaveral, Florida in the first half of August. The mission will carry the next batch of...",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile Targets August Launch for Three BlueBird Satellites",
-      "url": "https://www.marketscreener.com/news/ast-spacemobile-targets-august-launch-for-three-bluebird-satellites-ce7f5fdade8dff27",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-23T14:30:19Z",
-      "excerpt": "AST SpaceMobile said Tuesday that BlueBird satellites 11, 12 and 13 are targeted for launch aboard a Falcon 9 rocket from Cape Canaveral in the first half of August. The mission will deploy the...",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "‘Better Than SpaceX,’ Says Investor About AST SpaceMobile Stock",
       "url": "https://markets.businessinsider.com/news/stocks/better-than-spacex-says-investor-about-ast-spacemobile-stock-1036281787",
       "source": "Markets Insider",
@@ -81,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 8,
-  "lastUpdated": "2026-06-30T13:55:01.032184+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-01T02:33:27.307007+00:00",
   "generator": "github-actions-gnews+fallback"
 }
