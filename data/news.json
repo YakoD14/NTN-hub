@@ -31,16 +31,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "Why Is AST SpaceMobile Stock (ASTS) Suddenly Soaring Today, 6/26/26?",
-      "url": "https://markets.businessinsider.com/news/stocks/why-is-ast-spacemobile-stock-asts-suddenly-soaring-today-6-26-26-1036280643",
-      "source": "Markets Insider",
-      "publishedAt": "2026-06-26T18:14:57Z",
-      "excerpt": "Satellite telecom company AST SpaceMobile (ASTS) dropped roughly 14% over the last five days, closing each day lower. However, its shares jumped...",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -61,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-07-03T13:42:16.337372+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-04T01:55:58.631339+00:00",
   "generator": "github-actions-gnews+fallback"
 }
