@@ -21,16 +21,6 @@
       "badge": "Operator Strategy"
     },
     {
-      "title": "‘Better Than SpaceX,’ Says Investor About AST SpaceMobile Stock",
-      "url": "https://markets.businessinsider.com/news/stocks/better-than-spacex-says-investor-about-ast-spacemobile-stock-1036281787",
-      "source": "Markets Insider",
-      "publishedAt": "2026-06-29T01:52:14Z",
-      "excerpt": "About two and a half weeks ago, giddy investors turned their eyes to the skies as SpaceX (NASDAQ:SPCX), the largest IPO in history, blasted off....",
-      "score": 44,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Looking for Exposure to AST SpaceMobile Stock (ASTS)? Consider These Two ETFs",
       "url": "https://markets.businessinsider.com/news/stocks/looking-for-exposure-to-ast-spacemobile-stock-asts-consider-these-two-etfs-1036298073",
       "source": "Markets Insider",
@@ -39,16 +29,6 @@
       "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
-    },
-    {
-      "title": "Globalstar, Inc.(NasdaqGS:GSAT) dropped from Russell 2000 Index",
-      "url": "https://www.marketscreener.com/news/globalstar-inc-nasdaqgs-gsat-dropped-from-russell-2000-index-ce7f5fdfda8df221",
-      "source": "MarketScreener",
-      "publishedAt": "2026-06-29T18:38:55Z",
-      "excerpt": "Globalstar, Inc. dropped from Russell 2000 Index...",
-      "score": 14,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
     },
     {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
@@ -71,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-07-05T13:07:38.993884+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-06T02:09:14.332578+00:00",
   "generator": "github-actions-gnews+fallback"
 }
