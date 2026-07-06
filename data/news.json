@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "What's Going On With AST SpaceMobile Stock Monday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/06/60151757/whats-going-on-with-ast-spacemobile-stock-monday-3",
-      "source": "Benzinga",
-      "publishedAt": "2026-06-29T11:16:59Z",
-      "excerpt": "AST SpaceMobile stock jumps on SpaceX IPO filing and upcoming BlueBird satellite launch updates. Read the key levels to watch here.",
-      "score": 74,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Major Moves in Space: From Satellites to Lunar Landers",
       "url": "https://www.devdiscourse.com/article/science-environment/3943288-major-moves-in-space-from-satellites-to-lunar-landers",
       "source": "Devdiscourse",
@@ -29,6 +19,16 @@
       "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
+    },
+    {
+      "title": "Globalstar, Inc.(NasdaqGS:GSAT) dropped from Russell 2000 Index",
+      "url": "https://www.marketscreener.com/news/globalstar-inc-nasdaqgs-gsat-dropped-from-russell-2000-index-ce7f5fdfda8df221",
+      "source": "MarketScreener",
+      "publishedAt": "2026-06-29T18:38:55Z",
+      "excerpt": "Globalstar, Inc. dropped from Russell 2000 Index...",
+      "score": 14,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
     },
     {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
@@ -52,6 +52,6 @@
     }
   ],
   "count": 5,
-  "lastUpdated": "2026-07-06T02:09:14.332578+00:00",
+  "lastUpdated": "2026-07-06T14:58:15.165459+00:00",
   "generator": "github-actions-gnews+fallback"
 }
