@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "Major Moves in Space: From Satellites to Lunar Landers",
-      "url": "https://www.devdiscourse.com/article/science-environment/3943288-major-moves-in-space-from-satellites-to-lunar-landers",
-      "source": "Devdiscourse",
-      "publishedAt": "2026-06-30T20:57:59Z",
-      "excerpt": "In science news, Rakuten Group receives substantial Japanese government funding for a satellite project, collaborating with AST SpaceMobile. Studies reveal similarities in laughter between humans and great apes, showcasing evolutionary links. NASA awards significant contracts to companies for lunar landers. Anthropic introduces Claude Science, enhancing AI in research.",
-      "score": 50,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
-    },
-    {
       "title": "Looking for Exposure to AST SpaceMobile Stock (ASTS)? Consider These Two ETFs",
       "url": "https://markets.businessinsider.com/news/stocks/looking-for-exposure-to-ast-spacemobile-stock-asts-consider-these-two-etfs-1036298073",
       "source": "Markets Insider",
@@ -41,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-07-07T14:06:48.861033+00:00",
+  "count": 3,
+  "lastUpdated": "2026-07-08T01:45:36.036679+00:00",
   "generator": "github-actions-gnews+fallback"
 }
