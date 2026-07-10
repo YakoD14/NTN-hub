@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "AST SpaceMobile: The CapEx Requirement Will Lead To Further Dilution",
+      "url": "https://seekingalpha.com/article/4920992-ast-spacemobile-the-capex-requirement-will-lead-to-further-dilution",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-07-09T19:10:27Z",
+      "excerpt": "AST SpaceMobile receives a Sell rating due to unsustainable unit economics and excessive capital requirements. Read more on ASTS stock here.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "Looking for Exposure to AST SpaceMobile Stock (ASTS)? Consider These Two ETFs",
       "url": "https://markets.businessinsider.com/news/stocks/looking-for-exposure-to-ast-spacemobile-stock-asts-consider-these-two-etfs-1036298073",
       "source": "Markets Insider",
@@ -41,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-07-10T01:55:47.612655+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-10T13:58:30.775689+00:00",
   "generator": "github-actions-gnews+fallback"
 }
