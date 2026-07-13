@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "SpaceX Stock vs. AST SpaceMobile: Analysts Say One Space Name Looks Stronger Near-Term",
+      "url": "https://markets.businessinsider.com/news/stocks/spacex-stock-vs-ast-spacemobile-analysts-say-one-space-name-looks-stronger-near-term-1036316745",
+      "source": "Markets Insider",
+      "publishedAt": "2026-07-12T14:38:33Z",
+      "excerpt": "The space sector has been one of the market’s busiest themes this year, but Wall Street’s view of SpaceX (SPCX) and AST SpaceMobile (ASTS) is cu...",
+      "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "AST SpaceMobile: The CapEx Requirement Will Lead To Further Dilution",
       "url": "https://seekingalpha.com/article/4920992-ast-spacemobile-the-capex-requirement-will-lead-to-further-dilution",
       "source": "Seeking Alpha",
@@ -41,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-07-13T01:49:20.422632+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-13T14:04:38.117410+00:00",
   "generator": "github-actions-gnews+fallback"
 }
