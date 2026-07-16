@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Stock: The Stock Has Lost Touch With Reality (NASDAQ:ASTS)",
-      "url": "https://seekingalpha.com/article/4920770-ast-spacemobile-stock-has-lost-touch-with-reality",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-07-09T13:15:16Z",
-      "excerpt": "AST SpaceMobile faces significant headwinds from SpaceX's Starlink expansion, launch delays with Blue Origin, and cash burn. Read why ASTS stock is a sell.",
-      "score": 98,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "SpaceX Stock vs. AST SpaceMobile: Analysts Say One Space Name Looks Stronger Near-Term",
       "url": "https://markets.businessinsider.com/news/stocks/spacex-stock-vs-ast-spacemobile-analysts-say-one-space-name-looks-stronger-near-term-1036316745",
       "source": "Markets Insider",
@@ -19,6 +9,26 @@
       "score": 64,
       "tag": "Starlink",
       "badge": "Starlink"
+    },
+    {
+      "title": "‘Stay Away,’ Says Investor About AST SpaceMobile Stock",
+      "url": "https://markets.businessinsider.com/news/stocks/stay-away-says-investor-about-ast-spacemobile-stock-1036331426",
+      "source": "Markets Insider",
+      "publishedAt": "2026-07-16T00:54:22Z",
+      "excerpt": "AST SpaceMobile (NASDAQ:ASTS) investors received an unwelcome surprise after Wednesday’s closing bell. Shares fell about 12% in after-hours trad...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Why AST SpaceMobile Stock (ASTS) Trended Lower in After-Hours Today, 7/15/2026",
+      "url": "https://markets.businessinsider.com/news/stocks/why-ast-spacemobile-stock-asts-trended-lower-in-after-hours-today-7-15-2026-1036331217",
+      "source": "Markets Insider",
+      "publishedAt": "2026-07-15T23:13:24Z",
+      "excerpt": "AST SpaceMobile (ASTS) sank 13.4% in after‑hours trading after the company disclosed plans to raise $1 billion through a private offering of con...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
     },
     {
       "title": "AST SpaceMobile: The CapEx Requirement Will Lead To Further Dilution",
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-07-16T01:43:15.053861+00:00",
+  "count": 7,
+  "lastUpdated": "2026-07-16T13:19:26.874949+00:00",
   "generator": "github-actions-gnews+fallback"
 }
