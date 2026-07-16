@@ -31,6 +31,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "Bell closer to launching space-based service as it begins testing satellite ground station in Quebec",
+      "url": "https://www.theglobeandmail.com/business/article-bell-satellite-ground-station-quebec-satellite-to-mobile-coverage/",
+      "source": "The Globe and Mail",
+      "publishedAt": "2026-07-15T12:57:23Z",
+      "excerpt": "Company aiming to offer satellite coverage early next year through AST SpaceMobile partnership",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -51,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-07-15T13:11:33.381771+00:00",
+  "count": 6,
+  "lastUpdated": "2026-07-16T01:43:15.053861+00:00",
   "generator": "github-actions-gnews+fallback"
 }
