@@ -11,6 +11,26 @@
       "badge": "Starlink"
     },
     {
+      "title": "AST delays first direct-to-phone satellite network.",
+      "url": "https://www.theverge.com/news/966400/ast-delays-first-direct-to-phone-satellite-network",
+      "source": "The Verge",
+      "publishedAt": "2026-07-16T07:45:29Z",
+      "excerpt": "AST SpaceMobile was targeting the end of 2026 to begin service, but its low-Earth orbit constellation won’t reach its target of 45 BlueBird satellites until “early 2027.” This is partly due to Blue Origin’s failure to properly deploy one of AST’s giant cell towers, but also a reduction in launch capacity now that the New Glenn rocket is sidelined by a subsequent launch pad explosion. [Link: AST SpaceMobile Delays Service Launch To 2027, Eyes 'Acquisitions' | https://www.pcmag.com/news/ast-spacemobile-delays-service-launch-to-2027-eyes-acquisitions | PCMAG]",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Why Is AST SpaceMobile Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60491119/why-is-ast-spacemobile-stock-falling-thursday-2",
+      "source": "Benzinga",
+      "publishedAt": "2026-07-16T10:58:02Z",
+      "excerpt": "AST SpaceMobile ($ASTS) stock falls 10% in premarket after pricing a $1B convertible notes offering. Get the latest market reaction.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "‘Stay Away,’ Says Investor About AST SpaceMobile Stock",
       "url": "https://markets.businessinsider.com/news/stocks/stay-away-says-investor-about-ast-spacemobile-stock-1036331426",
       "source": "Markets Insider",
@@ -27,26 +47,6 @@
       "publishedAt": "2026-07-15T23:13:24Z",
       "excerpt": "AST SpaceMobile (ASTS) sank 13.4% in after‑hours trading after the company disclosed plans to raise $1 billion through a private offering of con...",
       "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile: The CapEx Requirement Will Lead To Further Dilution",
-      "url": "https://seekingalpha.com/article/4920992-ast-spacemobile-the-capex-requirement-will-lead-to-further-dilution",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-07-09T19:10:27Z",
-      "excerpt": "AST SpaceMobile receives a Sell rating due to unsustainable unit economics and excessive capital requirements. Read more on ASTS stock here.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "Bell closer to launching space-based service as it begins testing satellite ground station in Quebec",
-      "url": "https://www.theglobeandmail.com/business/article-bell-satellite-ground-station-quebec-satellite-to-mobile-coverage/",
-      "source": "The Globe and Mail",
-      "publishedAt": "2026-07-15T12:57:23Z",
-      "excerpt": "Company aiming to offer satellite coverage early next year through AST SpaceMobile partnership",
-      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-07-16T13:19:26.874949+00:00",
+  "lastUpdated": "2026-07-17T01:46:29.933718+00:00",
   "generator": "github-actions-gnews+fallback"
 }
