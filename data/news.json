@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "SK Hynix, AST SpaceMobile, SpaceX: 5 Stocks Investors Couldn't Stop Buzzing About This Week",
+      "url": "https://www.benzinga.com/markets/equities/26/07/60540973/sk-hynix-ast-spacemobile-spacex-5-stocks-investors-couldnt-stop-buzzing-about-this-week",
+      "source": "Benzinga",
+      "publishedAt": "2026-07-18T13:00:43Z",
+      "excerpt": "Retail investors talked up five hot stocks during the week (July 13 to July 17) on X and Reddit: NFLX, ASTS, SKHY, MU, SPCX.",
+      "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "SpaceX Stock vs. AST SpaceMobile: Analysts Say One Space Name Looks Stronger Near-Term",
       "url": "https://markets.businessinsider.com/news/stocks/spacex-stock-vs-ast-spacemobile-analysts-say-one-space-name-looks-stronger-near-term-1036316745",
       "source": "Markets Insider",
@@ -71,7 +81,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-07-18T12:51:13.756372+00:00",
+  "count": 8,
+  "lastUpdated": "2026-07-19T01:44:04.282800+00:00",
   "generator": "github-actions-gnews+fallback"
 }
