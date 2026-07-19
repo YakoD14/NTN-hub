@@ -11,16 +11,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "SpaceX Stock vs. AST SpaceMobile: Analysts Say One Space Name Looks Stronger Near-Term",
-      "url": "https://markets.businessinsider.com/news/stocks/spacex-stock-vs-ast-spacemobile-analysts-say-one-space-name-looks-stronger-near-term-1036316745",
-      "source": "Markets Insider",
-      "publishedAt": "2026-07-12T14:38:33Z",
-      "excerpt": "The space sector has been one of the market’s busiest themes this year, but Wall Street’s view of SpaceX (SPCX) and AST SpaceMobile (ASTS) is cu...",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST delays first direct-to-phone satellite network.",
       "url": "https://www.theverge.com/news/966400/ast-delays-first-direct-to-phone-satellite-network",
       "source": "The Verge",
@@ -81,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 8,
-  "lastUpdated": "2026-07-19T01:44:04.282800+00:00",
+  "count": 7,
+  "lastUpdated": "2026-07-19T12:53:55.112589+00:00",
   "generator": "github-actions-gnews+fallback"
 }
