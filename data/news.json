@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "AST SpaceMobile: Convertible Notes Accelerate Its Full Potential (NASDAQ:ASTS)",
+      "url": "https://seekingalpha.com/article/4923611-ast-spacemobile-stock-convertible-notes-accelerate-potential-rating-upgrade",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-07-21T05:18:20Z",
+      "excerpt": "AST SpaceMobile delayed its 45-satellite target to early 2027 due to launch constraints. Find out why ASTS stock is upgraded to Strong Buy.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST delays first direct-to-phone satellite network.",
       "url": "https://www.theverge.com/news/966400/ast-delays-first-direct-to-phone-satellite-network",
       "source": "The Verge",
@@ -41,16 +51,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Why Is AST SpaceMobile Stock Falling Thursday?",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60491119/why-is-ast-spacemobile-stock-falling-thursday-2",
-      "source": "Benzinga",
-      "publishedAt": "2026-07-16T10:58:02Z",
-      "excerpt": "AST SpaceMobile ($ASTS) stock falls 10% in premarket after pricing a $1B convertible notes offering. Get the latest market reaction.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-07-21T13:16:07.355438+00:00",
+  "lastUpdated": "2026-07-22T01:43:29.557459+00:00",
   "generator": "github-actions-gnews+fallback"
 }
