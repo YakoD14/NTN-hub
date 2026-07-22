@@ -21,16 +21,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST delays first direct-to-phone satellite network.",
-      "url": "https://www.theverge.com/news/966400/ast-delays-first-direct-to-phone-satellite-network",
-      "source": "The Verge",
-      "publishedAt": "2026-07-16T07:45:29Z",
-      "excerpt": "AST SpaceMobile was targeting the end of 2026 to begin service, but its low-Earth orbit constellation won’t reach its target of 45 BlueBird satellites until “early 2027.” This is partly due to Blue Origin’s failure to properly deploy one of AST’s giant cell towers, but also a reduction in launch capacity now that the New Glenn rocket is sidelined by a subsequent launch pad explosion. [Link: AST SpaceMobile Delays Service Launch To 2027, Eyes 'Acquisitions' | https://www.pcmag.com/news/ast-spacemobile-delays-service-launch-to-2027-eyes-acquisitions | PCMAG]",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "Why Piper Sandler Likes AST SpaceMobile (ASTS) Stock Over Other Space Stocks",
       "url": "https://www.barchart.com/story/news/3339359/why-piper-sandler-likes-ast-spacemobile-asts-stock-over-other-space-stocks",
       "source": "Barchart",
@@ -46,6 +36,16 @@
       "source": "Seeking Alpha",
       "publishedAt": "2026-07-17T16:30:37Z",
       "excerpt": "AST SpaceMobile has dropped nearly 60%, but dilution was only the catalyst after weakening sentiment. Click here to read more about ASTS.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Why Is AST SpaceMobile Stock Falling Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60491119/why-is-ast-spacemobile-stock-falling-thursday-2",
+      "source": "Benzinga",
+      "publishedAt": "2026-07-16T10:58:02Z",
+      "excerpt": "AST SpaceMobile ($ASTS) stock falls 10% in premarket after pricing a $1B convertible notes offering. Get the latest market reaction.",
       "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-07-22T01:43:29.557459+00:00",
+  "lastUpdated": "2026-07-22T13:20:56.517633+00:00",
   "generator": "github-actions-gnews+fallback"
 }
