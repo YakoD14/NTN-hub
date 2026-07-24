@@ -21,6 +21,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "Why Is AST SpaceMobile Stock Falling On Thursday?",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60645296/why-is-ast-spacemobile-stock-falling-on-thursday",
+      "source": "Benzinga",
+      "publishedAt": "2026-07-23T15:48:13Z",
+      "excerpt": "AST SpaceMobile Inc. (NASDAQ: ASTS) stock moved lower Thursday following its recent $1.15 billion capital raise, analyst rating updates, and elevated short interest ahead of its Q2 earnings report.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "Why Piper Sandler Likes AST SpaceMobile (ASTS) Stock Over Other Space Stocks",
       "url": "https://www.barchart.com/story/news/3339359/why-piper-sandler-likes-ast-spacemobile-asts-stock-over-other-space-stocks",
       "source": "Barchart",
@@ -37,16 +47,6 @@
       "publishedAt": "2026-07-17T16:30:37Z",
       "excerpt": "AST SpaceMobile has dropped nearly 60%, but dilution was only the catalyst after weakening sentiment. Click here to read more about ASTS.",
       "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "Why Is AST SpaceMobile Stock Soaring Tuesday?",
-      "url": "https://www.benzinga.com/markets/offerings/26/07/60590552/why-is-ast-spacemobile-stock-soaring-tuesday",
-      "source": "Benzinga",
-      "publishedAt": "2026-07-21T18:23:30Z",
-      "excerpt": "AST SpaceMobile shares surge 11% following a $1.15 billion debt deal, expanding total cash reserves to over $3.8 billion.",
-      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-07-24T01:46:44.156396+00:00",
+  "lastUpdated": "2026-07-24T13:17:06.054490+00:00",
   "generator": "github-actions-gnews+fallback"
 }
