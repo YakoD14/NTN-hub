@@ -21,6 +21,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "RKLB, LUNR, ASTS: Space Stocks Are Falling Hard Today - Here’s Why",
+      "url": "https://markets.businessinsider.com/news/stocks/rklb-lunr-asts-space-stocks-are-falling-hard-today-here-s-why-1036364000",
+      "source": "Markets Insider",
+      "publishedAt": "2026-07-24T19:45:48Z",
+      "excerpt": "Space stocks, such as Rocket Lab (RKLB), Intuitive Machines (LUNR), and AST SpaceMobile (ASTS), fell sharply on Friday as the sector came under ...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "Why Is AST SpaceMobile Stock Falling On Thursday?",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/07/60645296/why-is-ast-spacemobile-stock-falling-on-thursday",
       "source": "Benzinga",
@@ -36,16 +46,6 @@
       "source": "Benzinga",
       "publishedAt": "2026-07-21T18:23:30Z",
       "excerpt": "AST SpaceMobile shares surge 11% following a $1.15 billion debt deal, expanding total cash reserves to over $3.8 billion.",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "Cramer: ‘That Thing Has Just Been Crushed’",
-      "url": "https://www.benzinga.com/trading-ideas/long-ideas/26/07/60573605/stock-crushed-cramer-lightning-round-mad-money",
-      "source": "Benzinga",
-      "publishedAt": "2026-07-21T12:04:05Z",
-      "excerpt": "\"Mad Money\" host Jim Cramer says AST SpaceMobile is \"losing a fortune,\" suggests Fiserv ink a merger and praises Cheesecake Factory's menu.",
       "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-07-25T01:46:53.155973+00:00",
+  "lastUpdated": "2026-07-25T13:00:40.137859+00:00",
   "generator": "github-actions-gnews+fallback"
 }
