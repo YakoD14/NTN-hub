@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile's Next Chapter Is Finally Here",
+      "url": "https://seekingalpha.com/article/4925670-ast-spacemobiles-next-chapter-is-finally-here",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-07-26T10:46:30Z",
+      "excerpt": "AST SpaceMobile targets 45+ satellite launches in 2026 with $3.5B cash, strong operator backing, and $150–$200M revenue guide. Click for more on ASTS stock.",
+      "score": 80,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
+    },
+    {
       "title": "AST SpaceMobile: Convertible Notes Accelerate Its Full Potential (NASDAQ:ASTS)",
       "url": "https://seekingalpha.com/article/4923611-ast-spacemobile-stock-convertible-notes-accelerate-potential-rating-upgrade",
       "source": "Seeking Alpha",
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-07-26T12:57:27.502018+00:00",
+  "count": 7,
+  "lastUpdated": "2026-07-27T01:56:53.002865+00:00",
   "generator": "github-actions-gnews+fallback"
 }
