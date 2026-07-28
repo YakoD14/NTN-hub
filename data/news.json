@@ -41,6 +41,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "Amazon wants to launch 5,105 new direct-to-device satellites.",
+      "url": "https://www.theverge.com/science/971254/amazon-wants-to-launch-5105-new-direct-to-device-satellites",
+      "source": "The Verge",
+      "publishedAt": "2026-07-27T10:13:32Z",
+      "excerpt": "The FCC application was submitted on Saturday. The low-Earth orbit satellites would communicate directly with unmodified mobile phones and IoT devices, and operate in concert with Amazon’s burgeoning Leo constellation (which requires a dish for connectivity) and the Globalstar system used by iPhones that Amazon is acquiring. [Link: Amazon Leo confirms 5,105 satellites scheme | https://www.advanced-television.com/2026/07/27/amazon-leo-confirms-5105-satellites-scheme/ | Advanced Television]",
+      "score": 38,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
       "title": "Why Is AST SpaceMobile Stock Soaring Tuesday?",
       "url": "https://www.benzinga.com/markets/offerings/26/07/60590552/why-is-ast-spacemobile-stock-soaring-tuesday",
       "source": "Benzinga",
@@ -71,7 +81,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-07-27T14:09:57.263718+00:00",
+  "count": 8,
+  "lastUpdated": "2026-07-28T01:40:38.789517+00:00",
   "generator": "github-actions-gnews+fallback"
 }
