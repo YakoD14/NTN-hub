@@ -41,16 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Why Is AST SpaceMobile Stock Soaring Tuesday?",
-      "url": "https://www.benzinga.com/markets/offerings/26/07/60590552/why-is-ast-spacemobile-stock-soaring-tuesday",
-      "source": "Benzinga",
-      "publishedAt": "2026-07-21T18:23:30Z",
-      "excerpt": "AST SpaceMobile shares surge 11% following a $1.15 billion debt deal, expanding total cash reserves to over $3.8 billion.",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-07-28T13:29:36.258996+00:00",
+  "count": 6,
+  "lastUpdated": "2026-07-29T01:41:33.123502+00:00",
   "generator": "github-actions-gnews+fallback"
 }
