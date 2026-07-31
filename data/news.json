@@ -11,16 +11,6 @@
       "badge": "Operator Strategy"
     },
     {
-      "title": "Amazon asked the FCC to approve 5,105 satellites for a network that sends internet straight to your phone",
-      "url": "https://thenextweb.com/news/amazon-5105-satellites-direct-to-device-fcc",
-      "source": "TNW",
-      "publishedAt": "2026-07-27T19:00:04Z",
-      "excerpt": "Amazon filed to launch 5,105 satellites for direct-to-device connectivity. It combines Kuiper and Globalstar assets. Deployment targets 2028. SpaceX already offers D2D via T-Mobile.",
-      "score": 78,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
-    },
-    {
       "title": "Despite Challenges, AST SpaceMobile Stock Could Make a Compelling Options Trade for Contrarians Here",
       "url": "https://www.barchart.com/story/news/3481094/despite-challenges-ast-spacemobile-stock-could-make-a-compelling-options-trade-for-contrarians-here",
       "source": "Barchart",
@@ -39,36 +29,6 @@
       "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
-    },
-    {
-      "title": "Amazon Files for 5,105-Satellite Network That Will Power iPhone Satellite Features",
-      "url": "https://www.macrumors.com/2026/07/27/amazon-iphone-satellite-network/",
-      "source": "MacRumors",
-      "publishedAt": "2026-07-27T17:21:12Z",
-      "excerpt": "Amazon is planning to deploy up to 5,105 low Earth orbit satellites that will use Globalstar spectrum to provide voice, data, messaging, and emergency services to devices like the iPhone. Amazon's project is expected to improve existing iPhone satellite features and support new features. Apple uses Globalstar for the satellite features on the iPhone and Apple Watch Ultra 3, and Amazon is in the process of acquiring the company.",
-      "score": 38,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "Amazon wants to launch 5,105 new direct-to-device satellites.",
-      "url": "https://www.theverge.com/science/971254/amazon-wants-to-launch-5105-new-direct-to-device-satellites",
-      "source": "The Verge",
-      "publishedAt": "2026-07-27T10:13:32Z",
-      "excerpt": "The FCC application was submitted on Saturday. The low-Earth orbit satellites would communicate directly with unmodified mobile phones and IoT devices, and operate in concert with Amazon’s burgeoning Leo constellation (which requires a dish for connectivity) and the Globalstar system used by iPhones that Amazon is acquiring. [Link: Amazon Leo confirms 5,105 satellites scheme | https://www.advanced-television.com/2026/07/27/amazon-leo-confirms-5105-satellites-scheme/ | Advanced Television]",
-      "score": 38,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "Amazon seeks to launch 5,105 satellites for direct-to-device network",
-      "url": "https://www.cnbc.com/2026/07/27/amazon-satellite-internet-network.html",
-      "source": "CNBC",
-      "publishedAt": "2026-07-27T15:52:28Z",
-      "excerpt": "The proposed network will partly rely on assets from Globalstar, which Amazon announced plans to acquire in April for roughly $11.6 billion.",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
     },
     {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
@@ -91,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 9,
-  "lastUpdated": "2026-07-31T01:51:09.860945+00:00",
+  "count": 5,
+  "lastUpdated": "2026-07-31T13:39:30.494390+00:00",
   "generator": "github-actions-gnews+fallback"
 }
