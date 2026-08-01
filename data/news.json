@@ -21,16 +21,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "RKLB, LUNR, ASTS: Space Stocks Are Falling Hard Today - Here’s Why",
-      "url": "https://markets.businessinsider.com/news/stocks/rklb-lunr-asts-space-stocks-are-falling-hard-today-here-s-why-1036364000",
-      "source": "Markets Insider",
-      "publishedAt": "2026-07-24T19:45:48Z",
-      "excerpt": "Space stocks, such as Rocket Lab (RKLB), Intuitive Machines (LUNR), and AST SpaceMobile (ASTS), fell sharply on Friday as the sector came under ...",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -51,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-07-31T13:39:30.494390+00:00",
+  "count": 4,
+  "lastUpdated": "2026-08-01T01:52:12.731845+00:00",
   "generator": "github-actions-gnews+fallback"
 }
