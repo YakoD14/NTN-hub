@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "title": "Despite Challenges, AST SpaceMobile Stock Could Make a Compelling Options Trade for Contrarians Here",
-      "url": "https://www.barchart.com/story/news/3481094/despite-challenges-ast-spacemobile-stock-could-make-a-compelling-options-trade-for-contrarians-here",
-      "source": "Barchart",
-      "publishedAt": "2026-07-27T14:25:25Z",
-      "excerpt": "A combination of smart money positioning and a potentially lower risk profile relative to historical norms make ASTS stock worth a speculative look.",
-      "score": 40,
+      "title": "AST SpaceMobile Is Entering Its Defining Year",
+      "url": "https://seekingalpha.com/article/4929457-ast-spacemobile-is-entering-its-defining-year",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-08-03T12:09:33Z",
+      "excerpt": "AST SpaceMobile has secured $3.8 billion of liquidity, accelerated manufacturing and maintained its $150-200 million 2026 revenue guidance despite launch...",
+      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -32,6 +32,6 @@
     }
   ],
   "count": 3,
-  "lastUpdated": "2026-08-03T14:14:41.006272+00:00",
+  "lastUpdated": "2026-08-04T01:26:34.585522+00:00",
   "generator": "github-actions-gnews+fallback"
 }
