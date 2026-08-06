@@ -11,6 +11,26 @@
       "badge": "Direct-to-Cell"
     },
     {
+      "title": "AST SpaceMobile Launches Three BlueBird Satellites Into Orbit",
+      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60962813/ast-spacemobile-launches-three-bluebird-satellites-into-orbit",
+      "source": "Benzinga",
+      "publishedAt": "2026-08-05T17:45:23Z",
+      "excerpt": "AST SpaceMobile successfully launched BlueBird satellites 11, 12, and 13, expanding its next-generation satellite communications network.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "A Meta Executive Just Gave AST SpaceMobile a Shoutout. What It Means for ASTS Stock.",
+      "url": "https://www.barchart.com/story/news/3670062/a-meta-executive-just-gave-ast-spacemobile-a-shoutout-what-it-means-for-asts-stock",
+      "source": "Barchart",
+      "publishedAt": "2026-08-05T17:25:27Z",
+      "excerpt": "AST SpaceMobile shares rose 10.69% on August 4 after a Meta executive revealed a technical workshop exploring how WhatsApp could operate over the company’s satellite network for messaging, voice, video, and AI features on standard smartphones.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Is Entering Its Defining Year",
       "url": "https://seekingalpha.com/article/4929457-ast-spacemobile-is-entering-its-defining-year",
       "source": "Seeking Alpha",
@@ -41,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-08-06T01:29:26.822154+00:00",
+  "count": 6,
+  "lastUpdated": "2026-08-06T13:40:31.580559+00:00",
   "generator": "github-actions-gnews+fallback"
 }
