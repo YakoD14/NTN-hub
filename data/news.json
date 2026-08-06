@@ -1,11 +1,11 @@
 {
   "items": [
     {
-      "title": "Watch SpaceX launch 3 giant BlueBird direct-to-cell satellites early on Aug. 5",
+      "title": "SpaceX launches 3 giant BlueBird direct-to-cell satellites on Falcon 9 rocket",
       "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-launches-ast-spacemobile-11-13-direct-to-cell-satellites",
       "source": "Space.com",
       "publishedAt": "2026-08-04T22:00:00Z",
-      "excerpt": "SpaceX plans to launch three of AST SpaceMobile's huge BlueBird direct-to-cell satellites early on Wednesday morning (Aug. 5), and you can watch the action live.",
+      "excerpt": "A SpaceX Falcon 9 rocket launched three of AST SpaceMobile's huge BlueBird direct-to-cell satellites to low Earth orbit early on Wednesday morning (Aug. 5).",
       "score": 102,
       "tag": "D2C",
       "badge": "Direct-to-Cell"
@@ -42,6 +42,6 @@
     }
   ],
   "count": 4,
-  "lastUpdated": "2026-08-05T13:42:13.410656+00:00",
+  "lastUpdated": "2026-08-06T01:29:26.822154+00:00",
   "generator": "github-actions-gnews+fallback"
 }
