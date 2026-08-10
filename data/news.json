@@ -21,22 +21,22 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "RKLB or ASTS: Which Space Stock Is a Better Buy as Earnings Loom?",
+      "url": "https://markets.businessinsider.com/news/stocks/rklb-or-asts-which-space-stock-is-a-better-buy-as-earnings-loom-1036432589",
+      "source": "Markets Insider",
+      "publishedAt": "2026-08-09T14:00:52Z",
+      "excerpt": "Tomorrow (Monday, August 10) will be a big day for space stocks. Both Rocket Lab (NASDAQ:RKLB) and AST SpaceMobile (NASDAQ:ASTS) will report Q2 ...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "A Meta Executive Just Gave AST SpaceMobile a Shoutout. What It Means for ASTS Stock.",
       "url": "https://www.barchart.com/story/news/3670062/a-meta-executive-just-gave-ast-spacemobile-a-shoutout-what-it-means-for-asts-stock",
       "source": "Barchart",
       "publishedAt": "2026-08-05T17:25:27Z",
       "excerpt": "AST SpaceMobile shares rose 10.69% on August 4 after a Meta executive revealed a technical workshop exploring how WhatsApp could operate over the company’s satellite network for messaging, voice, video, and AI features on standard smartphones.",
       "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile Is Entering Its Defining Year",
-      "url": "https://seekingalpha.com/article/4929457-ast-spacemobile-is-entering-its-defining-year",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-08-03T12:09:33Z",
-      "excerpt": "AST SpaceMobile has secured $3.8 billion of liquidity, accelerated manufacturing and maintained its $150-200 million 2026 revenue guidance despite launch...",
-      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -62,6 +62,6 @@
     }
   ],
   "count": 6,
-  "lastUpdated": "2026-08-10T00:57:18.805949+00:00",
+  "lastUpdated": "2026-08-10T12:43:24.384304+00:00",
   "generator": "github-actions-gnews+fallback"
 }
