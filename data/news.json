@@ -21,6 +21,26 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "SpaceX Rivals Rocket Lab, AST SpaceMobile About To Report Earnings. What To Expect.",
+      "url": "https://www.investors.com/news/spacex-rocket-lab-ast-spacemobile-earnings-electron-launch-neutron-rocket/",
+      "source": "Investor's Business Daily",
+      "publishedAt": "2026-08-10T15:05:07Z",
+      "excerpt": "Ahead of the SpaceX rivals' earnings late Monday, Rocket Lab stock rose slightly, while AST SpaceMobile fell.",
+      "score": 44,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "Ahead of AST SpaceMobile Earnings, Here's What Barchart Data Says Comes Next for ASTS Stock",
+      "url": "https://www.barchart.com/story/news/3762068/ahead-of-ast-spacemobile-earnings-here-s-what-barchart-data-says-comes-next-for-asts-stock",
+      "source": "Barchart",
+      "publishedAt": "2026-08-10T19:36:48Z",
+      "excerpt": "AST SpaceMobile is scheduled to report its Q2 earnings today after market close. Wall Street remains bullish on ASTS shares heading into the quarterly print.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "RKLB or ASTS: Which Space Stock Is a Better Buy as Earnings Loom?",
       "url": "https://markets.businessinsider.com/news/stocks/rklb-or-asts-which-space-stock-is-a-better-buy-as-earnings-loom-1036432589",
       "source": "Markets Insider",
@@ -61,7 +81,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-08-11T00:56:38.689637+00:00",
+  "count": 8,
+  "lastUpdated": "2026-08-11T12:40:32.000873+00:00",
   "generator": "github-actions-gnews+fallback"
 }
