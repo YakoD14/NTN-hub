@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "SpaceX launches 3 giant BlueBird direct-to-cell satellites on Falcon 9 rocket",
-      "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-launches-ast-spacemobile-11-13-direct-to-cell-satellites",
-      "source": "Space.com",
-      "publishedAt": "2026-08-04T22:00:00Z",
-      "excerpt": "A SpaceX Falcon 9 rocket launched three of AST SpaceMobile's huge BlueBird direct-to-cell satellites to low Earth orbit early on Wednesday morning (Aug. 5).",
-      "score": 102,
-      "tag": "D2C",
-      "badge": "Direct-to-Cell"
-    },
-    {
       "title": "AST SpaceMobile Launches Three BlueBird Satellites Into Orbit",
       "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60962813/ast-spacemobile-launches-three-bluebird-satellites-into-orbit",
       "source": "Benzinga",
@@ -81,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 8,
-  "lastUpdated": "2026-08-11T12:40:32.000873+00:00",
+  "count": 7,
+  "lastUpdated": "2026-08-12T01:03:07.805461+00:00",
   "generator": "github-actions-gnews+fallback"
 }
