@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Launches Three BlueBird Satellites Into Orbit",
-      "url": "https://www.benzinga.com/trading-ideas/movers/26/08/60962813/ast-spacemobile-launches-three-bluebird-satellites-into-orbit",
-      "source": "Benzinga",
-      "publishedAt": "2026-08-05T17:45:23Z",
-      "excerpt": "AST SpaceMobile successfully launched BlueBird satellites 11, 12, and 13, expanding its next-generation satellite communications network.",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "SpaceX Rivals Rocket Lab, AST SpaceMobile About To Report Earnings. What To Expect.",
       "url": "https://www.investors.com/news/spacex-rocket-lab-ast-spacemobile-earnings-electron-launch-neutron-rocket/",
       "source": "Investor's Business Daily",
@@ -41,16 +31,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "A Meta Executive Just Gave AST SpaceMobile a Shoutout. What It Means for ASTS Stock.",
-      "url": "https://www.barchart.com/story/news/3670062/a-meta-executive-just-gave-ast-spacemobile-a-shoutout-what-it-means-for-asts-stock",
-      "source": "Barchart",
-      "publishedAt": "2026-08-05T17:25:27Z",
-      "excerpt": "AST SpaceMobile shares rose 10.69% on August 4 after a Meta executive revealed a technical workshop exploring how WhatsApp could operate over the company’s satellite network for messaging, voice, video, and AI features on standard smartphones.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-08-12T12:43:24.286202+00:00",
+  "count": 5,
+  "lastUpdated": "2026-08-13T01:05:11.752842+00:00",
   "generator": "github-actions-gnews+fallback"
 }
