@@ -31,6 +31,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "XCOM RAN by Globalstar Receives Frost & Sullivan's 2026 Global Enabling Technology Leadership Recognition for Private 5G Network Innovation",
+      "url": "https://www.prnewswire.co.uk/news-releases/xcom-ran-by-globalstar-receives-frost--sullivans-2026-global-enabling-technology-leadership-recognition-for-private-5g-network-innovation-302848925.html",
+      "source": "PR Newswire UK",
+      "publishedAt": "2026-08-12T13:00:00Z",
+      "excerpt": "/PRNewswire/ -- As enterprises accelerate the adoption of AI, automation, and other Industry 4.0 technologies, the need for wireless infrastructure that can...",
+      "score": 14,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -51,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-08-16T00:40:23.908799+00:00",
+  "count": 6,
+  "lastUpdated": "2026-08-16T12:17:48.682883+00:00",
   "generator": "github-actions-gnews+fallback"
 }
