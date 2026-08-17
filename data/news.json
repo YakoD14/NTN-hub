@@ -1,6 +1,36 @@
 {
   "items": [
     {
+      "title": "Globalstar Confirms Successful Launch of All 8 HIBLEO-4 Replacement Satellites",
+      "url": "https://www.manilatimes.net/2026/08/16/tmt-newswire/globenewswire/globalstar-confirms-successful-launch-of-all-8-hibleo-4-replacement-satellites/2406394",
+      "source": "The Manila Times",
+      "publishedAt": "2026-08-16T13:30:14Z",
+      "excerpt": "Satellites launched aboard SpaceX Falcon 9 rocket reach orbital plane",
+      "score": 48,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "SpaceX launches Globalstar, classified US Space Force missions 38 minutes apart in record-breaking feat",
+      "url": "https://www.aninews.in/news/world/us/spacex-launches-globalstar-classified-us-space-force-missions-38-minutes-apart-in-record-breaking-feat20260816153557/",
+      "source": "ANI (Asian News International)",
+      "publishedAt": "2026-08-16T10:05:58Z",
+      "excerpt": "The dual launches, executed on Saturday evening (local time), shattered SpaceX's previous dual-launch record of 65 minutes established in August 2024, showcasing the firm's rapid operational cadence and reusable rocket capabilities.",
+      "score": 48,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "SpaceX launches two Falcon 9 rockets just 38 minutes apart, sets new record",
+      "url": "https://indianexpress.com/article/technology/science/spacex-launches-two-falcon-9-rockets-just-38-minutes-apart-sets-new-record-10835459/",
+      "source": "The Indian Express",
+      "publishedAt": "2026-08-16T06:42:48Z",
+      "excerpt": "SpaceX launched two Falcon 9 rockets from Florida and California just 38 minutes apart, carrying Globalstar satellites and a classified US Space Force mission.",
+      "score": 48,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "SpaceX Rivals Rocket Lab, AST SpaceMobile About To Report Earnings. What To Expect.",
       "url": "https://www.investors.com/news/spacex-rocket-lab-ast-spacemobile-earnings-electron-launch-neutron-rocket/",
       "source": "Investor's Business Daily",
@@ -19,6 +49,36 @@
       "score": 40,
       "tag": "AST",
       "badge": "AST / D2C"
+    },
+    {
+      "title": "Rocket Lab Satellite Platforms Built for MDA Space Successfully Reach Orbit, Supporting Globalstar Direct-to-Device Communications Services",
+      "url": "https://www.manilatimes.net/2026/08/17/tmt-newswire/globenewswire/rocket-lab-satellite-platforms-built-for-mda-space-successfully-reach-orbit-supporting-globalstar-direct-to-device-communications-services/2406443",
+      "source": "The Manila Times",
+      "publishedAt": "2026-08-16T18:50:49Z",
+      "excerpt": "Rocket Lab Satellite Platforms Built for MDA Space Successfully Reach Orbit, Supporting Globalstar Direct-to-Device Communications Services",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "Globalstar confirms launch of all 8 HIBLEO-4 replacement satellites",
+      "url": "https://markets.businessinsider.com/news/stocks/globalstar-confirms-launch-of-all-8-hibleo-4-replacement-satellites-1036462391",
+      "source": "Markets Insider",
+      "publishedAt": "2026-08-16T16:10:05Z",
+      "excerpt": "Globalstar (GSAT) announced the successful launch and deployment of its latest satellites, marking another significant milestone in the continue...",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "XCOM RAN by Globalstar Receives Frost & Sullivan's 2026 Global Enabling Technology Leadership Recognition for Private 5G Network Innovation",
+      "url": "https://www.prnewswire.co.uk/news-releases/xcom-ran-by-globalstar-receives-frost--sullivans-2026-global-enabling-technology-leadership-recognition-for-private-5g-network-innovation-302848925.html",
+      "source": "PR Newswire UK",
+      "publishedAt": "2026-08-12T13:00:00Z",
+      "excerpt": "/PRNewswire/ -- As enterprises accelerate the adoption of AI, automation, and other Industry 4.0 technologies, the need for wireless infrastructure that can...",
+      "score": 14,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
     },
     {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
@@ -41,7 +101,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-08-17T00:38:10.740717+00:00",
-  "generator": "github-actions-gnews+fallback"
+  "count": 10,
+  "lastUpdated": "2026-08-17T12:21:36.236853+00:00",
+  "generator": "github-actions-gnews"
 }
