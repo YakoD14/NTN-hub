@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "SpaceX sets launch record with two Falcon 9 missions in under 39 minutes",
-      "url": "https://www.bolnews.com/latest-news/spacex-sets-launch-record-with-two-falcon-9-missions-in-under-39-minutes/",
-      "source": "BOL News",
-      "publishedAt": "2026-08-17T07:44:22Z",
-      "excerpt": "SpaceX launches two Falcon 9 rockets for Globalstar and the U.S. Space Force just 38.5 minutes apart, setting a company record.",
-      "score": 48,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST SpaceMobile: Sovereign Satellite Strategy Wins More Contracts; Launch Risks Explored",
       "url": "https://seekingalpha.com/article/4939358-ast-spacemobile-sovereign-satellite-strategy-wins-more-contracts-launch-risks-explored",
       "source": "Seeking Alpha",
@@ -51,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-08-24T00:40:16.641910+00:00",
+  "count": 4,
+  "lastUpdated": "2026-08-24T12:26:00.359153+00:00",
   "generator": "github-actions-gnews+fallback"
 }
