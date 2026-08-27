@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile: Bulls Are Ignoring The Biggest Red Flags",
+      "url": "https://seekingalpha.com/article/4940374-ast-spacemobile-bulls-are-ignoring-the-biggest-red-flags",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-08-26T15:05:52Z",
+      "excerpt": "AST SpaceMobile remains a Sell due to persistent overvaluation, mounting losses, and intensifying competition from SpaceX. Read more on ASTS stock here.",
+      "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "2degrees, AST SpaceMobile open ground station, paving the way for full satellite",
+      "url": "https://www.nzherald.co.nz/business/2degrees-ast-spacemobile-open-ground-station-paving-the-way-for-full-satellite-to-mobile-service/premium/7ZPT7RCSMJFLNPF7XG7RMVP3YI/",
+      "source": "The New Zealand Herald",
+      "publishedAt": "2026-08-26T03:51:16Z",
+      "excerpt": "Elon Musk’s Starlink satellite network has competition on the way, and New Zealand will be among the first countries to see it, thanks to a ground station...",
+      "score": 44,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "AST SpaceMobile: Sovereign Satellite Strategy Wins More Contracts; Launch Risks Explored",
       "url": "https://seekingalpha.com/article/4939358-ast-spacemobile-sovereign-satellite-strategy-wins-more-contracts-launch-risks-explored",
       "source": "Seeking Alpha",
@@ -41,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-08-26T12:28:51.408739+00:00",
+  "count": 6,
+  "lastUpdated": "2026-08-27T05:43:53.783022+00:00",
   "generator": "github-actions-gnews+fallback"
 }
