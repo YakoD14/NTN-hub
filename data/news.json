@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "1,000 Reasons to Buy AST SpaceMobile Stock Now",
+      "url": "https://www.barchart.com/story/news/4207600/1-000-reasons-to-buy-ast-spacemobile-stock-now",
+      "source": "Barchart",
+      "publishedAt": "2026-08-27T13:00:02Z",
+      "excerpt": "ASTS stock is climbing on record backlog, fresh government contracts, and a White House push for 1,000 space launches a year.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "2degrees, AST SpaceMobile open ground station, paving the way for full satellite",
       "url": "https://www.nzherald.co.nz/business/2degrees-ast-spacemobile-open-ground-station-paving-the-way-for-full-satellite-to-mobile-service/premium/7ZPT7RCSMJFLNPF7XG7RMVP3YI/",
       "source": "The New Zealand Herald",
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-08-27T21:25:44.989844+00:00",
+  "count": 7,
+  "lastUpdated": "2026-08-28T07:52:22.152396+00:00",
   "generator": "github-actions-gnews+fallback"
 }
