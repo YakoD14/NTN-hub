@@ -31,16 +31,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "AST SpaceMobile: Sovereign Satellite Strategy Wins More Contracts; Launch Risks Explored",
-      "url": "https://seekingalpha.com/article/4939358-ast-spacemobile-sovereign-satellite-strategy-wins-more-contracts-launch-risks-explored",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-08-22T13:33:44Z",
-      "excerpt": "AST SpaceMobile proves the success of their sovereign satellite strategy through the growing, multi-year contracted backlog. Click to know why it is rated Buy.",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -61,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-08-29T04:45:44.242085+00:00",
+  "count": 5,
+  "lastUpdated": "2026-08-29T15:55:28.763550+00:00",
   "generator": "github-actions-gnews+fallback"
 }
