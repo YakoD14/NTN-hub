@@ -41,16 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Rocket Lab and AST SpaceMobile Are Priced for the Big Bang. One Space Stock Already Delivered.",
-      "url": "https://www.barchart.com/story/news/3979324/rocket-lab-and-ast-spacemobile-are-priced-for-the-big-bang-one-space-stock-already-delivered",
-      "source": "Barchart",
-      "publishedAt": "2026-08-21T23:00:02Z",
-      "excerpt": "Two space stocks are priced for a perfect future. A third is already cashing checks. Here's what Rocket Lab, AST SpaceMobile, and Karman really cost.",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-08-28T21:34:54.023380+00:00",
+  "count": 6,
+  "lastUpdated": "2026-08-29T04:45:44.242085+00:00",
   "generator": "github-actions-gnews+fallback"
 }
