@@ -1,14 +1,14 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile: Bulls Are Ignoring The Biggest Red Flags",
-      "url": "https://seekingalpha.com/article/4940374-ast-spacemobile-bulls-are-ignoring-the-biggest-red-flags",
+      "title": "AST SpaceMobile: Q2 Was The Most Bullish Call But Overshadowed By Manufacturing Delays",
+      "url": "https://seekingalpha.com/article/4942069-ast-spacemobile-q2-was-the-most-bullish-call-but-overshadowed-by-possible-manufacturing-delays-downgrade",
       "source": "Seeking Alpha",
-      "publishedAt": "2026-08-26T15:05:52Z",
-      "excerpt": "AST SpaceMobile remains a Sell due to persistent overvaluation, mounting losses, and intensifying competition from SpaceX. Read more on ASTS stock here.",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
+      "publishedAt": "2026-09-01T16:29:00Z",
+      "excerpt": "AST SpaceMobile is downgraded to Buy due to short-term manufacturing delays impacting satellite launch cadence. Read more on ASTS stock here.",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
     },
     {
       "title": "1,000 Reasons to Buy AST SpaceMobile Stock Now",
@@ -19,16 +19,6 @@
       "score": 50,
       "tag": "AST",
       "badge": "AST / D2C"
-    },
-    {
-      "title": "2degrees, AST SpaceMobile open ground station, paving the way for full satellite",
-      "url": "https://www.nzherald.co.nz/business/2degrees-ast-spacemobile-open-ground-station-paving-the-way-for-full-satellite-to-mobile-service/premium/7ZPT7RCSMJFLNPF7XG7RMVP3YI/",
-      "source": "The New Zealand Herald",
-      "publishedAt": "2026-08-26T03:51:16Z",
-      "excerpt": "Elon Musk’s Starlink satellite network has competition on the way, and New Zealand will be among the first countries to see it, thanks to a ground station...",
-      "score": 44,
-      "tag": "Starlink",
-      "badge": "Starlink"
     },
     {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
@@ -51,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-09-02T01:57:16.158233+00:00",
+  "count": 4,
+  "lastUpdated": "2026-09-02T15:35:53.603020+00:00",
   "generator": "github-actions-gnews+fallback"
 }
