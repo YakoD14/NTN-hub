@@ -11,12 +11,12 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "1,000 Reasons to Buy AST SpaceMobile Stock Now",
-      "url": "https://www.barchart.com/story/news/4207600/1-000-reasons-to-buy-ast-spacemobile-stock-now",
+      "title": "AST SpaceMobile Fell More Than 50%. A Director Just Made Her Biggest Buy Yet",
+      "url": "https://www.barchart.com/story/news/4403271/ast-spacemobile-fell-more-than-50-a-director-just-made-her-biggest-buy-yet",
       "source": "Barchart",
-      "publishedAt": "2026-08-27T13:00:02Z",
-      "excerpt": "ASTS stock is climbing on record backlog, fresh government contracts, and a White House push for 1,000 space launches a year.",
-      "score": 50,
+      "publishedAt": "2026-09-02T14:49:21Z",
+      "excerpt": "AST SpaceMobile has fallen more than 50%, but a director’s biggest-ever purchase suggests the market may be underestimating the path to commercialization.",
+      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -42,6 +42,6 @@
     }
   ],
   "count": 4,
-  "lastUpdated": "2026-09-03T02:02:13.245637+00:00",
+  "lastUpdated": "2026-09-03T15:27:33.590789+00:00",
   "generator": "github-actions-gnews+fallback"
 }
