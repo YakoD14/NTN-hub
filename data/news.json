@@ -11,16 +11,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Fell More Than 50%. A Director Just Made Her Biggest Buy Yet",
-      "url": "https://www.barchart.com/story/news/4403271/ast-spacemobile-fell-more-than-50-a-director-just-made-her-biggest-buy-yet",
-      "source": "Barchart",
-      "publishedAt": "2026-09-02T14:49:21Z",
-      "excerpt": "AST SpaceMobile has fallen more than 50%, but a director’s biggest-ever purchase suggests the market may be underestimating the path to commercialization.",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -41,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-09-09T02:07:08.983112+00:00",
+  "count": 3,
+  "lastUpdated": "2026-09-09T15:32:30.451461+00:00",
   "generator": "github-actions-gnews+fallback"
 }
