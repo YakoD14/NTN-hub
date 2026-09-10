@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Stock: The Selloff Has Gone Too Far (NASDAQ:ASTS)",
-      "url": "https://seekingalpha.com/article/4942652-ast-spacemobile-the-selloff-has-gone-too-far",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-09-03T08:26:09Z",
-      "excerpt": "AST SpaceMobile targets ~$1B in revenue in its first commercial year (2027), with 45 BlueBird satellites in orbit. Read why ASTS stock is a buy.",
-      "score": 70,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -31,7 +21,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 3,
-  "lastUpdated": "2026-09-10T02:03:55.855847+00:00",
+  "count": 2,
+  "lastUpdated": "2026-09-10T15:28:13.220822+00:00",
   "generator": "github-actions-gnews+fallback"
 }
