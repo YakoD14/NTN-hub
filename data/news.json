@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "Robbins LLP Informs Investors of the AST SpaceMobile, Inc. Class Action Lawsuit",
+      "url": "https://www.wallstreet-online.de/nachricht/21379236-investor-notice-robbins-llp-informs-investors-of-the-ast-spacemobile-inc-class-action-lawsuit",
+      "source": "Wallstreet Online",
+      "publishedAt": "2026-09-14T23:00:05Z",
+      "excerpt": "15.09.2026 - Shareholder rights law firm Robbins LLP informs investors that a class action was filed on behalf of persons and entities who purchased or otherwise acquired AST SpaceMobile, Inc. (NASDAQ: ASTS) securities between March 4, 2025 and July 15, 2026, ... Seite 1",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -21,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 2,
-  "lastUpdated": "2026-09-15T02:25:57.012341+00:00",
+  "count": 3,
+  "lastUpdated": "2026-09-15T15:53:42.869199+00:00",
   "generator": "github-actions-gnews+fallback"
 }
