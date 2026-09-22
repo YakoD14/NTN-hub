@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "title": "Robbins LLP Informs Investors of the AST SpaceMobile, Inc. Class Action Lawsuit",
-      "url": "https://www.wallstreet-online.de/nachricht/21379236-investor-notice-robbins-llp-informs-investors-of-the-ast-spacemobile-inc-class-action-lawsuit",
-      "source": "Wallstreet Online",
-      "publishedAt": "2026-09-14T23:00:05Z",
-      "excerpt": "15.09.2026 - Shareholder rights law firm Robbins LLP informs investors that a class action was filed on behalf of persons and entities who purchased or otherwise acquired AST SpaceMobile, Inc. (NASDAQ: ASTS) securities between March 4, 2025 and July 15, 2026, ... Seite 1",
-      "score": 40,
+      "title": "AST SpaceMobile: The Next 30 Satellites Change Everything",
+      "url": "https://seekingalpha.com/article/4948269-ast-spacemobile-the-next-30-satellites-change-everything",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-09-21T11:47:16Z",
+      "excerpt": "AST SpaceMobile is a Strong Buy, reflecting BlueBird deployment to ~45 satellites by 2027 and a $1.3B backlog. Click here for more on ASTS stock.",
+      "score": 60,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -32,6 +32,6 @@
     }
   ],
   "count": 3,
-  "lastUpdated": "2026-09-21T17:24:18.659158+00:00",
+  "lastUpdated": "2026-09-22T02:23:24.455339+00:00",
   "generator": "github-actions-gnews+fallback"
 }
