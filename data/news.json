@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile: The Moat SpaceX Can’t Copy (NASDAQ:ASTS)",
+      "url": "https://seekingalpha.com/article/4949502-ast-spacemobile-the-moat-spacex-cant-copy",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-09-24T17:19:41Z",
+      "excerpt": "AST SpaceMobile has fallen roughly 55%, improving risk-reward while its long-term commercialization thesis remains fundamentally intact. Click for more on ASTS.",
+      "score": 74,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "AST SpaceMobile: The Next 30 Satellites Change Everything",
       "url": "https://seekingalpha.com/article/4948269-ast-spacemobile-the-next-30-satellites-change-everything",
       "source": "Seeking Alpha",
@@ -31,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 3,
-  "lastUpdated": "2026-09-25T02:28:24.764988+00:00",
+  "count": 4,
+  "lastUpdated": "2026-09-25T16:07:46.427275+00:00",
   "generator": "github-actions-gnews+fallback"
 }
