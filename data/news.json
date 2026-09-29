@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "Can Canadians Buy Stock in AST SpaceMobile?",
+      "url": "https://www.fool.ca/2026/09/28/can-canadians-buy-stock-in-ast-spacemobile/",
+      "source": "The Motley Fool Canada",
+      "publishedAt": "2026-09-28T20:10:00Z",
+      "excerpt": "U.S. equities can help build a diversified portfolio, offering exposure to industries that are less prominent in Canada.",
+      "score": 20,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -31,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 3,
-  "lastUpdated": "2026-09-29T03:15:30.108417+00:00",
+  "count": 4,
+  "lastUpdated": "2026-09-29T17:14:57.355174+00:00",
   "generator": "github-actions-gnews+fallback"
 }
