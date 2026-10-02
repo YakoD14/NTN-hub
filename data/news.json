@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "Sateliot to launch five new satellites with SpaceX to expand 5G network coverage",
+      "url": "https://www.euronews.com/2026/09/29/sateliot-to-launch-five-new-satellites-with-spacex-to-expand-5g-network-coverage",
+      "source": "Euronews",
+      "publishedAt": "2026-09-29T16:21:12Z",
+      "excerpt": "Sateliot will launch five satellites with SpaceX on Thursday, expanding its constellation to 11 and boosting its 5G NTN IoT connectivity service.",
+      "score": 56,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "Spanish company Sateliot to launch five satellites with SpaceX to boost global 5G",
+      "url": "https://www.euronews.com/2026/09/29/spanish-company-sateliot-to-launch-five-satellites-with-spacex-to-boost-global-5g",
+      "source": "Euronews",
+      "publishedAt": "2026-09-29T16:21:12Z",
+      "excerpt": "Sateliot is launching five satellites with SpaceX on Thursday, taking its constellation to 11. The Draconis mission will double daily passes, halve revisit time and bolster its 5G NTN IoT connectivity service.",
+      "score": 56,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "ROSEN, LEADING INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
       "url": "https://www.wallstreet-online.de/nachricht/21458049-rosen-leading-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
       "source": "Wallstreet Online",
@@ -41,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-10-02T03:06:34.896616+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-02T17:01:17.992199+00:00",
   "generator": "github-actions-gnews+fallback"
 }
