@@ -31,6 +31,16 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "TELUS Communications Inc. And AST SpaceMobile, Inc. Successfully Complete First Satellite-To-Smartphone Integration Test On The TELUS Network",
+      "url": "https://www.marketscreener.com/news/telus-communications-inc-and-ast-spacemobile-inc-successfully-complete-first-satellite-to-smartph-ce785dd8db81f021",
+      "source": "MarketScreener",
+      "publishedAt": "2026-10-05T16:35:25Z",
+      "excerpt": "TELUS Communications Inc. and AST SpaceMobile, Inc. have successfully completed their first integration test between TELUS' wireless network and AST SpaceMobile's space-based network, marking a...",
+      "score": 20,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -51,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-10-06T03:49:14.586208+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-06T17:35:35.955356+00:00",
   "generator": "github-actions-gnews+fallback"
 }
