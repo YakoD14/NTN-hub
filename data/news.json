@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "ROSEN, NATIONAL INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
+      "url": "https://www.wallstreet-online.de/nachricht/21474823-rosen-national-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
+      "source": "Wallstreet Online",
+      "publishedAt": "2026-10-04T22:35:57Z",
+      "excerpt": "05.10.2026 - New York, New York--(Newsfile Corp. - October 4, 2026) - WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of AST SpaceMobile, Inc. (NASDAQ: ASTS) between March 4, 2025 and July 15, 2026, inclusive (the 'Class ...",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "ROSEN, LEADING INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
       "url": "https://www.wallstreet-online.de/nachricht/21458049-rosen-leading-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
       "source": "Wallstreet Online",
@@ -11,12 +21,12 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Can Canadians Buy Stock in AST SpaceMobile?",
-      "url": "https://www.fool.ca/2026/09/28/can-canadians-buy-stock-in-ast-spacemobile/",
-      "source": "The Motley Fool Canada",
-      "publishedAt": "2026-09-28T20:10:00Z",
-      "excerpt": "U.S. equities can help build a diversified portfolio, offering exposure to industries that are less prominent in Canada.",
-      "score": 20,
+      "title": "TELUS and AST SpaceMobile successfully complete first satellite-to-smartphone integration test on the TELUS network",
+      "url": "https://lfpress.com/press-releases/pr-newswire/telus-and-ast-spacemobile-successfully-complete-first-satellite-to-smartphone-integration-test-on-the-telus-network/",
+      "source": "The London Free Press",
+      "publishedAt": "2026-10-05T13:19:27Z",
+      "excerpt": "Successful integration brings TELUS and AST SpaceMobile closer to connecting smartphones in remote areas of Canada where traditional cell service isn't",
+      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -41,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-10-05T02:59:57.591599+00:00",
+  "count": 5,
+  "lastUpdated": "2026-10-06T03:49:14.586208+00:00",
   "generator": "github-actions-gnews+fallback"
 }
