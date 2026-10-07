@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile: Cheaper And Better Than SpaceX (Upgrade) (NASDAQ:ASTS)",
+      "url": "https://seekingalpha.com/article/4952291-ast-spacemobile-cheaper-and-better-than-spacex-upgrade",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-10-06T16:59:26Z",
+      "excerpt": "AST SpaceMobile is upgraded to a Strong Buy, as current valuations price in a worst-case scenario despite sector delays. Click for more on the ASTS stock.",
+      "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "AST SpaceMobile: The Bull Case Just Got Stronger",
+      "url": "https://seekingalpha.com/article/4952296-ast-spacemobile-the-bull-case-just-got-stronger",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-10-06T17:03:20Z",
+      "excerpt": "TELUS and AST SpaceMobile validate satellite-to-smartphone broadband, voice and messaging. Click here to read more on ASTS stock.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "ROSEN, NATIONAL INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
       "url": "https://www.wallstreet-online.de/nachricht/21474823-rosen-national-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
       "source": "Wallstreet Online",
@@ -31,16 +51,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "TELUS Communications Inc. And AST SpaceMobile, Inc. Successfully Complete First Satellite-To-Smartphone Integration Test On The TELUS Network",
-      "url": "https://www.marketscreener.com/news/telus-communications-inc-and-ast-spacemobile-inc-successfully-complete-first-satellite-to-smartph-ce785dd8db81f021",
-      "source": "MarketScreener",
-      "publishedAt": "2026-10-05T16:35:25Z",
-      "excerpt": "TELUS Communications Inc. and AST SpaceMobile, Inc. have successfully completed their first integration test between TELUS' wireless network and AST SpaceMobile's space-based network, marking a...",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-10-07T03:17:04.377749+00:00",
+  "count": 7,
+  "lastUpdated": "2026-10-07T18:06:52.638636+00:00",
   "generator": "github-actions-gnews+fallback"
 }
