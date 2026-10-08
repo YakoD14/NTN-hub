@@ -31,22 +31,22 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "ROSEN, LEADING INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
-      "url": "https://www.wallstreet-online.de/nachricht/21458049-rosen-leading-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
-      "source": "Wallstreet Online",
-      "publishedAt": "2026-09-30T22:16:00Z",
-      "excerpt": "01.10.2026 - New York, New York--(Newsfile Corp. - September 30, 2026) - WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of AST SpaceMobile, Inc. (NASDAQ: ASTS) between March 4, 2025 and July 15, 2026, inclusive (the ...",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "TELUS and AST SpaceMobile successfully complete first satellite-to-smartphone integration test on the TELUS network",
       "url": "https://lfpress.com/press-releases/pr-newswire/telus-and-ast-spacemobile-successfully-complete-first-satellite-to-smartphone-integration-test-on-the-telus-network/",
       "source": "The London Free Press",
       "publishedAt": "2026-10-05T13:19:27Z",
       "excerpt": "Successful integration brings TELUS and AST SpaceMobile closer to connecting smartphones in remote areas of Canada where traditional cell service isn't",
       "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "TELUS Communications Inc. And AST SpaceMobile, Inc. Successfully Complete First Satellite-To-Smartphone Integration Test On The TELUS Network",
+      "url": "https://www.marketscreener.com/news/telus-communications-inc-and-ast-spacemobile-inc-successfully-complete-first-satellite-to-smartph-ce785dd8db81f021",
+      "source": "MarketScreener",
+      "publishedAt": "2026-10-05T16:35:25Z",
+      "excerpt": "TELUS Communications Inc. and AST SpaceMobile, Inc. have successfully completed their first integration test between TELUS' wireless network and AST SpaceMobile's space-based network, marking a...",
+      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-10-07T18:06:52.638636+00:00",
+  "lastUpdated": "2026-10-08T03:32:31.940824+00:00",
   "generator": "github-actions-gnews+fallback"
 }
