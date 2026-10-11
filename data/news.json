@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile: Things May Get Uglier From Here (NASDAQ:ASTS)",
+      "url": "https://seekingalpha.com/article/4953279-ast-spacemobile-things-may-get-uglier-from-here",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-10-10T14:42:12Z",
+      "excerpt": "AST SpaceMobile faces rising SpaceX direct-to-device competition, execution delays, and profitability pushed to 2029. Click for more on ASTS.",
+      "score": 64,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "‘Don’t Get It Wrong,’ Says Analyst as AST SpaceMobile Stock Takes a Beating",
       "url": "https://markets.businessinsider.com/news/stocks/don-t-get-it-wrong-says-analyst-as-ast-spacemobile-stock-takes-a-beating-1036614184",
       "source": "Markets Insider",
@@ -71,16 +81,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "ROSEN, NATIONAL INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
-      "url": "https://www.wallstreet-online.de/nachricht/21474823-rosen-national-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
-      "source": "Wallstreet Online",
-      "publishedAt": "2026-10-04T22:35:57Z",
-      "excerpt": "05.10.2026 - New York, New York--(Newsfile Corp. - October 4, 2026) - WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of AST SpaceMobile, Inc. (NASDAQ: ASTS) between March 4, 2025 and July 15, 2026, inclusive (the 'Class ...",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "TELUS and AST SpaceMobile successfully complete first satellite-to-smartphone integration test on the TELUS network",
       "url": "https://lfpress.com/press-releases/pr-newswire/telus-and-ast-spacemobile-successfully-complete-first-satellite-to-smartphone-integration-test-on-the-telus-network/",
       "source": "The London Free Press",
@@ -91,17 +91,17 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
-      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
-      "source": "AST SpaceMobile Press",
-      "publishedAt": "2023-09-19T00:00:00+00:00",
-      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
-      "score": 50,
+      "title": "TELUS Communications Inc. And AST SpaceMobile, Inc. Successfully Complete First Satellite-To-Smartphone Integration Test On The TELUS Network",
+      "url": "https://www.marketscreener.com/news/telus-communications-inc-and-ast-spacemobile-inc-successfully-complete-first-satellite-to-smartph-ce785dd8db81f021",
+      "source": "MarketScreener",
+      "publishedAt": "2026-10-05T16:35:25Z",
+      "excerpt": "TELUS Communications Inc. and AST SpaceMobile, Inc. have successfully completed their first integration test between TELUS' wireless network and AST SpaceMobile's space-based network, marking a...",
+      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-10-10T16:34:45.457404+00:00",
+  "lastUpdated": "2026-10-11T02:52:26.806007+00:00",
   "generator": "github-actions-gnews"
 }
