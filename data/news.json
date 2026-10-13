@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "SpaceX Changed My Mind On AST SpaceMobile",
+      "url": "https://seekingalpha.com/article/4953553-spacex-changed-my-mind-on-ast-spacemobile",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-10-12T17:44:29Z",
+      "excerpt": "AST SpaceMobile, Inc. vs. SpaceX: why ASTS is downgraded on rising spectrum/launch risks, while SPCX is a Strong Buy. Click for the reasons for my rating changes.",
+      "score": 74,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
       "title": "AST SpaceMobile: Story Collapses Before Even Starting",
       "url": "https://seekingalpha.com/article/4953475-ast-spacemobile-story-collapses-before-even-starting",
       "source": "Seeking Alpha",
@@ -81,16 +91,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile: The Bull Case Just Got Stronger",
-      "url": "https://seekingalpha.com/article/4952296-ast-spacemobile-the-bull-case-just-got-stronger",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-06T17:03:20Z",
-      "excerpt": "TELUS and AST SpaceMobile validate satellite-to-smartphone broadband, voice and messaging. Click here to read more on ASTS stock.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile upgraded to buy at Deutsche Bank",
       "url": "https://www.cnbc.com/2026/10/12/ast-spacemobile-deutsche-bank-upgrade.html",
       "source": "CNBC",
@@ -102,6 +102,6 @@
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-10-13T04:30:42.416408+00:00",
+  "lastUpdated": "2026-10-13T18:38:56.210943+00:00",
   "generator": "github-actions-gnews"
 }
