@@ -61,16 +61,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "AST SpaceMobile Stock (ASTS) Hits 52-Week Low Today. Here’s Why",
-      "url": "https://markets.businessinsider.com/news/stocks/ast-spacemobile-stock-asts-hits-52-week-low-today-here-s-why-1036614115",
-      "source": "Markets Insider",
-      "publishedAt": "2026-10-09T19:02:25Z",
-      "excerpt": "AST SpaceMobile (ASTS) stock fell 13.54% to $49.22 on Friday, hitting a new 52-week low. Investors are weighing growing competition from SpaceX ...",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Banking Giant sets AST SpaceMobile (ASTS) stock price target",
       "url": "https://finbold.com/banking-giant-sets-ast-spacemobile-asts-stock-price-target/",
       "source": "Finbold",
@@ -81,12 +71,22 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Analysts Offer Insights on Technology Companies: AST SpaceMobile (ASTS) and Nvidia (NVDA)",
-      "url": "https://markets.businessinsider.com/news/stocks/analysts-offer-insights-on-technology-companies-ast-spacemobile-asts-and-nvidia-nvda-1036614125",
-      "source": "Markets Insider",
-      "publishedAt": "2026-10-09T19:40:08Z",
-      "excerpt": "There’s a lot to be optimistic about in the Technology sector as 2 analysts just weighed in on AST SpaceMobile (ASTS) and Nvidia (NVDA) with bul...",
-      "score": 40,
+      "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
+      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-ast-spacemobile-stock-rebound-after-sharp-sell-off/slideshow/134933605.cms",
+      "source": "The Economic Times",
+      "publishedAt": "2026-10-14T05:45:00Z",
+      "excerpt": "AST SpaceMobile shares came under heavy selling pressure on October 13, falling about 8.5% by the close, according to MarketBeat. Earlier in the session, the decline reached 9.07%, taking shares to $46.80. The sell-off reflected mounting concerns over the satellite communications company's technical outlook and competitive position. (Sources KuCoin | MarketBeat) AST SpaceMobile Stock Slides",
+      "score": 20,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
+      "url": "https://economictimes.indiatimes.com/markets/stocks/news/can-ast-spacemobile-stock-rebound-after-sharp-sell-off/slideshow/134933605.cms",
+      "source": "The Economic Times",
+      "publishedAt": "2026-10-14T05:45:00Z",
+      "excerpt": "AST SpaceMobile shares came under heavy selling pressure on October 13, falling about 8.5% by the close, according to MarketBeat. Earlier in the session, the decline reached 9.07%, taking shares to $46.80. The sell-off reflected mounting concerns over the satellite communications company's technical outlook and competitive position. (Sources KuCoin | MarketBeat) AST SpaceMobile Stock Slides",
+      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -102,6 +102,6 @@
     }
   ],
   "count": 10,
-  "lastUpdated": "2026-10-14T16:09:23.911009+00:00",
+  "lastUpdated": "2026-10-15T02:20:09.531269+00:00",
   "generator": "github-actions-gnews"
 }
