@@ -31,16 +31,6 @@
       "badge": "Starlink"
     },
     {
-      "title": "AST SpaceMobile: Things May Get Uglier From Here (NASDAQ:ASTS)",
-      "url": "https://seekingalpha.com/article/4953279-ast-spacemobile-things-may-get-uglier-from-here",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-10T14:42:12Z",
-      "excerpt": "AST SpaceMobile faces rising SpaceX direct-to-device competition, execution delays, and profitability pushed to 2029. Click for more on ASTS.",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Banking Giant sets AST SpaceMobile (ASTS) stock price target",
       "url": "https://finbold.com/banking-giant-sets-ast-spacemobile-asts-stock-price-target/",
       "source": "Finbold",
@@ -101,7 +91,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 10,
-  "lastUpdated": "2026-10-17T14:38:09.873714+00:00",
-  "generator": "github-actions-gnews"
+  "count": 9,
+  "lastUpdated": "2026-10-18T02:05:49.792074+00:00",
+  "generator": "github-actions-gnews+fallback"
 }
