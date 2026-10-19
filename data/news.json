@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "SpaceX Changed My Mind On AST SpaceMobile",
-      "url": "https://seekingalpha.com/article/4953553-spacex-changed-my-mind-on-ast-spacemobile",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-12T17:44:29Z",
-      "excerpt": "AST SpaceMobile, Inc. vs. SpaceX: why ASTS is downgraded on rising spectrum/launch risks, while SPCX is a Strong Buy. Click for the reasons for my rating changes.",
-      "score": 74,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST SpaceMobile: The Bad News May Be Overstated",
       "url": "https://seekingalpha.com/article/4953863-ast-spacemobile-the-bad-news-may-be-overstated",
       "source": "Seeking Alpha",
@@ -19,26 +9,6 @@
       "score": 64,
       "tag": "Starlink",
       "badge": "Starlink"
-    },
-    {
-      "title": "AST SpaceMobile: Story Collapses Before Even Starting",
-      "url": "https://seekingalpha.com/article/4953475-ast-spacemobile-story-collapses-before-even-starting",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-12T15:10:00Z",
-      "excerpt": "AST SpaceMobile faces major competition as Starlink Mobile's spectrum acquisition erodes its first-mover advantage in D2D. Read more on ASTS stock here.",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
-      "title": "Banking Giant sets AST SpaceMobile (ASTS) stock price target",
-      "url": "https://finbold.com/banking-giant-sets-ast-spacemobile-asts-stock-price-target/",
-      "source": "Finbold",
-      "publishedAt": "2026-10-12T13:27:09Z",
-      "excerpt": "Deutsche Bank upgraded AST SpaceMobile from “Hold” to “Buy” while maintaining its $93 ASTS stock price target.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
     },
     {
       "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
@@ -56,16 +26,6 @@
       "source": "The Economic Times",
       "publishedAt": "2026-10-14T05:45:00Z",
       "excerpt": "AST SpaceMobile shares came under heavy selling pressure on October 13, falling about 8.5% by the close, according to MarketBeat. Earlier in the session, the decline reached 9.07%, taking shares to $46.80. The sell-off reflected mounting concerns over the satellite communications company's technical outlook and competitive position. (Sources KuCoin | MarketBeat) AST SpaceMobile Stock Slides",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile upgraded to buy at Deutsche Bank",
-      "url": "https://www.cnbc.com/2026/10/12/ast-spacemobile-deutsche-bank-upgrade.html",
-      "source": "CNBC",
-      "publishedAt": "2026-10-12T14:09:53Z",
-      "excerpt": "The bank upgraded the stock to buy from hold and maintained its $93 price target.",
       "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
@@ -91,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 9,
-  "lastUpdated": "2026-10-19T02:22:06.388106+00:00",
+  "count": 5,
+  "lastUpdated": "2026-10-19T17:56:36.117685+00:00",
   "generator": "github-actions-gnews+fallback"
 }
