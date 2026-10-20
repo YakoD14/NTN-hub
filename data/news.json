@@ -11,6 +11,16 @@
       "badge": "Starlink"
     },
     {
+      "title": "AST SpaceMobile Partners With European Mobile Network Operators to Expand Coverage",
+      "url": "https://www.marketscreener.com/news/ast-spacemobile-partners-with-european-mobile-network-operators-to-expand-coverage-ce785cdbda8bff23",
+      "source": "MarketScreener",
+      "publishedAt": "2026-10-19T13:38:47Z",
+      "excerpt": "By Connor Hart AST SpaceMobile said it will collaborate with Europe's four largest mobile-network operators, aiming to accelerate network integration, improve customer experiences and expand...",
+      "score": 60,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
+    },
+    {
       "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
       "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-ast-spacemobile-stock-rebound-after-sharp-sell-off/slideshow/134933605.cms",
       "source": "The Economic Times",
@@ -51,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-10-19T17:56:36.117685+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-20T02:35:35.874034+00:00",
   "generator": "github-actions-gnews+fallback"
 }
