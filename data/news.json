@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile: The Bad News May Be Overstated",
-      "url": "https://seekingalpha.com/article/4953863-ast-spacemobile-the-bad-news-may-be-overstated",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-13T16:59:12Z",
-      "excerpt": "AST SpaceMobile Strong Buy: LEO satellites deliver 200 Mbps to phones; SpaceX spectrum supports thesis. Click here to read my analysis on ASTS stock.",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "AST SpaceMobile Partners With European Mobile Network Operators to Expand Coverage",
       "url": "https://www.marketscreener.com/news/ast-spacemobile-partners-with-european-mobile-network-operators-to-expand-coverage-ce785cdbda8bff23",
       "source": "MarketScreener",
@@ -21,22 +11,42 @@
       "badge": "Operator Strategy"
     },
     {
-      "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/can-ast-spacemobile-stock-rebound-after-sharp-sell-off/slideshow/134933605.cms",
-      "source": "The Economic Times",
-      "publishedAt": "2026-10-14T05:45:00Z",
-      "excerpt": "AST SpaceMobile shares came under heavy selling pressure on October 13, falling about 8.5% by the close, according to MarketBeat. Earlier in the session, the decline reached 9.07%, taking shares to $46.80. The sell-off reflected mounting concerns over the satellite communications company's technical outlook and competitive position. (Sources KuCoin | MarketBeat) AST SpaceMobile Stock Slides",
-      "score": 20,
+      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
+      "url": "https://www.brantfordexpositor.ca/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
+      "source": "The Expositor",
+      "publishedAt": "2026-10-20T12:13:30Z",
+      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
+      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
     {
-      "title": "Can AST SpaceMobile stock rebound after sharp sell-off?",
-      "url": "https://economictimes.indiatimes.com/markets/stocks/news/can-ast-spacemobile-stock-rebound-after-sharp-sell-off/slideshow/134933605.cms",
-      "source": "The Economic Times",
-      "publishedAt": "2026-10-14T05:45:00Z",
-      "excerpt": "AST SpaceMobile shares came under heavy selling pressure on October 13, falling about 8.5% by the close, according to MarketBeat. Earlier in the session, the decline reached 9.07%, taking shares to $46.80. The sell-off reflected mounting concerns over the satellite communications company's technical outlook and competitive position. (Sources KuCoin | MarketBeat) AST SpaceMobile Stock Slides",
-      "score": 20,
+      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
+      "url": "https://www.nugget.ca/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
+      "source": "The North Bay Nugget",
+      "publishedAt": "2026-10-20T12:13:02Z",
+      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
+      "url": "https://lfpress.com/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
+      "source": "The London Free Press",
+      "publishedAt": "2026-10-20T12:12:40Z",
+      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
+      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
+      "url": "https://www.thewhig.com/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
+      "source": "The Kingston Whig-Standard",
+      "publishedAt": "2026-10-20T12:12:28Z",
+      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
+      "score": 30,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-10-20T16:00:47.233239+00:00",
+  "count": 7,
+  "lastUpdated": "2026-10-21T02:29:48.342016+00:00",
   "generator": "github-actions-gnews+fallback"
 }
