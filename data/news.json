@@ -11,6 +11,16 @@
       "badge": "Operator Strategy"
     },
     {
+      "title": "Long Rocket Lab, Short AST SpaceMobile: One Owns Its Path, The Other Rents (ASTS)",
+      "url": "https://seekingalpha.com/article/4956583-long-rocket-lab-short-ast-spacemobile-one-owns-its-path-the-other-rents-it-from-spacex",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-10-22T18:55:39Z",
+      "excerpt": "Rocket Lab Corporation is upgraded to Buy, while AST SpaceMobile remains a Sell, reinforcing the pair trade thesis after recent corrections. Click for more.",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
       "url": "https://www.brantfordexpositor.ca/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
       "source": "The Expositor",
@@ -41,16 +51,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
-      "url": "https://www.thewhig.com/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
-      "source": "The Kingston Whig-Standard",
-      "publishedAt": "2026-10-20T12:12:28Z",
-      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -72,6 +72,6 @@
     }
   ],
   "count": 7,
-  "lastUpdated": "2026-10-23T02:31:11.792086+00:00",
+  "lastUpdated": "2026-10-23T16:06:01.956555+00:00",
   "generator": "github-actions-gnews+fallback"
 }
