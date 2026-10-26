@@ -1,14 +1,14 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Partners With European Mobile Network Operators to Expand Coverage",
-      "url": "https://www.marketscreener.com/news/ast-spacemobile-partners-with-european-mobile-network-operators-to-expand-coverage-ce785cdbda8bff23",
-      "source": "MarketScreener",
-      "publishedAt": "2026-10-19T13:38:47Z",
-      "excerpt": "By Connor Hart AST SpaceMobile said it will collaborate with Europe's four largest mobile-network operators, aiming to accelerate network integration, improve customer experiences and expand...",
-      "score": 60,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
+      "title": "ROSEN, HIGHLY RECOGNIZED INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
+      "url": "https://www.wallstreet-online.de/nachricht/21579054-rosen-highly-recognized-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
+      "source": "Wallstreet Online",
+      "publishedAt": "2026-10-26T01:07:00Z",
+      "excerpt": "New York, New York--(Newsfile Corp. - October 25, 2026) - WHY: Rosen Law Firm, a global investor rights law firm, reminds purchasers of securities of AST SpaceMobile, Inc. (NASDAQ: ASTS) between March 4, 2025 and July 15, 2026, inclusive (the \"Class … 26.10.2026",
+      "score": 40,
+      "tag": "AST",
+      "badge": "AST / D2C"
     },
     {
       "title": "Long Rocket Lab, Short AST SpaceMobile: One Owns Its Path, The Other Rents (ASTS)",
@@ -41,16 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
-      "url": "https://lfpress.com/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
-      "source": "The London Free Press",
-      "publishedAt": "2026-10-20T12:12:40Z",
-      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-10-26T02:16:55.755453+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-26T17:53:06.910773+00:00",
   "generator": "github-actions-gnews+fallback"
 }
