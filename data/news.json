@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile Wins Brazil Spectrum Approval, Signs Deals With Regional Operators",
+      "url": "https://www.marketscreener.com/news/ast-spacemobile-wins-brazil-spectrum-approval-signs-deals-with-regional-operators-ce785cdcda8cf127",
+      "source": "MarketScreener",
+      "publishedAt": "2026-10-26T12:43:54Z",
+      "excerpt": "AST SpaceMobile said Monday it received approval from Brazil's telecommunications regulator to use S-band spectrum and share spectrum held by four regional operators as it works to deliver...",
+      "score": 50,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
+    },
+    {
       "title": "ROSEN, HIGHLY RECOGNIZED INVESTOR COUNSEL, Encourages AST SpaceMobile, Inc. Investors to Secure Counsel Before Important Deadline in Securities Class Action - ASTS",
       "url": "https://www.wallstreet-online.de/nachricht/21579054-rosen-highly-recognized-investor-counsel-encourages-ast-spacemobile-inc-investors-to-secure-counsel-before-deadline-securities-class-action-asts",
       "source": "Wallstreet Online",
@@ -61,7 +71,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-10-26T17:53:06.910773+00:00",
+  "count": 7,
+  "lastUpdated": "2026-10-27T02:52:47.027151+00:00",
   "generator": "github-actions-gnews+fallback"
 }
