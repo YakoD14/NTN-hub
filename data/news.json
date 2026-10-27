@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "AST SpaceMobile to Host Third Quarter 2026 Business Update Call on November 9, 2026",
+      "url": "https://www.wallstreet-online.de/nachricht/21584595-ast-spacemobile-to-host-third-quarter-2026-business-update-call-on-november-9-2026",
+      "source": "Wallstreet Online",
+      "publishedAt": "2026-10-26T23:10:04Z",
+      "excerpt": "AST SpaceMobile, Inc. (“AST SpaceMobile”) (NASDAQ: ASTS), the company building the first and only space-based cellular broadband network accessible directly by everyday smartphones, designed for both commercial and government applications, today … 27.10.2026 Seite 1",
+      "score": 50,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Wins Brazil Spectrum Approval, Signs Deals With Regional Operators",
       "url": "https://www.marketscreener.com/news/ast-spacemobile-wins-brazil-spectrum-approval-signs-deals-with-regional-operators-ce785cdcda8cf127",
       "source": "MarketScreener",
@@ -31,26 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
-      "url": "https://www.brantfordexpositor.ca/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
-      "source": "The Expositor",
-      "publishedAt": "2026-10-20T12:13:30Z",
-      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "AST SpaceMobile Advances Service Readiness Ahead of Initial Space-Based Cellular Broadband Coverage in Key Global Markets",
-      "url": "https://www.nugget.ca/press-releases/business-wire/ast-spacemobile-advances-service-readiness-ahead-of-initial-space-based-cellular-broadband-coverage-in-key-global-markets/",
-      "source": "The North Bay Nugget",
-      "publishedAt": "2026-10-20T12:13:02Z",
-      "excerpt": "Initial, intermittent coverage targeted before year-end 2026 in the United States, Canada, Japan, United Kingdom and Saudi Arabia More than 60 gateways",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-10-27T02:52:47.027151+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-27T17:00:33.358963+00:00",
   "generator": "github-actions-gnews+fallback"
 }
