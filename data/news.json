@@ -41,16 +41,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Long Rocket Lab, Short AST SpaceMobile: One Owns Its Path, The Other Rents (ASTS)",
-      "url": "https://seekingalpha.com/article/4956583-long-rocket-lab-short-ast-spacemobile-one-owns-its-path-the-other-rents-it-from-spacex",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-10-22T18:55:39Z",
-      "excerpt": "Rocket Lab Corporation is upgraded to Buy, while AST SpaceMobile remains a Sell, reinforcing the pair trade thesis after recent corrections. Click for more.",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-10-29T17:45:57.844121+00:00",
+  "count": 6,
+  "lastUpdated": "2026-10-30T03:29:58.523994+00:00",
   "generator": "github-actions-gnews+fallback"
 }
