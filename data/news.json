@@ -1,14 +1,44 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile to Host Third Quarter 2026 Business Update Call on November 9, 2026",
-      "url": "https://www.wallstreet-online.de/nachricht/21584595-ast-spacemobile-to-host-third-quarter-2026-business-update-call-on-november-9-2026",
-      "source": "Wallstreet Online",
-      "publishedAt": "2026-10-26T23:10:04Z",
-      "excerpt": "AST SpaceMobile, Inc. (“AST SpaceMobile”) (NASDAQ: ASTS), the company building the first and only space-based cellular broadband network accessible directly by everyday smartphones, designed for both commercial and government applications, today … 27.10.2026 Seite 1",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
+      "title": "FCC approves Amazon Leo's $11.5B acquisition of satellite operator Globalstar, setting up a new satellite connectivity battle with Elon Musk's SpaceX",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/fcc-approves-amazon-leos-11-5b-acquisition-of-satellite-operator-globalstar-setting-up-a-new-satellite-connectivity-battle-with-elon-musks-spacex/articleshow/135263468.cms",
+      "source": "Times of India",
+      "publishedAt": "2026-10-28T11:24:00Z",
+      "excerpt": "The Federal Communications Commission (FCC) has approved Amazon Leo’s $11.5 billion acquisition of Globalstar to “acquire approximately 25 megahertz of",
+      "score": 68,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
+    },
+    {
+      "title": "US agency approves Amazon Leo's $11.5 billion acquisition of Globalstar",
+      "url": "https://economictimes.indiatimes.com/tech/technology/us-agency-approves-amazon-leos-11-5-billion-acquisition-of-globalstar/articleshow/135251028.cms",
+      "source": "The Economic Times",
+      "publishedAt": "2026-10-28T03:41:28Z",
+      "excerpt": "The Federal Communications Commission said Tuesday it has approved Amazon Leo's $11.5 billion deal to acquire Globalstar as the retail giant's satellite arm aims to build a satellite-based communications network to take on Elon Musk's SpaceX Starlink unit.",
+      "score": 62,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "US agency approves Amazon Leo’s $11.5 billion acquisition of Globalstar",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/10/28/us-agency-approves-amazon-leos-115-billion-acquisition-of-globalstar",
+      "source": "The Star",
+      "publishedAt": "2026-10-27T23:39:00Z",
+      "excerpt": "Oct 27 (Reuters) - The ⁠Federal Communications Commission said Tuesday it has approved Amazon Leo's $11.5 billion deal to ⁠acquire Globalstar as the retail giant's satellite arm aims to build a satellite-based ‌communications network to take on Elon Musk's SpaceX Starlink unit.",
+      "score": 62,
+      "tag": "Starlink",
+      "badge": "Starlink"
+    },
+    {
+      "title": "FCC Clears Amazon Leo To Acquire Mobile",
+      "url": "https://www.engadget.com/2299367/fcc-clears-amazon-leo-to-acquire-mobile-satellite-operator-globalstar/",
+      "source": "Engadget",
+      "publishedAt": "2026-10-28T13:13:19Z",
+      "excerpt": "Amazon Leo's $11.5 billion acquisition of mobile-satellite operator Globalstar has been approved by the FCC.",
+      "score": 44,
+      "tag": "MNO",
+      "badge": "Operator Strategy"
     },
     {
       "title": "NOVEMBER 13, 2026 DEADLINE: AST SpaceMobile, Inc. Investors with Substantial Losses May Seek to Lead Class Action Lawsuit - ASTS",
@@ -31,27 +61,47 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
-      "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
-      "source": "AST SpaceMobile Press",
-      "publishedAt": "2023-09-19T00:00:00+00:00",
-      "excerpt": "First-ever 5G connection for voice and data between an everyday, unmodified smartphone and a satellite in space.",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
+      "title": "The FCC approves Amazon Leo’s $11.5 billion Globalstar acquisition.",
+      "url": "https://www.theverge.com/tech/1020515/the-fcc-approves-amazon-leos-11-5-billion-globalstar-acquisition",
+      "source": "The Verge",
+      "publishedAt": "2026-10-28T13:19:05Z",
+      "excerpt": "The deal was announced in April and is expected to close in 2027. It gives Amazon Globalstar’s constellation of 25 satellites and its spectrum — a welcome boost given its stalled launch timeline — and means Leo will now power the satellite services for Apple’s supported iPhones and Apple Watches. [Link: FCC Approves Amazon Leo’s Acquisition of Globalstar | https://docs.fcc.gov/public/attachments/DOC-426214A1.pdf | The Federal Communications Commission]",
+      "score": 38,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
     },
     {
-      "title": "T-Mobile Takes Coverage Above and Beyond With SpaceX",
-      "url": "https://www.t-mobile.com/news/un-carrier/t-mobile-takes-coverage-above-and-beyond-with-spacex",
-      "source": "T-Mobile Newsroom",
-      "publishedAt": "2022-08-25T00:00:00+00:00",
-      "excerpt": "T-Mobile and SpaceX announce Coverage Above and Beyond using Starlink direct-to-cell connectivity.",
-      "score": 45,
-      "tag": "MNO",
-      "badge": "Operator Strategy"
+      "title": "Amazon Leo wins FCC approval to buy iPhone satellite partner Globalstar",
+      "url": "https://thenextweb.com/news/amazon-leo-globalstar-fcc-approval",
+      "source": "TNW",
+      "publishedAt": "2026-10-28T19:43:09Z",
+      "excerpt": "‘Empowered Amazon Leo,’ says the FCC’s chair, as the regulator approves the $11.5bn Globalstar deal behind iPhone satellite SOS.",
+      "score": 28,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "FCC approves Amazon’s acquisition of Globalstar",
+      "url": "https://www.siliconrepublic.com/comms/fcc-approves-amazons-acquisition-of-globalstar",
+      "source": "Siliconrepublic.com",
+      "publishedAt": "2026-10-28T10:00:43Z",
+      "excerpt": "The deal will allow Amazon to integrate Globalstar’s existing satellite assets into its own space internet service Leo.",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "US agency approves Amazon Leo’s $11.5 billion acquisition of Globalstar",
+      "url": "https://www.devdiscourse.com/article/international/3998298-us-agency-approves-amazon-leos-115-billion-acquisition-of-globalstar",
+      "source": "Devdiscourse",
+      "publishedAt": "2026-10-27T19:42:48Z",
+      "excerpt": "Read more about US agency approves Amazon Leo’s $11.5 billion acquisition of Globalstar on Devdiscourse",
+      "score": 14,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-11-02T21:02:48.930773+00:00",
-  "generator": "github-actions-gnews+fallback"
+  "count": 10,
+  "lastUpdated": "2026-11-03T04:33:16.007629+00:00",
+  "generator": "github-actions-gnews"
 }
