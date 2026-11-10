@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile Stock Crash: Why ASTS shares plunged 11% as SpaceX eyes Boost Mobile",
-      "url": "https://economictimes.indiatimes.com/markets/us-stocks/news/ast-spacemobile-stock-crash-why-asts-shares-plunged-11-as-spacex-eyes-boost-mobile/slideshow/135484806.cms",
-      "source": "The Economic Times",
-      "publishedAt": "2026-11-03T06:08:00Z",
-      "excerpt": "AST SpaceMobile shares hit a 52-week low of $36.72 amid growing concerns over competition in the satellite-to-smartphone connectivity market. The stock has fallen nearly 73% from its 52-week high of $133.86, reflecting mounting investor concerns about the company's growth prospects and competitive positioning. (Sources: Investing.com, TradingView, Reuters) ​AST SpaceMobile Stock Hits 52-Week Low of $36.72",
-      "score": 64,
-      "tag": "Starlink",
-      "badge": "Starlink"
-    },
-    {
       "title": "Kaplan Fox Alerts Investors: Lead Plaintiff Deadline for AST SpaceMobile, Inc. (ASTS) is November 13, 2026",
       "url": "https://www.wallstreet-online.de/nachricht/21655824-kaplan-fox-alerts-investors-lead-plaintiff-deadline-for-ast-spacemobile-inc-asts-is-november-13-2026",
       "source": "Wallstreet Online",
@@ -71,7 +61,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 7,
-  "lastUpdated": "2026-11-10T05:11:42.808284+00:00",
+  "count": 6,
+  "lastUpdated": "2026-11-10T19:01:36.987669+00:00",
   "generator": "github-actions-gnews+fallback"
 }
