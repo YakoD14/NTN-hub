@@ -21,22 +21,22 @@
       "badge": "AST / D2C"
     },
     {
+      "title": "Firefly: AST SpaceMobile Deal Turns The Launch Bottleneck Into A Growth Engine",
+      "url": "https://seekingalpha.com/article/4966663-firefly-ast-spacemobile-deal-turns-the-launch-bottleneck-into-a-growth-engine",
+      "source": "Seeking Alpha",
+      "publishedAt": "2026-11-11T21:06:20Z",
+      "excerpt": "Firefly Aerospace Inc. rated Strong Buy with a $50 target, citing a $1.3B AST SpaceMobile deal and a path to positive adjusted EBITDA. Click for a FLY update.",
+      "score": 30,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile announces new 'Blacklift' rocket, targets 2028 launch debut",
       "url": "https://www.space.com/space-exploration/launches-spacecraft/ast-spacemobile-announces-new-blacklift-rocket-targets-2028-launch-debut",
       "source": "Space.com",
       "publishedAt": "2026-11-06T22:00:00Z",
       "excerpt": "AST SpaceMobile plans to launch its broadband satellites on a new rocket called Blacklift, which it will build in house and plans to start flying in 2028.",
       "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
-      "title": "Firefly inks $1.3 billion deal to supply engines for new AST SpaceMobile 'Blacklift' rocket",
-      "url": "https://www.devdiscourse.com/article/international/4002938-firefly-inks-13-billion-deal-to-supply-engines-for-new-ast-spacemobile-blacklift-rocket",
-      "source": "Devdiscourse",
-      "publishedAt": "2026-11-06T17:39:19Z",
-      "excerpt": "Read more about Firefly inks $1.3 billion deal to supply engines for new AST SpaceMobile 'Blacklift' rocket on Devdiscourse",
-      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -62,6 +62,6 @@
     }
   ],
   "count": 6,
-  "lastUpdated": "2026-11-12T04:52:40.362423+00:00",
+  "lastUpdated": "2026-11-12T19:18:12.685868+00:00",
   "generator": "github-actions-gnews+fallback"
 }
