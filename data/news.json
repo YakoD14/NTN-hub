@@ -21,56 +21,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
-      "url": "https://www.brantfordexpositor.ca/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
-      "source": "The Expositor",
-      "publishedAt": "2026-11-10T13:40:14Z",
-      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
-      "url": "https://www.nugget.ca/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
-      "source": "The North Bay Nugget",
-      "publishedAt": "2026-11-10T13:39:51Z",
-      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
-      "url": "https://www.thewhig.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
-      "source": "The Kingston Whig-Standard",
-      "publishedAt": "2026-11-10T13:39:17Z",
-      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
-      "url": "https://financialpost.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
-      "source": "Financial Post",
-      "publishedAt": "2026-11-10T13:38:44Z",
-      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
-      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
-      "url": "https://nationalpost.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
-      "source": "National Post",
-      "publishedAt": "2026-11-10T13:38:40Z",
-      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
-      "score": 24,
-      "tag": "iOS",
-      "badge": "iOS / Satellite"
-    },
-    {
       "title": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
       "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
       "source": "Ars Technica",
@@ -101,7 +51,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 10,
-  "lastUpdated": "2026-11-14T04:01:13.192269+00:00",
-  "generator": "github-actions-gnews"
+  "count": 5,
+  "lastUpdated": "2026-11-14T17:27:27.453445+00:00",
+  "generator": "github-actions-gnews+fallback"
 }
