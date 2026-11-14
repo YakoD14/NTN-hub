@@ -11,16 +11,6 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "Kaplan Fox Alerts Investors: Lead Plaintiff Deadline for AST SpaceMobile, Inc. (ASTS) is November 13, 2026",
-      "url": "https://www.wallstreet-online.de/nachricht/21655824-kaplan-fox-alerts-investors-lead-plaintiff-deadline-for-ast-spacemobile-inc-asts-is-november-13-2026",
-      "source": "Wallstreet Online",
-      "publishedAt": "2026-11-06T23:56:13Z",
-      "excerpt": "New York, New York--(Newsfile Corp. - November 6, 2026) - Kaplan Fox & Kilsheimer LLP announces that a class action lawsuit has been filed against AST SpaceMobile, Inc. (\"AST\" or the \"Company\") (NASDAQ: ASTS) on behalf of investors that purchased or … 07.11.2026",
-      "score": 40,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "Firefly: AST SpaceMobile Deal Turns The Launch Bottleneck Into A Growth Engine",
       "url": "https://seekingalpha.com/article/4966663-firefly-ast-spacemobile-deal-turns-the-launch-bottleneck-into-a-growth-engine",
       "source": "Seeking Alpha",
@@ -31,12 +21,62 @@
       "badge": "AST / D2C"
     },
     {
-      "title": "AST SpaceMobile announces new 'Blacklift' rocket, targets 2028 launch debut",
-      "url": "https://www.space.com/space-exploration/launches-spacecraft/ast-spacemobile-announces-new-blacklift-rocket-targets-2028-launch-debut",
-      "source": "Space.com",
-      "publishedAt": "2026-11-06T22:00:00Z",
-      "excerpt": "AST SpaceMobile plans to launch its broadband satellites on a new rocket called Blacklift, which it will build in house and plans to start flying in 2028.",
-      "score": 30,
+      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
+      "url": "https://www.brantfordexpositor.ca/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
+      "source": "The Expositor",
+      "publishedAt": "2026-11-10T13:40:14Z",
+      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
+      "url": "https://www.nugget.ca/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
+      "source": "The North Bay Nugget",
+      "publishedAt": "2026-11-10T13:39:51Z",
+      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
+      "url": "https://www.thewhig.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
+      "source": "The Kingston Whig-Standard",
+      "publishedAt": "2026-11-10T13:39:17Z",
+      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
+      "url": "https://financialpost.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
+      "source": "Financial Post",
+      "publishedAt": "2026-11-10T13:38:44Z",
+      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "MDA SPACE AND GLOBALSTAR COMPLETE INITIAL ON-ORBIT FUNCTIONAL TESTS FOR GLOBALSTAR 2-R MISSION",
+      "url": "https://nationalpost.com/press-releases/pr-newswire/mda-space-and-globalstar-complete-initial-on-orbit-functional-tests-for-globalstar-2-r-mission/",
+      "source": "National Post",
+      "publishedAt": "2026-11-10T13:38:40Z",
+      "excerpt": "First set of eight satellites launched on August 15 have passed initial functional tests and payload health checks are underway. TORONTO, Nov. 10, 2026",
+      "score": 24,
+      "tag": "iOS",
+      "badge": "iOS / Satellite"
+    },
+    {
+      "title": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
+      "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
+      "source": "Ars Technica",
+      "publishedAt": "2026-11-12T18:28:22Z",
+      "excerpt": "We're not doing this thing because we like rockets.\"",
+      "score": 20,
       "tag": "AST",
       "badge": "AST / D2C"
     },
@@ -61,7 +101,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 6,
-  "lastUpdated": "2026-11-13T18:55:30.301504+00:00",
-  "generator": "github-actions-gnews+fallback"
+  "count": 10,
+  "lastUpdated": "2026-11-14T04:01:13.192269+00:00",
+  "generator": "github-actions-gnews"
 }
