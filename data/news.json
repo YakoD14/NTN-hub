@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "AST SpaceMobile targets intermittent nationwide service by year-end 2026 while outlining over 100 BlueBird deployments in 2027-2028",
-      "url": "https://seekingalpha.com/news/4669529-ast-spacemobile-targets-intermittent-nationwide-service-by-year-end-2026-while-outlining-over",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-11-10T07:51:50Z",
-      "excerpt": "AST SpaceMobile Q3 2026 earnings: service launch timing, Blacklift rocket, revenue guidance, and risks.",
-      "score": 50,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "Firefly: AST SpaceMobile Deal Turns The Launch Bottleneck Into A Growth Engine",
       "url": "https://seekingalpha.com/article/4966663-firefly-ast-spacemobile-deal-turns-the-launch-bottleneck-into-a-growth-engine",
       "source": "Seeking Alpha",
@@ -51,7 +41,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 5,
-  "lastUpdated": "2026-11-17T05:41:54.365332+00:00",
+  "count": 4,
+  "lastUpdated": "2026-11-17T20:12:46.915282+00:00",
   "generator": "github-actions-gnews+fallback"
 }
