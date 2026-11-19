@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "Firefly: AST SpaceMobile Deal Turns The Launch Bottleneck Into A Growth Engine",
-      "url": "https://seekingalpha.com/article/4966663-firefly-ast-spacemobile-deal-turns-the-launch-bottleneck-into-a-growth-engine",
-      "source": "Seeking Alpha",
-      "publishedAt": "2026-11-11T21:06:20Z",
-      "excerpt": "Firefly Aerospace Inc. rated Strong Buy with a $50 target, citing a $1.3B AST SpaceMobile deal and a path to positive adjusted EBITDA. Click for a FLY update.",
-      "score": 30,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
       "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
       "source": "Ars Technica",
@@ -41,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 4,
-  "lastUpdated": "2026-11-18T19:43:55.351355+00:00",
+  "count": 3,
+  "lastUpdated": "2026-11-19T04:59:41.148990+00:00",
   "generator": "github-actions-gnews+fallback"
 }
