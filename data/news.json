@@ -1,16 +1,6 @@
 {
   "items": [
     {
-      "title": "Building a rocket is hard. AST SpaceMobile thinks it's \"simple.\"",
-      "url": "https://arstechnica.com/space/2026/11/building-a-rocket-is-hard-ast-spacemobile-thinks-its-simple/",
-      "source": "Ars Technica",
-      "publishedAt": "2026-11-12T18:28:22Z",
-      "excerpt": "We're not doing this thing because we like rockets.\"",
-      "score": 20,
-      "tag": "AST",
-      "badge": "AST / D2C"
-    },
-    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -31,7 +21,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 3,
-  "lastUpdated": "2026-11-19T04:59:41.148990+00:00",
+  "count": 2,
+  "lastUpdated": "2026-11-19T19:44:27.358403+00:00",
   "generator": "github-actions-gnews+fallback"
 }
