@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "title": "HubSpot, AST SpaceMobile downgraded: Wall Street’s top analyst calls",
+      "url": "https://markets.businessinsider.com/news/stocks/hubspot-ast-spacemobile-downgraded-wall-street-s-top-analyst-calls-1036806389",
+      "source": "Markets Insider",
+      "publishedAt": "2026-11-27T15:41:12Z",
+      "excerpt": "The most talked about and market moving research calls around Wall Street are now in one place. Here are today’s research calls that investors n...",
+      "score": 20,
+      "tag": "AST",
+      "badge": "AST / D2C"
+    },
+    {
       "title": "AST SpaceMobile Makes History in 5G Broadband Cellular Connectivity from Space",
       "url": "https://ast-science.com/2023/09/19/ast-spacemobile-makes-history-in-5g-broadband-cellular-connectivity-from-space/",
       "source": "AST SpaceMobile Press",
@@ -21,7 +31,7 @@
       "badge": "Operator Strategy"
     }
   ],
-  "count": 2,
-  "lastUpdated": "2026-11-27T20:27:47.863532+00:00",
+  "count": 3,
+  "lastUpdated": "2026-11-28T05:29:23.440284+00:00",
   "generator": "github-actions-gnews+fallback"
 }
